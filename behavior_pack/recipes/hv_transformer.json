@@ -1,0 +1,14 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:hv_transformer" },
+    "tags": ["crafting_table"],
+    "pattern": [" C ", "CMC", " C "],
+    "key": {
+      "C": { "item": "ic2:iron_cable" },
+      "M": { "item": "ic2:mv_transformer" }
+    },
+    "unlock": [{ "item": "ic2:mv_transformer" }],
+    "result": { "item": "ic2:hv_transformer", "count": 1 }
+  }
+}

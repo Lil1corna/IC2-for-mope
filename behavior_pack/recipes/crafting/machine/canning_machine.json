@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:canning_machine"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "PPP",
+      "CMC",
+      "ABA"
+    ],
+    "key": {
+      "P": {
+        "item": "ic2:tin_plate"
+      },
+      "C": {
+        "item": "ic2:electronic_circuit"
+      },
+      "M": {
+        "item": "ic2:extractor"
+      },
+      "A": {
+        "item": "ic2:advanced_alloy"
+      },
+      "B": {
+        "item": "ic2:energy_crystal"
+      }
+    },
+    "result": {
+      "item": "ic2:canning_machine",
+      "count": 1
+    }
+  }
+}
+

@@ -1,0 +1,145 @@
+{
+  "namespace": "ic2:generator",
+  "title_label": {
+    "type": "label",
+    "offset": [
+      0,
+      -3
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "tile.ic2:generator.name",
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "main_panel": {
+    "type": "panel",
+    "size": [
+      "50% + 16px",
+      "100%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "size": [16, 16],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "controls": [
+            {
+              "input_impl_panel@input_impl_panel": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "input_impl_panel": {
+    "type": "panel",
+    "size": [54, 54],
+    "offset": [0, 16],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "slot_grid": {
+          "type": "grid",
+          "grid_dimensions": [1, 4],
+          "size": [54, 54],
+          "collection_name": "container_items",
+          "grid_item_template": "common.container_item",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "$item_collection_name": "container_items",
+          "controls": [
+            {
+              "charge_slot": {
+                "type": "panel",
+                "grid_position": [0, 0],
+                "controls": [
+                  {
+                    "charge_slot@common.container_item": {
+                      "offset": [0, -8]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fuel_slot": {
+                "type": "panel",
+                "grid_position": [0, 1],
+                "controls": [
+                  {
+                    "fuel_slot@common.container_item": {
+                      "offset": [0, 12]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "energy_bar": {
+                "type": "panel",
+                "grid_position": [0, 2],
+                "controls": [
+                  {
+                    "energy_bar@common.container_item": {
+                      "ignored": false,
+                      "$item_collection_name": "container_items",
+                      "$cell_image_size": [32, 32],
+                      "$item_renderer_size": [32, 32],
+                      "$cell_overlay_ref": "ic2:common.invisible",
+                      "$background_images": "ic2:common.invisible",
+                      "focus_enabled": false,
+                      "size": [0, 0],
+                      "offset": [48, -18]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fuel_progress": {
+                "type": "panel",
+                "grid_position": [0, 3],
+                "controls": [
+                  {
+                    "fuel_progress@common.container_item": {
+                      "ignored": false,
+                      "$item_collection_name": "container_items",
+                      "$cell_image_size": [17, 17],
+                      "$item_renderer_size": [17, 17],
+                      "$cell_overlay_ref": "ic2:common.invisible",
+                      "$background_images": "ic2:common.invisible",
+                      "focus_enabled": false,
+                      "size": [0, 0],
+                      "offset": [0, -32]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "entry_panel": {
+    "type": "panel",
+    "size": ["100%", "50% - 12px"],
+    "offset": [0, 7],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "title_label@title_label": {}
+      },
+      {
+        "main@main_panel": {}
+      }
+    ]
+  }
+}

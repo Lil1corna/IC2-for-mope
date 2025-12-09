@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:steel_plate"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "HH",
+      "HH"
+    ],
+    "key": {
+      "H": {
+        "item": "ic2:steel_ingot"
+      }
+    },
+    "result": {
+      "item": "ic2:steel_plate",
+      "count": 1
+    }
+  }
+}
+

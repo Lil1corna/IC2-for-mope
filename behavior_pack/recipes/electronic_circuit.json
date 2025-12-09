@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:electronic_circuit"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "CCC",
+            "RIR",
+            "CCC"
+        ],
+        "key": {
+            "C": { "item": "ic2:copper_cable", "data": 1 },
+            "R": { "item": "minecraft:redstone" },
+            "I": { "item": "ic2:iron_plate" }
+        },
+        "result": {
+            "item": "ic2:electronic_circuit",
+            "count": 1
+        }
+    }
+}

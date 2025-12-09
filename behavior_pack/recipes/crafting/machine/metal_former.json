@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:metal_former"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "PPP",
+      "CMC",
+      "ABA"
+    ],
+    "key": {
+      "P": {
+        "item": "ic2:steel_plate"
+      },
+      "C": {
+        "item": "ic2:electronic_circuit"
+      },
+      "M": {
+        "item": "ic2:macerator"
+      },
+      "A": {
+        "item": "ic2:advanced_alloy"
+      },
+      "B": {
+        "item": "ic2:energy_crystal"
+      }
+    },
+    "result": {
+      "item": "ic2:metal_former",
+      "count": 1
+    }
+  }
+}
+

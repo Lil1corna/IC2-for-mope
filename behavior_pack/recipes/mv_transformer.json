@@ -1,0 +1,14 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:mv_transformer" },
+    "tags": ["crafting_table"],
+    "pattern": [" C ", "CMC", " C "],
+    "key": {
+      "C": { "item": "ic2:gold_cable" },
+      "M": { "item": "ic2:machine_case" }
+    },
+    "unlock": [{ "item": "ic2:machine_case" }],
+    "result": { "item": "ic2:mv_transformer", "count": 1 }
+  }
+}

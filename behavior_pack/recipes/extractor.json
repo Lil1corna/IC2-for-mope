@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:extractor"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "TMT",
+            "CMC",
+            "   "
+        ],
+        "key": {
+            "T": { "item": "ic2:treetap" },
+            "M": { "item": "ic2:machine_case" },
+            "C": { "item": "ic2:electronic_circuit" }
+        },
+        "result": {
+            "item": "ic2:extractor",
+            "count": 1
+        }
+    }
+}

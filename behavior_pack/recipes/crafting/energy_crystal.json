@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:energy_crystal"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "RRR",
+      "RDR",
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "ic2:energy_crystal"
+    }
+  }
+}

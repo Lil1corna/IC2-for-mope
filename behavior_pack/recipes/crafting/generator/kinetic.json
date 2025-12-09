@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:kinetic_generator"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "gmi"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:iron_shaft"
+      },
+      "m": {
+        "item": "ic2:electric_motor"
+      },
+      "g": {
+        "item": "ic2:generator"
+      }
+    },
+    "result": {
+      "item": "ic2:kinetic_generator"
+    }
+  }
+}

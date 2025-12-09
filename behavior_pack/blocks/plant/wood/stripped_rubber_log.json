@@ -1,0 +1,76 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:stripped_rubber_log",
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:block_face"]
+        }
+      },
+      "menu_category": {
+        "category": "none",
+        "is_hidden_in_commands": true,
+        "group": "minecraft:itemGroup.name.log"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:flammable": {
+        "destroy_chance_modifier": 5,
+        "catch_chance_modifier": 5
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:stripped_rubber_log",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "ic2:stripped_rubber_log_top",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "ic2:stripped_rubber_log_top",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "tag:wood": {},
+      "tag:minecraft:logs": {},
+      "tag:minecraft:logs_that_burn": {},
+      "tag:script_data_driven": {},
+      "tag:ic2:leaves_update": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 90]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 0]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:electric_treetap"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "t",
+      "p"
+    ],
+    "key": {
+      "t": {
+        "item": "ic2:treetap"
+      },
+      "p": {
+        "item": "ic2:small_power_unit"
+      }
+    },
+    "result": {
+      "item": "ic2:electric_treetap"
+    }
+  }
+}

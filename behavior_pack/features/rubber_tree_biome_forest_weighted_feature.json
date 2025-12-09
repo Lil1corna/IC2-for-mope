@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ic2:rubber_tree_biome_forest_weighted_feature"
+    },
+    "features": [
+      ["ic2:sqc_rbt4", 3],
+      ["ic2:sqc_rbt5", 3],
+      ["ic2:sqc_rbt6", 2],
+      ["ic2:sqc_rbt7", 1],
+      ["ic2:sqc_rbt8", 1]
+    ]
+  }
+}

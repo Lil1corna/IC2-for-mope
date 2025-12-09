@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:glass_fibre_cable"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "GGG",
+            "DSD",
+            "GGG"
+        ],
+        "key": {
+            "G": { "item": "minecraft:glass" },
+            "D": { "item": "minecraft:diamond" },
+            "S": { "item": "ic2:copper_ingot" }
+        },
+        "result": {
+            "item": "ic2:glass_fibre_cable",
+            "count": 4
+        }
+    }
+}

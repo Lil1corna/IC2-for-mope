@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:bronze_hoe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      " i",
+      " i"
+    ],
+    "key": {
+      "#": {
+        "item": "ic2:bronze_ingot"
+      },
+      "i": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ic2:bronze_hoe"
+    }
+  }
+}

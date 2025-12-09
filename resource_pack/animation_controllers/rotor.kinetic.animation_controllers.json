@@ -1,0 +1,76 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.rotor.kinetic": {
+      "initial_state": "stop",
+      "states": {
+        "rotate_1": {
+          "animations": ["rotate_1"],
+          "transitions": [
+            {"rotate_2": "q.property('ic2:rotation_stage') == 2 && q.all_animations_finished"},
+            {"rotate_3": "q.property('ic2:rotation_stage') == 3 && q.all_animations_finished"},
+            {"rotate_4": "q.property('ic2:rotation_stage') == 4 && q.all_animations_finished"},
+            {"rotate_overload": "q.property('ic2:rotation_stage') == 0 && q.all_animations_finished"},
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 3.2
+        },
+        "rotate_2": {
+          "animations": ["rotate_2"],
+          "transitions": [
+            {"rotate_1": "q.property('ic2:rotation_stage') == 1 && q.all_animations_finished"},
+            {"rotate_3": "q.property('ic2:rotation_stage') == 3 && q.all_animations_finished"},
+            {"rotate_4": "q.property('ic2:rotation_stage') == 4 && q.all_animations_finished"},
+            {"rotate_overload": "q.property('ic2:rotation_stage') == 0 && q.all_animations_finished"},
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 3.2
+        },
+        "rotate_3": {
+          "animations": ["rotate_3"],
+          "transitions": [
+            {"rotate_1": "q.property('ic2:rotation_stage') == 1 && q.all_animations_finished"},
+            {"rotate_2": "q.property('ic2:rotation_stage') == 2 && q.all_animations_finished"},
+            {"rotate_4": "q.property('ic2:rotation_stage') == 4 && q.all_animations_finished"},
+            {"rotate_overload": "q.property('ic2:rotation_stage') == 0 && q.all_animations_finished"},
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 3.2
+        },
+        "rotate_4": {
+          "animations": ["rotate_4"],
+          "transitions": [
+            {"rotate_1": "q.property('ic2:rotation_stage') == 1 && q.all_animations_finished"},
+            {"rotate_2": "q.property('ic2:rotation_stage') == 2 && q.all_animations_finished"},
+            {"rotate_3": "q.property('ic2:rotation_stage') == 3 && q.all_animations_finished"},
+            {"rotate_overload": "q.property('ic2:rotation_stage') == 0 && q.all_animations_finished"},
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 3.2
+        },
+        "rotate_overload": {
+          "animations": ["rotate_overload"],
+          "transitions": [
+            {"rotate_1": "q.property('ic2:rotation_stage') == 1 && q.all_animations_finished"},
+            {"rotate_2": "q.property('ic2:rotation_stage') == 2 && q.all_animations_finished"},
+            {"rotate_3": "q.property('ic2:rotation_stage') == 3 && q.all_animations_finished"},
+            {"rotate_4": "q.property('ic2:rotation_stage') == 4 && q.all_animations_finished"},
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 3.2
+        },
+        "stop": {
+          "animations": ["stop"],
+          "transitions": [
+            {"rotate_1": "q.property('ic2:rotation_stage') == 1 && q.is_baby"},
+            {"rotate_2": "q.property('ic2:rotation_stage') == 2 && q.is_baby"},
+            {"rotate_3": "q.property('ic2:rotation_stage') == 3 && q.is_baby"},
+            {"rotate_4": "q.property('ic2:rotation_stage') == 4 && q.is_baby"},
+            {"rotate_overload": "q.property('ic2:rotation_stage') == 0 && q.is_baby"}
+          ],
+          "blend_transition": 1.6
+        }
+      }
+    }
+  }
+}

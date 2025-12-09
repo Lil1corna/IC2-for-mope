@@ -1,0 +1,16 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ic2:machine_case",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.ic2_components"
+            }
+        },
+        "components": {
+            "minecraft:icon": "ic2_machine_case",
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

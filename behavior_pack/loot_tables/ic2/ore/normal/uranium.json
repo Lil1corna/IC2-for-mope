@@ -1,0 +1,194 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "enchantments": [
+            {
+              "enchantment": "silk_touch",
+              "levels": 1
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "ic2:uranium_ore"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "inverted",
+          "term": {
+            "condition": "match_tool",
+            "enchantments": [
+              {
+                "enchantment": "silk_touch",
+                "levels": 1
+              }
+            ]
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "ic2:raw_uranium"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "enchantments": [
+            {
+              "enchantment": "fortune",
+              "levels": 1
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "weight": 67,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 33,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "enchantments": [
+            {
+              "enchantment": "fortune",
+              "levels": 2
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "weight": 50,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 25,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 25,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "enchantments": [
+            {
+              "enchantment": "fortune",
+              "levels": 3
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "weight": 40,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "weight": 20,
+          "name": "ic2:raw_uranium",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

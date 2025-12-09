@@ -1,0 +1,50 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:biome_modifier": {
+    "description": {
+      "identifier": "ic2:add_ic2_ores"
+    },
+    "components": {
+      "minecraft:add_features": {
+        "features": [
+          "ic2:overworld_underground_ores"
+        ],
+        "biomes": [
+          "minecraft:plains",
+          "minecraft:desert",
+          "minecraft:extreme_hills",
+          "minecraft:forest",
+          "minecraft:taiga",
+          "minecraft:swampland",
+          "minecraft:river",
+          "minecraft:frozen_river",
+          "minecraft:ice_plains",
+          "minecraft:ice_mountains",
+          "minecraft:mushroom_island",
+          "minecraft:mushroom_island_shore",
+          "minecraft:beach",
+          "minecraft:desert_hills",
+          "minecraft:forest_hills",
+          "minecraft:taiga_hills",
+          "minecraft:extreme_hills_edge",
+          "minecraft:jungle",
+          "minecraft:jungle_hills",
+          "minecraft:jungle_edge",
+          "minecraft:deep_ocean",
+          "minecraft:ocean",
+          "minecraft:cold_ocean",
+          "minecraft:frozen_ocean",
+          "minecraft:cold_taiga",
+          "minecraft:cold_taiga_hills",
+          "minecraft:stone_beach",
+          "minecraft:extreme_hills_plus_trees",
+          "minecraft:savanna",
+          "minecraft:savanna_plateau",
+          "minecraft:mesa",
+          "minecraft:mesa_plateau_f",
+          "minecraft:mesa_plateau"
+        ]
+      }
+    }
+  }
+}

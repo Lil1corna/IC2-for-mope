@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:insulated_copper_cable"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "cr"
+    ],
+    "key": {
+      "r": {
+        "item": "ic2:rubber"
+      },
+      "c": {
+        "item": "ic2:copper_cable"
+      }
+    },
+    "result": {
+      "item": "ic2:insulated_copper_cable"
+    }
+  }
+}

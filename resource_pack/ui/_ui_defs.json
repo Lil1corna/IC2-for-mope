@@ -1,0 +1,24 @@
+{
+  "ui_defs": [
+    "ui/ic2/common.json",
+    "ui/ic2/battery.json",
+    "ui/ic2/machine.json",
+    "ui/chest_screen.json",
+    "ui/ic2/screen/generators.json",
+    "ui/ic2/screen/machines.json",
+    "ui/ic2/screen/batteries.json",
+    "ui/ic2/battery/batbox.json",
+    "ui/ic2/battery/cesu.json",
+    "ui/ic2/battery/mfe.json",
+    "ui/ic2/battery/mfsu.json",
+    "ui/ic2/generator/generator.json",
+    "ui/ic2/generator/geo_generator.json",
+    "ui/ic2/generator/water.json",
+    "ui/ic2/generator/wind.json",
+    "ui/ic2/generator/kinetic/wind.json",
+    "ui/ic2/machine/macerator.json",
+    "ui/ic2/machine/compressor.json",
+    "ui/ic2/machine/extractor.json",
+    "ui/ic2/machine/recycler.json"
+  ]
+}

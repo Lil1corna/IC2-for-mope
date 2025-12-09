@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "ic2:uranium_ore_feature"
+        },
+        "count": 2,
+        "replace_rules": [
+            {
+                "places_block": "ic2:uranium_ore",
+                "may_replace": [
+                    "minecraft:stone",
+                    "minecraft:deepslate",
+                    "minecraft:granite",
+                    "minecraft:diorite",
+                    "minecraft:andesite",
+                    "minecraft:tuff"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "item",
+          "name": "ic2:machine"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

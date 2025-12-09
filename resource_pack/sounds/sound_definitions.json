@@ -1,0 +1,29 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "item.treetap.use": {
+      "category": "block",
+      "sounds": ["sounds/tool/treetap/treetap"]
+    },
+    "item.treetap.electric.use": {
+      "category": "block",
+      "sounds": ["sounds/tool/treetap/electric"]
+    },
+    "wrench.use": {
+      "category": "block",
+      "sounds": ["sounds/tool/wrench"]
+    },
+    "container.silence": {
+      "category": "entity",
+      "sounds": ["sounds/silence_will_fall"]
+    },
+    "generator.generator.loop": {
+      "category": "block",
+      "sounds": ["sounds/generator/generator"]
+    },
+    "macerator.loop": {
+      "category": "block",
+      "sounds": ["sounds/machine/macerator"]
+    }
+  }
+}

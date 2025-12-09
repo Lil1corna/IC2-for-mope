@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ic2:stripped_rubber_wood"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ic2:stripped_rubber_log"
+      },
+      {
+        "item": "ic2:stripped_rubber_log"
+      },
+      {
+        "item": "ic2:stripped_rubber_log"
+      },
+      {
+        "item": "ic2:stripped_rubber_log"
+      }
+    ],
+    "result": {
+      "item": "ic2:stripped_rubber_wood",
+      "count": 3
+    }
+  }
+}

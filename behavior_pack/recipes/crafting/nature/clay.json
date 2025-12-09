@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:clay"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "iii",
+      "i#i",
+      "iii"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:clay_dust"
+      },
+      "#": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+    "result": [
+      {
+        "item": "minecraft:clay_ball"
+      },
+      {
+        "item": "minecraft:bucket"
+      }
+    ]
+  }
+}

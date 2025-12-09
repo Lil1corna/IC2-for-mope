@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:tin_plate"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "TT",
+            "TT"
+        ],
+        "key": {
+            "T": { "item": "ic2:tin_ingot" }
+        },
+        "result": {
+            "item": "ic2:tin_plate",
+            "count": 2
+        }
+    }
+}

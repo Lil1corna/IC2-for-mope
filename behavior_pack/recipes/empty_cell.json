@@ -1,0 +1,11 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:empty_cell" },
+    "tags": ["crafting_table"],
+    "pattern": [" T ", "T T", " T "],
+    "key": { "T": { "item": "ic2:tin_plate" } },
+    "unlock": [{ "item": "ic2:tin_plate" }],
+    "result": { "item": "ic2:empty_cell", "count": 16 }
+  }
+}

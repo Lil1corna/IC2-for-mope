@@ -1,0 +1,41 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:lead_block",
+      "menu_category": {
+        "category": "construction",
+        "group": "ic2:itemGroup.name.ingot_block"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 10.0
+      },
+      "minecraft:loot": "loot_tables/empty.json",
+      
+
+
+
+
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:lead_block",
+          "render_method": "opaque"
+        }
+      },
+      "tag:metal": {}
+    }
+
+
+
+
+
+
+
+  }
+}

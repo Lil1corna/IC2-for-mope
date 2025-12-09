@@ -1,0 +1,50 @@
+# Build outputs
+*.mcaddon
+*.mcpack
+node_modules/
+*.log
+npm-debug.log*
+
+# Development files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Temporary files
+temp/
+tmp/
+cache/
+build/
+
+# Generated files
+behavior_pack/scripts/Main.js
+behavior_pack/scripts/**/*.js
+!behavior_pack/scripts/Main_old.js
+!behavior_pack/scripts/Main_optimized.js
+
+# Test coverage
+coverage/
+
+# Environment variables
+.env
+.env.local

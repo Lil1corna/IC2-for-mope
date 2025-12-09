@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:treetap"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "  W",
+            " WW",
+            "W  "
+        ],
+        "key": {
+            "W": { "item": "minecraft:planks" }
+        },
+        "result": {
+            "item": "ic2:treetap",
+            "count": 1
+        }
+    }
+}

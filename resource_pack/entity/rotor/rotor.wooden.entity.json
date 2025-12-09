@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ic2:rotor.wooden",
+      "materials": {
+        "default": "minecart"
+      },
+      "textures": {
+        "default": "textures/entity/rotor/wooden",
+        "charging": "textures/entity/rotor/wooden"
+      },
+      "geometry": {
+        "default": "geometry.rotor.wooden"
+      },
+      "animations": {
+        "controller": "controller.animation.rotor.kinetic",
+        "rotate_1": "animation.ic2.rotor.kinetic.rotate_1",
+        "rotate_2": "animation.ic2.rotor.kinetic.rotate_2",
+        "rotate_3": "animation.ic2.rotor.kinetic.rotate_3",
+        "rotate_4": "animation.ic2.rotor.kinetic.rotate_4",
+        "rotate_overload": "animation.ic2.rotor.kinetic.rotate_overload",
+        "stop": "animation.ic2.rotor.kinetic.stop"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": ["controller.render.vex"]
+    }
+  }
+}

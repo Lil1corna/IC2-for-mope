@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:batbox" },
+    "tags": ["crafting_table"],
+    "pattern": ["#P#", "#B#", "###"],
+    "key": {
+      "#": { "item": "minecraft:planks" },
+      "P": { "item": "ic2:tin_cable" },
+      "B": { "item": "ic2:battery" }
+    },
+    "unlock": [{ "item": "ic2:battery" }],
+    "result": { "item": "ic2:batbox", "count": 1 }
+  }
+}

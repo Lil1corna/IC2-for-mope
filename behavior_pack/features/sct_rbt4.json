@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "ic2:sct_rbt4"
+    },
+    "places_feature": "ic2:weighted_rubber_tree_feature_4",
+    "iterations": 1,
+    "x": -2,
+    "y": 1,
+    "z": -2
+  }
+}

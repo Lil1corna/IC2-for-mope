@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:steel_rotor_blade"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "pip",
+      "pip",
+      "pip"
+    ],
+    "key": {
+      "p": {
+        "item": "ic2:steel_plate"
+      },
+      "i": {
+        "item": "ic2:steel_ingot"
+      }
+    },
+    "result": {
+      "item": "ic2:steel_rotor_blade"
+    }
+  }
+}

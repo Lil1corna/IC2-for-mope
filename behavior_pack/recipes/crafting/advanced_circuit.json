@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:advanced_circuit"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "RGR",
+      "LCL",
+      "RGR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "L": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "C": {
+        "item": "ic2:electronic_circuit"
+      }
+    },
+    "result": {
+      "item": "ic2:advanced_circuit"
+    }
+  }
+}
+EOF && echo "✅ Добавлен рецепт Advanced Circuit"

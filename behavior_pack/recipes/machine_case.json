@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:machine_case"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "III",
+            "I I",
+            "III"
+        ],
+        "key": {
+            "I": { "item": "ic2:iron_plate" }
+        },
+        "result": {
+            "item": "ic2:machine_case",
+            "count": 1
+        }
+    }
+}

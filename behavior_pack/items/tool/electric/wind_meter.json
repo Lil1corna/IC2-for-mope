@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:wind_meter",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 1000
+      },
+      "minecraft:icon": "ic2:wind_meter",
+      "minecraft:tags": {
+        "tags": [
+          "ic2:low_voltage_tier",
+          "minecraft:is_tool"
+        ]
+      }
+    }
+  }
+}

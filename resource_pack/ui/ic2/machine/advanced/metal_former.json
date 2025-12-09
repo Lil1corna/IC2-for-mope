@@ -1,0 +1,50 @@
+{
+  "namespace": "ic2_metal_former",
+  "metal_former_screen": {
+    "type": "custom_form",
+    "title": "Metal Former",
+    "content": [
+      {
+        "type": "label",
+        "text": "§lMetal Former - Advanced Metal Processing"
+      },
+      {
+        "type": "label",
+        "text": "§eEnergy: §b%energy% / %max_energy% EU"
+      },
+      {
+        "type": "label",
+        "text": "§eProgress: §a%progress%%"
+      },
+      {
+        "type": "label",
+        "text": "§eMode: §6%mode%"
+      },
+      {
+        "type": "button",
+        "text": "Change Mode",
+        "image": {
+          "type": "path",
+          "data": "textures/ui/ic2/common/button_mode"
+        }
+      },
+      {
+        "type": "button",
+        "text": "Process",
+        "image": {
+          "type": "path",
+          "data": "textures/ui/ic2/common/button_process"
+        }
+      },
+      {
+        "type": "button",
+        "text": "Close",
+        "image": {
+          "type": "path",
+          "data": "textures/ui/ic2/common/button_close"
+        }
+      }
+    ]
+  }
+}
+

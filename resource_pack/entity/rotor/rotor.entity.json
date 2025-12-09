@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ic2:rotor",
+      "materials": {
+        "default": "minecart"
+      },
+      "textures": {
+        "default": "textures/blocks/general/machine/sides",
+        "charging": "textures/blocks/general/machine/sides"
+      },
+      "geometry": {
+        "default": "geometry.rotor"
+      },
+      "animations": {
+        "controller": "controller.animation.rotor",
+        "run": "animation.ic2.rotor.run",
+        "stop": "animation.ic2.rotor.stop"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": ["controller.render.vex"]
+    }
+  }
+}

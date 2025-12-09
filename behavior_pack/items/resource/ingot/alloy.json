@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:alloy_ingot",
+      "menu_category": {
+        "category": "items",
+        "group": "ic2:itemGroup.name.ingot"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ic2:alloy_ingot"
+    }
+  }
+}

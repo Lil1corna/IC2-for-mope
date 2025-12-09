@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:forge_hammer_left"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ii ",
+      "iss",
+      "ii "
+    ],
+    "key": {
+      "i": {
+        "item": "minecraft:iron_ingot"
+      },
+      "s": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ic2:forge_hammer"
+    }
+  }
+}

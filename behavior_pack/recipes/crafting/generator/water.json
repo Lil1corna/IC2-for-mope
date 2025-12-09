@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:water_generator"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "sgs",
+      "pgp",
+      "sps"
+    ],
+    "key": {
+      "g": {
+        "item": "ic2:generator"
+      },
+      "s": {
+        "item": "minecraft:stick"
+      },
+      "p": {
+        "item": "minecraft:planks"
+      }
+    },
+    "result": {
+      "item": "ic2:water_generator"
+    }
+  }
+}

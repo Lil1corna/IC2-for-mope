@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:solar_generator"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cgc",
+      "gcg",
+      "ifi"
+    ],
+    "key": {
+      "g": {
+        "item": "minecraft:glass"
+      },
+      "c": {
+        "item": "ic2:coal_dust"
+      },
+      "i": {
+        "item": "ic2:circuit"
+      },
+      "f": {
+        "item": "ic2:generator"
+      }
+    },
+    "result": {
+      "item": "ic2:solar_generator"
+    }
+  }
+}

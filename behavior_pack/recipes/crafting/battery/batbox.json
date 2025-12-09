@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:batbox"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "pcp",
+      "rrr",
+      "ppp"
+    ],
+    "key": {
+      "r": {
+        "item": "ic2:re_battery"
+      },
+      "p": {
+        "item": "minecraft:planks"
+      },
+      "c": {
+        "item": "ic2:insulated_tin_cable"
+      }
+    },
+    "result": {
+      "item": "ic2:batbox"
+    }
+  }
+}

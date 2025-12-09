@@ -1,0 +1,35 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:stripped_rubber_wood",
+      "menu_category": {
+        "category": "none",
+        "is_hidden_in_commands": true,
+        "group": "minecraft:itemGroup.name.wood"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:flammable": {
+        "burn_odds": 5,
+        "flame_odds": 5
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:stripped_rubber_log",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "tag:wood": {},
+      "tag:minecraft:logs": {},
+      "tag:minecraft:logs_that_burn": {}
+    }
+  }
+}

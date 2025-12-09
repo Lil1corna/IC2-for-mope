@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:deepslate_lead_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "ic2:itemGroup.name.ore"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 6
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 4.0
+      },
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:deepslate_lead_ore"
+        }
+      },
+      "tendrock:ore": {
+        "deepslate": true
+      },
+      "tag:stone": {},
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+      "tag:minecraft:stone_tier_destructible": {}
+    }
+  }
+}

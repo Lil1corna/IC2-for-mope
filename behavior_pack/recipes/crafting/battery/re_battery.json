@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:re_battery"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " # ",
+      "prp",
+      "prp"
+    ],
+    "key": {
+      "r": {
+        "item": "minecraft:redstone"
+      },
+      "p": {
+        "item": "ic2:tin_casing"
+      },
+      "#": {
+        "item": "ic2:insulated_copper_cable"
+      }
+    },
+    "result": {
+      "item": "ic2:re_battery"
+    }
+  }
+}

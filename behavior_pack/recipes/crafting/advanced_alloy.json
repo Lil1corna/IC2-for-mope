@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:advanced_alloy"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "ABA",
+      "BCB",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "ic2:bronze_ingot"
+      },
+      "B": {
+        "item": "ic2:steel_ingot"
+      },
+      "C": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "ic2:advanced_alloy",
+      "count": 2
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:bronze_plate"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "HH",
+      "HH"
+    ],
+    "key": {
+      "H": {
+        "item": "ic2:bronze_ingot"
+      }
+    },
+    "result": {
+      "item": "ic2:bronze_plate",
+      "count": 1
+    }
+  }
+}
+

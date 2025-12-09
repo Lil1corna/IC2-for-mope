@@ -1,0 +1,24 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:nuclear_reactor"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "LCL",
+            "LML",
+            "LGL"
+        ],
+        "key": {
+            "L": { "item": "ic2:lead_ingot" },
+            "C": { "item": "ic2:advanced_circuit" },
+            "M": { "item": "ic2:machine_case" },
+            "G": { "item": "ic2:generator" }
+        },
+        "result": {
+            "item": "ic2:nuclear_reactor",
+            "count": 1
+        }
+    }
+}

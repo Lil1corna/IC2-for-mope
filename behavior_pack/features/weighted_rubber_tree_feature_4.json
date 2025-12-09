@@ -1,0 +1,18 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ic2:weighted_rubber_tree_feature_4"
+        },
+        "features": [
+            [
+                "ic2:rubber_tree_structure_feature_422_1",
+                1
+            ],
+            [
+                "ic2:rubber_tree_structure_feature_423_1",
+                1
+            ]
+        ]
+    }
+}

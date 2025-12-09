@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:coffee_powder",
+      "category": "nature"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "ic2:coffee_powder"
+      },
+      "minecraft:display_name": {
+        "value": "item.ic2:coffee_powder.name"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation_modifier": 0.2,
+        "can_always_eat": false
+      }
+    }
+  }
+}

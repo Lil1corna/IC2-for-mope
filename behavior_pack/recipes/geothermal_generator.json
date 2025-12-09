@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:geothermal_generator"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "GGG",
+            "GCG",
+            "GMG"
+        ],
+        "key": {
+            "G": { "item": "minecraft:glass" },
+            "C": { "item": "ic2:copper_ingot" },
+            "M": { "item": "ic2:generator" }
+        },
+        "result": {
+            "item": "ic2:geothermal_generator",
+            "count": 1
+        }
+    }
+}

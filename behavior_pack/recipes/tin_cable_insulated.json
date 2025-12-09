@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ic2:tin_cable_insulated"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "ic2:tin_cable" },
+            { "item": "ic2:rubber" }
+        ],
+        "result": {
+            "item": "ic2:tin_cable",
+            "count": 1,
+            "data": 1
+        }
+    }
+}

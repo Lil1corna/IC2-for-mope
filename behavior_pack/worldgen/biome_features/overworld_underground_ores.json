@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:biome_feature": {
+    "description": {
+      "identifier": "ic2:overworld_underground_ores"
+    },
+    "features": [
+      "ic2:tin_ore_feature_rule",
+      "ic2:lead_ore_feature_rule",
+      "ic2:uranium_ore_feature_rule",
+      "ic2:overworld_underground_tin_ore_upper_feature",
+      "ic2:overworld_underground_tin_ore_small_feature",
+      "ic2:overworld_underground_lead_ore_feature",
+      "ic2:overworld_underground_lead_ore_lower_feature",
+      "ic2:overworld_underground_uranium_ore_feature",
+      "ic2:overworld_underground_uranium_ore_large_feature",
+      "ic2:overworld_underground_uranium_ore_buried_feature"
+    ]
+  }
+}

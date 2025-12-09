@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:bronze_shovel"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#",
+      "a",
+      "a"
+    ],
+    "key": {
+      "#": {
+        "item": "ic2:bronze_ingot"
+      },
+      "a":{
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ic2:bronze_shovel"
+    }
+  }
+}

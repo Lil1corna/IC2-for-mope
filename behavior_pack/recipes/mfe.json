@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:mfe" },
+    "tags": ["crafting_table"],
+    "pattern": ["#B#", "BMB", "#B#"],
+    "key": {
+      "#": { "item": "ic2:gold_cable" },
+      "B": { "item": "ic2:battery" },
+      "M": { "item": "ic2:machine_case" }
+    },
+    "unlock": [{ "item": "ic2:machine_case" }],
+    "result": { "item": "ic2:mfe", "count": 1 }
+  }
+}

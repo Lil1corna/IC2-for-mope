@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:forge_hammer",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": false,
+      "minecraft:durability": {
+        "max_durability": 80
+      },
+      "minecraft:icon": "ic2:forge_hammer",
+      "minecraft:tags": {
+        "tags": [
+          "ic2:forge_hammer"
+        ]
+      }
+    }
+  }
+}

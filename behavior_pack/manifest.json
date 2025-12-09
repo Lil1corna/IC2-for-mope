@@ -1,0 +1,51 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Industrial Craft 2 Experimental для Minecraft Bedrock - полная адаптация IC2 с электричеством, машинами, реактором и продвинутой бронёй",
+    "name": "Industrial Craft 2 Experimental",
+    "uuid": "30027843-0c97-4509-8438-9762a27580ca",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 80]
+  },
+  "modules": [
+    {
+      "description": "Behavior Pack Module",
+      "type": "data",
+      "uuid": "945dfee5-390f-49a8-83ba-e121fcc6cda8",
+      "version": [0, 0, 0]
+    },
+    {
+      "description": "Script API Module Dev",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "29f274d5-088d-4765-924e-c42d0586ec1c",
+      "version": [1, 0, 0],
+      "entry": "scripts/Main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "version": [1, 0, 0],
+      "uuid": "d4e5f6a7-b8c9-0123-def0-123456789abd"
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.1.0-beta"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0-beta"
+    },
+    {
+      "module_name": "@minecraft/debug-utilities",
+      "version": "1.0.0-beta"
+    }
+  ],
+  "capabilities": [ "script_eval" ],
+  "metadata": {
+    "product_type": "addon",
+    "authors": [
+      "lil_milano"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:empty_cell",
+      "menu_category": {
+        "category": "items",
+        "group": "ic2:itemGroup.cell"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ic2:empty_cell",
+      "tendrock:bucket": {},
+      "minecraft:tags": {
+        "tags": ["ic2:buckets", "tendrock:buckets"]
+      }
+    }
+  }
+}

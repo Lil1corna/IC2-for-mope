@@ -1,0 +1,48 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:smithing_table",
+      "menu_category": {
+        "category": "construction",
+        "group": "ic2:itemGroup.name.general"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:material_instances": {
+        "up": {
+          "texture": "ic2:smithing_table_top",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "ic2:smithing_table_bottom",
+          "render_method": "opaque"
+        },
+        "*": {
+          "texture": "ic2:smithing_table_sides",
+          "render_method": "opaque"
+        },
+        "south": {
+          "texture": "ic2:smithing_table_front",
+          "render_method": "opaque"
+        },
+        "north": {
+          "texture": "ic2:smithing_table_front",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "ic2:enable_interact": true,
+      "tag:script_data_driven": {},
+      "tag:ic2:container:1": {},
+      "tag:ic2:container_inaccessible": {},
+      "tag:wood": {}
+    }
+  }
+}

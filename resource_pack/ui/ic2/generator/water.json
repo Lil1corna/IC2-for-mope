@@ -1,0 +1,110 @@
+{
+  "namespace": "ic2:water_generator",
+  "title_label": {
+    "type": "label",
+    "offset": [0, -12],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "tile.ic2:water_generator.name",
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "output_arrow_image": {
+    "type": "image",
+    "layer": 1,
+    "texture": "textures/ui/common/arrow/empty/right_48",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [48, 15],
+    "offset": [4, 18]
+  },
+  "entry_panel": {
+    "type": "panel",
+    "size": [54, 54],
+    "offset": [0, 16],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "title@title_label": {}
+      },
+      {
+        "output_arrow_image@output_arrow_image": {}
+      },
+      {
+        "slot_grid": {
+          "type": "grid",
+          "grid_dimensions": [1, 4],
+          "size": [54, 54],
+          "collection_name": "container_items",
+          "grid_item_template": "common.container_item",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$item_collection_name": "container_items",
+          "controls": [
+            {
+              "input_panel": {
+                "type": "panel",
+                "grid_position": [0, 0],
+                "controls": [
+                  {
+                    "input_slot@common.container_item": {
+                      "offset": [-32, 4]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "charge_panel": {
+                "type": "panel",
+                "grid_position": [0, 1],
+                "controls": [
+                  {
+                    "output_slot@common.container_item": {
+                      "offset": [-32, 26]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "output_panel": {
+                "type": "panel",
+                "grid_position": [0, 2],
+                "controls": [
+                  {
+                    "output_slot@common.container_item": {
+                      "offset": [40, 12]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "water_progress": {
+                "type": "panel",
+                "grid_position": [0, 3],
+                "controls": [
+                  {
+                    "water_progress@common.container_item": {
+                      "ignored": false,
+                      "$item_collection_name": "container_items",
+                      "$cell_image_size": [16, 16],
+                      "$item_renderer_size": [16, 16],
+                      "$cell_overlay_ref": "ic2:common.invisible",
+                      "$background_images": "ic2:common.invisible",
+                      "focus_enabled": false,
+                      "size": [0, 0],
+                      "offset": [-32, -18]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

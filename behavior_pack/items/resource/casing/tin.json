@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:tin_casing",
+      "menu_category": {
+        "category": "items",
+        "group": "ic2:itemGroup.name.casing"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ic2:tin_casing"
+    }
+  }
+}

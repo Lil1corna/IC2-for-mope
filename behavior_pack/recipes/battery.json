@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:battery"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " C ",
+            "TRT",
+            "TRT"
+        ],
+        "key": {
+            "C": { "item": "ic2:tin_cable", "data": 1 },
+            "T": { "item": "ic2:tin_ingot" },
+            "R": { "item": "minecraft:redstone" }
+        },
+        "result": {
+            "item": "ic2:battery",
+            "count": 1
+        }
+    }
+}

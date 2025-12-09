@@ -1,0 +1,138 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:lv_transformer",
+      "states": {
+        "ic2:is_activated": [false, true]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:facing_direction"],
+          "y_rotation_offset": 180
+        }
+      },
+      "menu_category": {
+        "category": "construction",
+        "group": "ic2:itemGroup.name.transformer"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 10.0
+      },
+      "minecraft:loot": "loot_tables/machine/basic_drop.json",
+      
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:lv_transformer_sides",
+          "render_method": "opaque"
+        },
+        "south": {
+          "texture": "ic2:lv_transformer_front",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "ic2:lv_transformer_up_down",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "ic2:lv_transformer_up_down",
+          "render_method": "opaque"
+        }
+      },
+      "ic2:enable_tick": true,
+      "ic2:enable_interact": true,
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [1, 1]
+      },
+      "tag:script_data_driven": {},
+      "tag:ic2:transformer": {},
+      "tag:ic2:cable_connectable": {},
+      "tag:metal": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 180, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 90, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, -90, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'up'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [-90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:is_activated') == false",
+        "components": {
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:is_activated') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:lv_transformer_sides_activated",
+              "render_method": "opaque"
+            },
+            "south": {
+              "texture": "ic2:lv_transformer_front_activated",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "ic2:lv_transformer_up_down_activated",
+              "render_method": "opaque"
+            },
+            "down": {
+              "texture": "ic2:lv_transformer_up_down_activated",
+              "render_method": "opaque"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

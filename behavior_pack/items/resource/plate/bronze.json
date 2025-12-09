@@ -1,0 +1,15 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:bronze_plate",
+      "menu_category": {
+        "category": "items",
+        "group": "ic2:itemGroup.name.plate"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ic2:bronze_plate"
+    }
+  }
+}

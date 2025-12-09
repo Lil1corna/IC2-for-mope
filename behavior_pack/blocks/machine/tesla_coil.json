@@ -1,0 +1,50 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:tesla_coil",
+      "states": {
+        "ic2:is_activated": [false, true]
+      },
+      "menu_category": {
+        "category": "construction",
+        "group": "ic2:itemGroup.name.machine"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 10.0
+      },
+      "minecraft:loot": "loot_tables/machine/basic_drop.json",
+      "ic2:enable_tick": true,
+      "ic2:enable_interact": true,
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [1, 1]
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:tesla_coil_sides",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "ic2:tesla_coil_bottomtop",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "ic2:tesla_coil_bottomtop",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "tag:script_data_driven": {},
+      "tag:ic2:machine": {},
+      "tag:ic2:cable_connectable": {},
+      "tag:dismantlable": {},
+      "tag:metal": {}
+    }
+  }
+}

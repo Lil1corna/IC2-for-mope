@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:macerator"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "fff",
+      "cbc",
+      " e "
+    ],
+    "key": {
+      "b": {
+        "item": "ic2:machine_basic_casing"
+      },
+      "e": {
+        "item": "ic2:circuit"
+      },
+      "c": {
+        "item": "minecraft:cobblestone"
+      },
+      "f": {
+        "item": "minecraft:flint"
+      }
+    },
+    "result": {
+      "item": "ic2:macerator"
+    }
+  }
+}

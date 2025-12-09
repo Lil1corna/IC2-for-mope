@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "ic2:lv_transformer" },
+    "tags": ["crafting_table"],
+    "pattern": ["#P#", "PCP", "#P#"],
+    "key": {
+      "#": { "item": "minecraft:planks" },
+      "P": { "item": "ic2:tin_cable" },
+      "C": { "item": "ic2:copper_cable" }
+    },
+    "unlock": [{ "item": "ic2:copper_cable" }],
+    "result": { "item": "ic2:lv_transformer", "count": 1 }
+  }
+}

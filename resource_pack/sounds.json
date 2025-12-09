@@ -1,0 +1,42 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "ic2:container:0": {
+        "events": {
+          "ambient": "container.silence",
+          "death": "container.silence",
+          "hurt": "container.silence"
+        },
+        "pitch": [
+          0.0,
+          0.0
+        ],
+        "volume": 0.0
+      },
+      "ic2:container:2": {
+        "events": {
+          "ambient": "container.silence",
+          "death": "container.silence",
+          "hurt": "container.silence"
+        },
+        "pitch": [
+          0.0,
+          0.0
+        ],
+        "volume": 0.0
+      },
+      "ic2:container:7": {
+        "events": {
+          "ambient": "container.silence",
+          "death": "container.silence",
+          "hurt": "container.silence"
+        },
+        "pitch": [
+          0.0,
+          0.0
+        ],
+        "volume": 0.0
+      }
+    }
+  }
+}

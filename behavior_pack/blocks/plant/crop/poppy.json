@@ -1,0 +1,143 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:crop_poppy",
+      "states": {
+        "ic2:growth_stage": [0, 1, 2, 3, 4, 5, 6, 7]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.01
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2
+      },
+      "ic2:enable_tick": true,
+      "ic2:enable_interact": true,
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [
+          1, 1
+        ]
+      },
+      "minecraft:loot": "loot_tables/plant/poppy.json",
+      "minecraft:geometry": "minecraft:geometry.cross",
+      "minecraft:collision_box": false,
+      "minecraft:selection_box": {
+        "origin": [
+          -4, 0, -4
+        ],
+        "size": [
+          8, 16, 8
+        ]
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:crop_poppy",
+          "render_method": "alpha_test",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:placement_filter": {
+        "allowed_faces": ["up"],
+        "conditions": [
+          {
+            "allowed_faces": ["up"],
+            "block_filter": [
+              "minecraft:grass",
+              "minecraft:dirt",
+              "minecraft:podzol"
+            ]
+          }
+        ]
+      },
+      "tag:ic2:crop": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_0"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_1"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_2"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_3"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_4"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_5"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_6"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 7",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_poppy_7"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

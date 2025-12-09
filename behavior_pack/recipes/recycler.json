@@ -1,0 +1,24 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:recycler"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "GDG",
+            "DMD",
+            "GCG"
+        ],
+        "key": {
+            "G": { "item": "minecraft:glowstone_dust" },
+            "D": { "item": "minecraft:dirt" },
+            "M": { "item": "ic2:machine_case" },
+            "C": { "item": "ic2:electronic_circuit" }
+        },
+        "result": {
+            "item": "ic2:recycler",
+            "count": 1
+        }
+    }
+}

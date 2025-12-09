@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:electric_wrench"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "w",
+      "p"
+    ],
+    "key": {
+      "w": {
+        "item": "ic2:wrench"
+      },
+      "p": {
+        "item": "ic2:small_power_unit"
+      }
+    },
+    "result": {
+      "item": "ic2:electric_wrench"
+    }
+  }
+}

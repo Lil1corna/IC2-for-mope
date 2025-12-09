@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ic2:furnace_crushed_copper_ore"
+    },
+    "tags": ["furnace", "blast_furnace"],
+    "input": "ic2:crushed_copper_ore",
+    "output": "minecraft:copper_ingot"
+  }
+}

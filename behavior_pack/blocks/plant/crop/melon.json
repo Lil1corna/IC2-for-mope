@@ -1,0 +1,128 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:crop_melon",
+      "states": {
+        "ic2:growth_stage": [0, 1, 2, 3, 4, 5, 6, 7]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.0
+      },
+      "minecraft:loot": "loot_tables/plant/melon.json",
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [2400, 4800]
+      },
+      "minecraft:geometry": "minecraft:geometry.cross",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:crop_melon",
+          "render_method": "alpha_test",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:placement_filter": {
+        "allowed_faces": ["up"],
+        "conditions": [
+          {
+            "allowed_faces": ["up"],
+            "block_filter": [
+              "minecraft:farmland",
+              "minecraft:grass",
+              "minecraft:dirt"
+            ]
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_0"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_1"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_2"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_3"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_4"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_5"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_6"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:growth_stage') == 7",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:crop_melon_7"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

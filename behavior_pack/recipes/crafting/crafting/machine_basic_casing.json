@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:machine_basic_casing"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "iii",
+      "i i",
+      "iii"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:iron_plate"
+      }
+    },
+    "result": {
+      "item": "ic2:machine_basic_casing"
+    }
+  }
+}

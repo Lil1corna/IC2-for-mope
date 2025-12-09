@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:cutter",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": false,
+      "minecraft:durability": {
+        "max_durability": 350
+      },
+      "minecraft:enchantable": {
+        "value": 9,
+        "slot": "shears"
+      },
+      "minecraft:icon": "ic2:cutter",
+      "minecraft:tags": {
+        "tags": [
+          "ic2:cutter"
+        ]
+      }
+    }
+  }
+}

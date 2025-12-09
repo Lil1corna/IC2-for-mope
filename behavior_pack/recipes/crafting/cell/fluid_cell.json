@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:fluid_cell"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " i ",
+      "i#i",
+      " i "
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:tin_casing"
+      },
+      "#": {
+        "item": "minecraft:glass_pane"
+      }
+    },
+    "result": [
+      {
+        "item": "ic2:empty_cell"
+      }
+    ]
+  }
+}

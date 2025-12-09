@@ -1,0 +1,54 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "ic2:wooden_rotor",
+              "name": "ic2:itemGroup.name.rotor"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "ic2:crushed_copper_ore",
+              "name": "ic2:itemGroup.name.crushed"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "ic2:copper_dust",
+              "name": "ic2:itemGroup.name.dust"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "ic2:copper_plate",
+              "name": "ic2:itemGroup.name.plate"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "ic2:copper_casing",
+              "name": "ic2:itemGroup.name.casing"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "ic2:copper_cable",
+              "name": "ic2:itemGroup.name.cable"
+            },
+            "items": []
+          }
+        ]
+      }
+    ]
+  }
+}

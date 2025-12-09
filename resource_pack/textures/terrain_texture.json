@@ -1,0 +1,1024 @@
+{
+  "resource_pack_name": "ic2",
+  "texture_name": "atlas.terrain",
+  "padding": 5,
+  "num_mip_levels": 4,
+  "texture_data": {
+    
+    "ic2:invisible": {
+      "textures": "textures/blocks/invisible"
+    },
+    "ic2:general_machine_top": {
+      "textures": "textures/blocks/general/machine/top"
+    },
+    "ic2:general_machine_bottom": {
+      "textures": "textures/blocks/general/machine/bottom"
+    },
+    "ic2:general_machine_sides": {
+      "textures": "textures/blocks/general/machine/sides"
+    },
+    "ic2:smithing_table_top": {
+      "textures": "textures/blocks/general/smithing/top"
+    },
+    "ic2:smithing_table_sides": {
+      "textures": "textures/blocks/general/smithing/sides"
+    },
+    "ic2:smithing_table_front": {
+      "textures": "textures/blocks/general/smithing/front"
+    },
+    "ic2:smithing_table_bottom": {
+      "textures": "textures/blocks/general/smithing/bottom"
+    },
+    
+    "ic2:deepslate_uranium_ore": {
+      "textures": "textures/blocks/ore/deepslate_uranium_ore"
+    },
+    "ic2:deepslate_tin_ore": {
+      "textures": "textures/blocks/ore/deepslate_tin_ore"
+    },
+    "ic2:deepslate_lead_ore": {
+      "textures": "textures/blocks/ore/deepslate_lead_ore"
+    },
+    "ic2:tin_ore": {
+      "textures": "textures/blocks/ore/tin_ore"
+    },
+    "ic2:lead_ore": {
+      "textures": "textures/blocks/ore/lead_ore"
+    },
+    "ic2:uranium_ore": {
+      "textures": "textures/blocks/ore/uranium_ore"
+    },
+    
+    "ic2:tin_block": {
+      "textures": "textures/blocks/ore/ingot_block/tin_block"
+    },
+    "ic2:lead_block": {
+      "textures": "textures/blocks/ore/ingot_block/lead_block"
+    },
+    "ic2:bronze_block": {
+      "textures": "textures/blocks/ore/ingot_block/bronze_block"
+    },
+    "ic2:steel_block": {
+      "textures": "textures/blocks/ore/ingot_block/steel_block"
+    },
+    "ic2:uranium_block_bottomtop": {
+      "textures": "textures/blocks/ore/ingot_block/uranium_bottomtop"
+    },
+    "ic2:uranium_block_sides": {
+      "textures": "textures/blocks/ore/ingot_block/uranium_sides"
+    },
+    
+    "ic2:rubber_log_bottomtop": {
+      "textures": "textures/blocks/plants/wood/rubber_wood_bottomtop"
+    },
+    "ic2:rubber_log_dry_front": {
+      "textures": "textures/blocks/plants/wood/rubber_wood_dry_front"
+    },
+    "ic2:rubber_log_wet_front": {
+      "textures": "textures/blocks/plants/wood/rubber_wood_wet_front"
+    },
+    "ic2:rubber_log_sides": {
+      "textures": "textures/blocks/plants/wood/rubber_wood_sides"
+    },
+    "ic2:stripped_rubber_log": {
+      "textures": "textures/blocks/plants/wood/stripped_rubber_log"
+    },
+    "ic2:stripped_rubber_log_top": {
+      "textures": "textures/blocks/plants/wood/stripped_rubber_log_top"
+    },
+    
+    "ic2:crop_stick": {
+      "textures": "textures/blocks/plants/crop/stick"
+    },
+    "ic2:crop_stick_upgraded": {
+      "textures": "textures/blocks/plants/crop/stick_upgraded"
+    },
+    "ic2:crop_cocoa_0": {
+      "textures": "textures/blocks/plants/crop/cocoa_0"
+    },
+    "ic2:crop_cocoa_1": {
+      "textures": "textures/blocks/plants/crop/cocoa_1"
+    },
+    "ic2:crop_cocoa_2": {
+      "textures": "textures/blocks/plants/crop/cocoa_2"
+    },
+    "ic2:crop_cocoa_3": {
+      "textures": "textures/blocks/plants/crop/cocoa_3"
+    },
+    "ic2:crop_cocoa_4": {
+      "textures": "textures/blocks/plants/crop/cocoa_4"
+    },
+    "ic2:crop_cocoa_5": {
+      "textures": "textures/blocks/plants/crop/cocoa_5"
+    },
+    "ic2:crop_cocoa_6": {
+      "textures": "textures/blocks/plants/crop/cocoa_6"
+    },
+    "ic2:crop_cocoa_7": {
+      "textures": "textures/blocks/plants/crop/cocoa_7"
+    },
+    "ic2:crop_aurelia_0": {
+      "textures": "textures/blocks/plants/crop/aurelia_0"
+    },
+    "ic2:crop_aurelia_1": {
+      "textures": "textures/blocks/plants/crop/aurelia_1"
+    },
+    "ic2:crop_aurelia_2": {
+      "textures": "textures/blocks/plants/crop/aurelia_2"
+    },
+    "ic2:crop_aurelia_3": {
+      "textures": "textures/blocks/plants/crop/aurelia_3"
+    },
+    "ic2:crop_aurelia_4": {
+      "textures": "textures/blocks/plants/crop/aurelia_4"
+    },
+    "ic2:crop_beetroot_0": {
+      "textures": "textures/blocks/plants/crop/beetroots_0"
+    },
+    "ic2:crop_beetroot_1": {
+      "textures": "textures/blocks/plants/crop/beetroots_1"
+    },
+    "ic2:crop_beetroot_2": {
+      "textures": "textures/blocks/plants/crop/beetroots_2"
+    },
+    "ic2:crop_beetroot_3": {
+      "textures": "textures/blocks/plants/crop/beetroots_3"
+    },
+    "ic2:crop_beetroot_4": {
+      "textures": "textures/blocks/plants/crop/beetroots_4"
+    },
+    "ic2:crop_beetroot_5": {
+      "textures": "textures/blocks/plants/crop/beetroots_5"
+    },
+    "ic2:crop_beetroot_6": {
+      "textures": "textures/blocks/plants/crop/beetroots_6"
+    },
+    "ic2:crop_beetroot_7": {
+      "textures": "textures/blocks/plants/crop/beetroots_7"
+    },
+    "ic2:crop_blackthorn_0": {
+      "textures": "textures/blocks/plants/crop/blackthorn_0"
+    },
+    "ic2:crop_blackthorn_1": {
+      "textures": "textures/blocks/plants/crop/blackthorn_1"
+    },
+    "ic2:crop_blackthorn_2": {
+      "textures": "textures/blocks/plants/crop/blackthorn_2"
+    },
+    "ic2:crop_blackthorn_3": {
+      "textures": "textures/blocks/plants/crop/blackthorn_3"
+    },
+    "ic2:crop_brown_mushroom_0": {
+      "textures": "textures/blocks/plants/crop/brown_mushroom_0"
+    },
+    "ic2:crop_brown_mushroom_1": {
+      "textures": "textures/blocks/plants/crop/brown_mushroom_1"
+    },
+    "ic2:crop_brown_mushroom_2": {
+      "textures": "textures/blocks/plants/crop/brown_mushroom_2"
+    },
+    "ic2:crop_brown_mushroom_3": {
+      "textures": "textures/blocks/plants/crop/brown_mushroom_3"
+    },
+    "ic2:crop_carrot_0": {
+      "textures": "textures/blocks/plants/crop/carrots_0"
+    },
+    "ic2:crop_carrot_1": {
+      "textures": "textures/blocks/plants/crop/carrots_1"
+    },
+    "ic2:crop_carrot_2": {
+      "textures": "textures/blocks/plants/crop/carrots_2"
+    },
+    "ic2:crop_carrot_3": {
+      "textures": "textures/blocks/plants/crop/carrots_3"
+    },
+    "ic2:crop_carrot_4": {
+      "textures": "textures/blocks/plants/crop/carrots_4"
+    },
+    "ic2:crop_carrot_5": {
+      "textures": "textures/blocks/plants/crop/carrots_5"
+    },
+    "ic2:crop_carrot_6": {
+      "textures": "textures/blocks/plants/crop/carrots_6"
+    },
+    "ic2:crop_carrot_7": {
+      "textures": "textures/blocks/plants/crop/carrots_7"
+    },
+    "ic2:crop_coffee_0": {
+      "textures": "textures/blocks/plants/crop/coffee_0"
+    },
+    "ic2:crop_coffee_1": {
+      "textures": "textures/blocks/plants/crop/coffee_1"
+    },
+    "ic2:crop_coffee_2": {
+      "textures": "textures/blocks/plants/crop/coffee_2"
+    },
+    "ic2:crop_coffee_3": {
+      "textures": "textures/blocks/plants/crop/coffee_3"
+    },
+    "ic2:crop_coffee_4": {
+      "textures": "textures/blocks/plants/crop/coffee_4"
+    },
+    "ic2:crop_coffee_5": {
+      "textures": "textures/blocks/plants/crop/coffee_5"
+    },
+    "ic2:crop_coffee_6": {
+      "textures": "textures/blocks/plants/crop/coffee_6"
+    },
+    "ic2:crop_coffee_7": {
+      "textures": "textures/blocks/plants/crop/coffee_7"
+    },
+    "ic2:crop_cyazint_0": {
+      "textures": "textures/blocks/plants/crop/cyazint_0"
+    },
+    "ic2:crop_cyazint_1": {
+      "textures": "textures/blocks/plants/crop/cyazint_1"
+    },
+    "ic2:crop_cyazint_2": {
+      "textures": "textures/blocks/plants/crop/cyazint_2"
+    },
+    "ic2:crop_cyazint_3": {
+      "textures": "textures/blocks/plants/crop/cyazint_3"
+    },
+    "ic2:crop_cyprium_0": {
+      "textures": "textures/blocks/plants/crop/cyprium_0"
+    },
+    "ic2:crop_cyprium_1": {
+      "textures": "textures/blocks/plants/crop/cyprium_1"
+    },
+    "ic2:crop_cyprium_2": {
+      "textures": "textures/blocks/plants/crop/cyprium_2"
+    },
+    "ic2:crop_cyprium_3": {
+      "textures": "textures/blocks/plants/crop/cyprium_3"
+    },
+    "ic2:crop_dandelion_0": {
+      "textures": "textures/blocks/plants/crop/dandelion_0"
+    },
+    "ic2:crop_dandelion_1": {
+      "textures": "textures/blocks/plants/crop/dandelion_1"
+    },
+    "ic2:crop_dandelion_2": {
+      "textures": "textures/blocks/plants/crop/dandelion_2"
+    },
+    "ic2:crop_dandelion_3": {
+      "textures": "textures/blocks/plants/crop/dandelion_3"
+    },
+    "ic2:crop_dandelion_4": {
+      "textures": "textures/blocks/plants/crop/dandelion_4"
+    },
+    "ic2:crop_dandelion_5": {
+      "textures": "textures/blocks/plants/crop/dandelion_5"
+    },
+    "ic2:crop_dandelion_6": {
+      "textures": "textures/blocks/plants/crop/dandelion_6"
+    },
+    "ic2:crop_dandelion_7": {
+      "textures": "textures/blocks/plants/crop/dandelion_7"
+    },
+    "ic2:crop_eating_plant_0": {
+      "textures": "textures/blocks/plants/crop/eating_plant_0"
+    },
+    "ic2:crop_eating_plant_1": {
+      "textures": "textures/blocks/plants/crop/eating_plant_1"
+    },
+    "ic2:crop_eating_plant_2": {
+      "textures": "textures/blocks/plants/crop/eating_plant_2"
+    },
+    "ic2:crop_eating_plant_3": {
+      "textures": "textures/blocks/plants/crop/eating_plant_3"
+    },
+    "ic2:crop_eating_plant_4": {
+      "textures": "textures/blocks/plants/crop/eating_plant_4"
+    },
+    "ic2:crop_eating_plant_5": {
+      "textures": "textures/blocks/plants/crop/eating_plant_5"
+    },
+    "ic2:crop_ferru_0": {
+      "textures": "textures/blocks/plants/crop/ferru_0"
+    },
+    "ic2:crop_ferru_1": {
+      "textures": "textures/blocks/plants/crop/ferru_1"
+    },
+    "ic2:crop_ferru_2": {
+      "textures": "textures/blocks/plants/crop/ferru_2"
+    },
+    "ic2:crop_ferru_3": {
+      "textures": "textures/blocks/plants/crop/ferru_3"
+    },
+    "ic2:crop_flax_0": {
+      "textures": "textures/blocks/plants/crop/flax_0"
+    },
+    "ic2:crop_flax_1": {
+      "textures": "textures/blocks/plants/crop/flax_1"
+    },
+    "ic2:crop_flax_2": {
+      "textures": "textures/blocks/plants/crop/flax_2"
+    },
+    "ic2:crop_flax_3": {
+      "textures": "textures/blocks/plants/crop/flax_3"
+    },
+    "ic2:crop_hops_0": {
+      "textures": "textures/blocks/plants/crop/hops_0"
+    },
+    "ic2:crop_hops_1": {
+      "textures": "textures/blocks/plants/crop/hops_1"
+    },
+    "ic2:crop_hops_2": {
+      "textures": "textures/blocks/plants/crop/hops_2"
+    },
+    "ic2:crop_hops_3": {
+      "textures": "textures/blocks/plants/crop/hops_3"
+    },
+    "ic2:crop_hops_4": {
+      "textures": "textures/blocks/plants/crop/hops_4"
+    },
+    "ic2:crop_hops_5": {
+      "textures": "textures/blocks/plants/crop/hops_5"
+    },
+    "ic2:crop_hops_6": {
+      "textures": "textures/blocks/plants/crop/hops_6"
+    },
+    "ic2:crop_hops_7": {
+      "textures": "textures/blocks/plants/crop/hops_7"
+    },
+    "ic2:crop_infested_0": {
+      "textures": "textures/blocks/plants/crop/infested_0"
+    },
+    "ic2:crop_infested_1": {
+      "textures": "textures/blocks/plants/crop/infested_1"
+    },
+    "ic2:crop_infested_2": {
+      "textures": "textures/blocks/plants/crop/infested_2"
+    },
+    "ic2:crop_infested_3": {
+      "textures": "textures/blocks/plants/crop/infested_3"
+    },
+    "ic2:crop_infested_4": {
+      "textures": "textures/blocks/plants/crop/infested_4"
+    },
+    "ic2:crop_melon_0": {
+      "textures": "textures/blocks/plants/crop/melon_0"
+    },
+    "ic2:crop_melon_1": {
+      "textures": "textures/blocks/plants/crop/melon_1"
+    },
+    "ic2:crop_melon_2": {
+      "textures": "textures/blocks/plants/crop/melon_2"
+    },
+    "ic2:crop_melon_3": {
+      "textures": "textures/blocks/plants/crop/melon_3"
+    },
+    "ic2:crop_melon_4": {
+      "textures": "textures/blocks/plants/crop/melon_4"
+    },
+    "ic2:crop_melon_5": {
+      "textures": "textures/blocks/plants/crop/melon_5"
+    },
+    "ic2:crop_melon_6": {
+      "textures": "textures/blocks/plants/crop/melon_6"
+    },
+    "ic2:crop_melon_7": {
+      "textures": "textures/blocks/plants/crop/melon_7"
+    },
+    "ic2:crop_nether_wart_0": {
+      "textures": "textures/blocks/plants/crop/nether_wart_0"
+    },
+    "ic2:crop_nether_wart_1": {
+      "textures": "textures/blocks/plants/crop/nether_wart_1"
+    },
+    "ic2:crop_nether_wart_2": {
+      "textures": "textures/blocks/plants/crop/nether_wart_2"
+    },
+    "ic2:crop_nether_wart_3": {
+      "textures": "textures/blocks/plants/crop/nether_wart_3"
+    },
+    "ic2:crop_nether_wart_4": {
+      "textures": "textures/blocks/plants/crop/nether_wart_4"
+    },
+    "ic2:crop_nether_wart_5": {
+      "textures": "textures/blocks/plants/crop/nether_wart_5"
+    },
+    "ic2:crop_nether_wart_6": {
+      "textures": "textures/blocks/plants/crop/nether_wart_6"
+    },
+    "ic2:crop_nether_wart_7": {
+      "textures": "textures/blocks/plants/crop/nether_wart_7"
+    },
+    "ic2:crop_plumbiscus_0": {
+      "textures": "textures/blocks/plants/crop/plumbiscus_0"
+    },
+    "ic2:crop_plumbiscus_1": {
+      "textures": "textures/blocks/plants/crop/plumbiscus_1"
+    },
+    "ic2:crop_plumbiscus_2": {
+      "textures": "textures/blocks/plants/crop/plumbiscus_2"
+    },
+    "ic2:crop_plumbiscus_3": {
+      "textures": "textures/blocks/plants/crop/plumbiscus_3"
+    },
+    "ic2:crop_poppy_0": {
+      "textures": "textures/blocks/plants/crop/poppy_0"
+    },
+    "ic2:crop_poppy_1": {
+      "textures": "textures/blocks/plants/crop/poppy_1"
+    },
+    "ic2:crop_poppy_2": {
+      "textures": "textures/blocks/plants/crop/poppy_2"
+    },
+    "ic2:crop_poppy_3": {
+      "textures": "textures/blocks/plants/crop/poppy_3"
+    },
+    "ic2:crop_poppy_4": {
+      "textures": "textures/blocks/plants/crop/poppy_4"
+    },
+    "ic2:crop_poppy_5": {
+      "textures": "textures/blocks/plants/crop/poppy_5"
+    },
+    "ic2:crop_poppy_6": {
+      "textures": "textures/blocks/plants/crop/poppy_6"
+    },
+    "ic2:crop_poppy_7": {
+      "textures": "textures/blocks/plants/crop/poppy_7"
+    },
+    "ic2:crop_potato_0": {
+      "textures": "textures/blocks/plants/crop/potato_0"
+    },
+    "ic2:crop_potato_1": {
+      "textures": "textures/blocks/plants/crop/potato_1"
+    },
+    "ic2:crop_potato_2": {
+      "textures": "textures/blocks/plants/crop/potato_2"
+    },
+    "ic2:crop_potato_3": {
+      "textures": "textures/blocks/plants/crop/potato_3"
+    },
+    "ic2:crop_potato_4": {
+      "textures": "textures/blocks/plants/crop/potato_4"
+    },
+    "ic2:crop_potato_5": {
+      "textures": "textures/blocks/plants/crop/potato_5"
+    },
+    "ic2:crop_potato_6": {
+      "textures": "textures/blocks/plants/crop/potato_6"
+    },
+    "ic2:crop_potato_7": {
+      "textures": "textures/blocks/plants/crop/potato_7"
+    },
+    "ic2:crop_pumpkin_0": {
+      "textures": "textures/blocks/plants/crop/pumpkin_0"
+    },
+    "ic2:crop_pumpkin_1": {
+      "textures": "textures/blocks/plants/crop/pumpkin_1"
+    },
+    "ic2:crop_pumpkin_2": {
+      "textures": "textures/blocks/plants/crop/pumpkin_2"
+    },
+    "ic2:crop_pumpkin_3": {
+      "textures": "textures/blocks/plants/crop/pumpkin_3"
+    },
+    "ic2:crop_pumpkin_4": {
+      "textures": "textures/blocks/plants/crop/pumpkin_4"
+    },
+    "ic2:crop_pumpkin_5": {
+      "textures": "textures/blocks/plants/crop/pumpkin_5"
+    },
+    "ic2:crop_pumpkin_6": {
+      "textures": "textures/blocks/plants/crop/pumpkin_6"
+    },
+    "ic2:crop_pumpkin_7": {
+      "textures": "textures/blocks/plants/crop/pumpkin_7"
+    },
+    "ic2:crop_red_mushroom_0": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_0"
+    },
+    "ic2:crop_red_mushroom_1": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_1"
+    },
+    "ic2:crop_red_mushroom_2": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_2"
+    },
+    "ic2:crop_red_mushroom_3": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_3"
+    },
+    "ic2:crop_red_mushroom_4": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_4"
+    },
+    "ic2:crop_red_mushroom_5": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_5"
+    },
+    "ic2:crop_red_mushroom_6": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_6"
+    },
+    "ic2:crop_red_mushroom_7": {
+      "textures": "textures/blocks/plants/crop/red_mushroom_7"
+    },
+    "ic2:crop_red_wheat_0": {
+      "textures": "textures/blocks/plants/crop/red_wheat_0"
+    },
+    "ic2:crop_red_wheat_1": {
+      "textures": "textures/blocks/plants/crop/red_wheat_1"
+    },
+    "ic2:crop_red_wheat_2": {
+      "textures": "textures/blocks/plants/crop/red_wheat_2"
+    },
+    "ic2:crop_red_wheat_3": {
+      "textures": "textures/blocks/plants/crop/red_wheat_3"
+    },
+    "ic2:crop_red_wheat_4": {
+      "textures": "textures/blocks/plants/crop/red_wheat_4"
+    },
+    "ic2:crop_red_wheat_5": {
+      "textures": "textures/blocks/plants/crop/red_wheat_5"
+    },
+    "ic2:crop_red_wheat_6": {
+      "textures": "textures/blocks/plants/crop/red_wheat_6"
+    },
+    "ic2:crop_reed_0": {
+      "textures": "textures/blocks/plants/crop/reed_0"
+    },
+    "ic2:crop_reed_1": {
+      "textures": "textures/blocks/plants/crop/reed_1"
+    },
+    "ic2:crop_reed_2": {
+      "textures": "textures/blocks/plants/crop/reed_2"
+    },
+    "ic2:crop_reed_3": {
+      "textures": "textures/blocks/plants/crop/reed_3"
+    },
+    "ic2:crop_reed_4": {
+      "textures": "textures/blocks/plants/crop/reed_4"
+    },
+    "ic2:crop_reed_5": {
+      "textures": "textures/blocks/plants/crop/reed_5"
+    },
+    "ic2:crop_reed_6": {
+      "textures": "textures/blocks/plants/crop/reed_6"
+    },
+    "ic2:crop_reed_7": {
+      "textures": "textures/blocks/plants/crop/reed_7"
+    },
+    "ic2:crop_shining_0": {
+      "textures": "textures/blocks/plants/crop/shining_0"
+    },
+    "ic2:crop_shining_1": {
+      "textures": "textures/blocks/plants/crop/shining_1"
+    },
+    "ic2:crop_shining_2": {
+      "textures": "textures/blocks/plants/crop/shining_2"
+    },
+    "ic2:crop_shining_3": {
+      "textures": "textures/blocks/plants/crop/shining_3"
+    },
+    "ic2:crop_shining_4": {
+      "textures": "textures/blocks/plants/crop/shining_4"
+    },
+    "ic2:crop_stagnium_0": {
+      "textures": "textures/blocks/plants/crop/stagnium_0"
+    },
+    "ic2:crop_stagnium_1": {
+      "textures": "textures/blocks/plants/crop/stagnium_1"
+    },
+    "ic2:crop_stagnium_2": {
+      "textures": "textures/blocks/plants/crop/stagnium_2"
+    },
+    "ic2:crop_stagnium_3": {
+      "textures": "textures/blocks/plants/crop/stagnium_3"
+    },
+    "ic2:crop_sticky_reed_0": {
+      "textures": "textures/blocks/plants/crop/sticky_reed_0"
+    },
+    "ic2:crop_sticky_reed_1": {
+      "textures": "textures/blocks/plants/crop/sticky_reed_1"
+    },
+    "ic2:crop_sticky_reed_2": {
+      "textures": "textures/blocks/plants/crop/sticky_reed_2"
+    },
+    "ic2:crop_sticky_reed_3": {
+      "textures": "textures/blocks/plants/crop/sticky_reed_3"
+    },
+    "ic2:crop_terra_wart_0": {
+      "textures": "textures/blocks/plants/crop/terra_wart_0"
+    },
+    "ic2:crop_terra_wart_1": {
+      "textures": "textures/blocks/plants/crop/terra_wart_1"
+    },
+    "ic2:crop_terra_wart_2": {
+      "textures": "textures/blocks/plants/crop/terra_wart_2"
+    },
+    "ic2:crop_tulip_0": {
+      "textures": "textures/blocks/plants/crop/tulip_0"
+    },
+    "ic2:crop_tulip_1": {
+      "textures": "textures/blocks/plants/crop/tulip_1"
+    },
+    "ic2:crop_tulip_2": {
+      "textures": "textures/blocks/plants/crop/tulip_2"
+    },
+    "ic2:crop_tulip_3": {
+      "textures": "textures/blocks/plants/crop/tulip_3"
+    },
+    "ic2:crop_tulip_4": {
+      "textures": "textures/blocks/plants/crop/tulip_4"
+    },
+    "ic2:crop_tulip_5": {
+      "textures": "textures/blocks/plants/crop/tulip_5"
+    },
+    "ic2:crop_tulip_6": {
+      "textures": "textures/blocks/plants/crop/tulip_6"
+    },
+    "ic2:crop_tulip_7": {
+      "textures": "textures/blocks/plants/crop/tulip_7"
+    },
+    "ic2:crop_cactus_0": {
+      "textures": "textures/blocks/plants/crop/cactus_0"
+    },
+    "ic2:crop_cactus_1": {
+      "textures": "textures/blocks/plants/crop/cactus_1"
+    },
+    "ic2:crop_cactus_2": {
+      "textures": "textures/blocks/plants/crop/cactus_2"
+    },
+    "ic2:crop_cactus_3": {
+      "textures": "textures/blocks/plants/crop/cactus_3"
+    },
+    "ic2:crop_cactus_4": {
+      "textures": "textures/blocks/plants/crop/cactus_4"
+    },
+    "ic2:crop_cactus_5": {
+      "textures": "textures/blocks/plants/crop/cactus_5"
+    },
+    "ic2:crop_cactus_6": {
+      "textures": "textures/blocks/plants/crop/cactus_6"
+    },
+    "ic2:crop_cactus_7": {
+      "textures": "textures/blocks/plants/crop/cactus_7"
+    },
+    "ic2:crop_malachite_0": {
+      "textures": "textures/blocks/plants/crop/malachite_0"
+    },
+    "ic2:crop_malachite_1": {
+      "textures": "textures/blocks/plants/crop/malachite_1"
+    },
+    "ic2:crop_malachite_2": {
+      "textures": "textures/blocks/plants/crop/malachite_2"
+    },
+    "ic2:crop_malachite_3": {
+      "textures": "textures/blocks/plants/crop/malachite_3"
+    },
+    "ic2:crop_malachite_4": {
+      "textures": "textures/blocks/plants/crop/malachite_4"
+    },
+    "ic2:crop_malachite_5": {
+      "textures": "textures/blocks/plants/crop/malachite_5"
+    },
+    "ic2:crop_malachite_6": {
+      "textures": "textures/blocks/plants/crop/malachite_6"
+    },
+    "ic2:crop_malachite_7": {
+      "textures": "textures/blocks/plants/crop/malachite_7"
+    },
+    "ic2:crop_venomilia_0": {
+      "textures": "textures/blocks/plants/crop/venomilia_0"
+    },
+    "ic2:crop_venomilia_1": {
+      "textures": "textures/blocks/plants/crop/venomilia_1"
+    },
+    "ic2:crop_venomilia_2": {
+      "textures": "textures/blocks/plants/crop/venomilia_2"
+    },
+    "ic2:crop_venomilia_3": {
+      "textures": "textures/blocks/plants/crop/venomilia_3"
+    },
+    "ic2:crop_venomilia_4": {
+      "textures": "textures/blocks/plants/crop/venomilia_4"
+    },
+    "ic2:crop_venomilia_5": {
+      "textures": "textures/blocks/plants/crop/venomilia_5"
+    },
+    "ic2:crop_weed_0": {
+      "textures": "textures/blocks/plants/crop/weed_0"
+    },
+    "ic2:crop_weed_1": {
+      "textures": "textures/blocks/plants/crop/weed_1"
+    },
+    "ic2:crop_weed_2": {
+      "textures": "textures/blocks/plants/crop/weed_2"
+    },
+    "ic2:crop_weed_3": {
+      "textures": "textures/blocks/plants/crop/weed_3"
+    },
+    "ic2:crop_weed_4": {
+      "textures": "textures/blocks/plants/crop/weed_4"
+    },
+    "ic2:crop_wheat_0": {
+      "textures": "textures/blocks/plants/crop/wheat_0"
+    },
+    "ic2:crop_wheat_1": {
+      "textures": "textures/blocks/plants/crop/wheat_1"
+    },
+    "ic2:crop_wheat_2": {
+      "textures": "textures/blocks/plants/crop/wheat_2"
+    },
+    "ic2:crop_wheat_3": {
+      "textures": "textures/blocks/plants/crop/wheat_3"
+    },
+    "ic2:crop_wheat_4": {
+      "textures": "textures/blocks/plants/crop/wheat_4"
+    },
+    "ic2:crop_wheat_5": {
+      "textures": "textures/blocks/plants/crop/wheat_5"
+    },
+    "ic2:crop_wheat_6": {
+      "textures": "textures/blocks/plants/crop/wheat_6"
+    },
+    "ic2:crop_wheat_7": {
+      "textures": "textures/blocks/plants/crop/wheat_7"
+    },
+    "ic2:rubber_leaves": {
+      "textures": [
+        {
+          "path": "textures/blocks/leaves_birch",
+          "tint_color": "#669944"
+        }
+      ]
+    },
+    "ic2:rubber_sapling": {
+      "textures": "textures/items/plants/rubber_sapling"
+    },
+    
+    "ic2:generator": {
+      "textures": "textures/blocks/generator/fire/front"
+    },
+    "ic2:generator_activated": {
+      "textures": "textures/blocks/generator/fire/front_activated"
+    },
+    "ic2:generator_geo": {
+      "textures": "textures/blocks/generator/geo/front"
+    },
+    "ic2:generator_geo_activated": {
+      "textures": "textures/blocks/generator/geo/front_activated"
+    },
+    "ic2:generator_solar": {
+      "textures": "textures/blocks/generator/solar/top"
+    },
+    "ic2:generator_wind_back": {
+      "textures": "textures/blocks/generator/wind/back"
+    },
+    "ic2:generator_wind": {
+      "textures": "textures/blocks/generator/wind/front"
+    },
+    "ic2:generator_water_back": {
+      "textures": "textures/blocks/generator/water/back"
+    },
+    "ic2:generator_water": {
+      "textures": "textures/blocks/generator/water/front"
+    },
+    "ic2:generator_kinetic_back": {
+      "textures": "textures/blocks/generator/kinetic/back"
+    },
+    "ic2:generator_kinetic_back_activated": {
+      "textures": "textures/blocks/generator/kinetic/back_activated"
+    },
+    "ic2:generator_kinetic": {
+      "textures": "textures/blocks/generator/kinetic/front"
+    },
+    "ic2:kinetic_generator_manual_sides": {
+      "textures": "textures/blocks/kinetic/manual/sides"
+    },
+    "ic2:kinetic_generator_wind": {
+      "textures": "textures/blocks/kinetic/wind/front"
+    },
+    "ic2:kinetic_generator_wind_back": {
+      "textures": "textures/blocks/kinetic/wind/back"
+    },
+    "ic2:kinetic_generator_water": {
+      "textures": "textures/blocks/kinetic/water/front"
+    },
+    "ic2:kinetic_generator_water_back": {
+      "textures": "textures/blocks/kinetic/water/back"
+    },
+    
+    "ic2:machine_macerator": {
+      "textures": "textures/blocks/machine/macerator/front"
+    },
+    "ic2:machine_macerator_top": {
+      "textures": "textures/blocks/machine/macerator/top"
+    },
+    "ic2:machine_macerator_activated": {
+      "textures": "textures/blocks/machine/macerator/front_activated"
+    },
+    "ic2:machine_macerator_top_activated": {
+      "textures": "textures/blocks/machine/macerator/top_activated"
+    },
+    "ic2:machine_extractor": {
+      "textures": "textures/blocks/machine/extractor/front"
+    },
+    "ic2:machine_extractor_activated": {
+      "textures": "textures/blocks/machine/extractor/front_activated"
+    },
+    "ic2:machine_extractor_sides": {
+      "textures": "textures/blocks/machine/extractor/sides"
+    },
+    "ic2:machine_extractor_sides_activated": {
+      "textures": "textures/blocks/machine/extractor/sides_activated"
+    },
+    "ic2:machine_recycler": {
+      "textures": "textures/blocks/machine/recycler/front"
+    },
+    "ic2:machine_recycler_activated": {
+      "textures": "textures/blocks/machine/recycler/front_activated"
+    },
+    "ic2:machine_recycler_top": {
+      "textures": "textures/blocks/machine/recycler/top"
+    },
+    "ic2:machine_recycler_top_activated": {
+      "textures": "textures/blocks/machine/recycler/top_activated"
+    },
+    "ic2:machine_compressor": {
+      "textures": "textures/blocks/machine/compressor/front"
+    },
+    "ic2:machine_compressor_activated": {
+      "textures": "textures/blocks/machine/compressor/front_activated"
+    },
+    "ic2:tesla_coil_sides": {
+      "textures": "textures/blocks/machine/tesla/sides"
+    },
+    "ic2:tesla_coil_bottomtop": {
+      "textures": "textures/blocks/machine/tesla/bottomtop"
+    },
+    
+    "ic2:storage_batbox_back": {
+      "textures": "textures/blocks/wiring/storage/batbox/back"
+    },
+    "ic2:storage_batbox_front": {
+      "textures": "textures/blocks/wiring/storage/batbox/front"
+    },
+    "ic2:storage_batbox_sides": {
+      "textures": "textures/blocks/wiring/storage/batbox/sides"
+    },
+    "ic2:storage_batbox_top": {
+      "textures": "textures/blocks/wiring/storage/batbox/top"
+    },
+    "ic2:storage_batbox_bottom": {
+      "textures": "textures/blocks/wiring/storage/batbox/bottom"
+    },
+    "ic2:storage_cesu_back": {
+      "textures": "textures/blocks/wiring/storage/cesu/back"
+    },
+    "ic2:storage_cesu_front": {
+      "textures": "textures/blocks/wiring/storage/cesu/front"
+    },
+    "ic2:storage_cesu_sides": {
+      "textures": "textures/blocks/wiring/storage/cesu/sides"
+    },
+    "ic2:storage_cesu_bottomtop": {
+      "textures": "textures/blocks/wiring/storage/cesu/bottomtop"
+    },
+    "ic2:storage_mfe_back": {
+      "textures": "textures/blocks/wiring/storage/mfe/back"
+    },
+    "ic2:storage_mfe_front": {
+      "textures": "textures/blocks/wiring/storage/mfe/front"
+    },
+    "ic2:storage_mfe_sides": {
+      "textures": "textures/blocks/wiring/storage/mfe/sides"
+    },
+    "ic2:storage_mfe_bottomtop": {
+      "textures": "textures/blocks/wiring/storage/mfe/bottomtop"
+    },
+    "ic2:storage_mfsu_front": {
+      "textures": "textures/blocks/wiring/storage/mfsu/front"
+    },
+    "ic2:storage_mfsu_sides": {
+      "textures": "textures/blocks/wiring/storage/mfsu/sides"
+    },
+    "ic2:storage_mfsu_bottomtop": {
+      "textures": "textures/blocks/wiring/storage/mfsu/bottomtop"
+    },
+    
+    "ic2:copper_cable": {
+      "textures": "textures/blocks/wiring/cable/copper"
+    },
+    "ic2:insulated_copper_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/copper/black"
+    },
+    "ic2:tin_cable": {
+      "textures": "textures/blocks/wiring/cable/tin"
+    },
+    "ic2:insulated_tin_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/tin/black"
+    },
+    "ic2:gold_cable": {
+      "textures": "textures/blocks/wiring/cable/gold"
+    },
+    "ic2:insulated_gold_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/gold/black"
+    },
+    "ic2:double_insulated_gold_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/gold_double/black"
+    },
+    "ic2:iron_cable": {
+      "textures": "textures/blocks/wiring/cable/iron"
+    },
+    "ic2:insulated_iron_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/iron/black"
+    },
+    "ic2:double_insulated_iron_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/iron_double/black"
+    },
+    "ic2:triple_insulated_iron_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/iron_triple/black"
+    },
+    "ic2:glass_fibre_cable": {
+      "textures": "textures/blocks/wiring/cable/insulated/glass/black"
+    },
+    
+    "ic2:lv_transformer_front": {
+      "textures": "textures/blocks/transformer/low/front"
+    },
+    "ic2:lv_transformer_front_activated": {
+      "textures": "textures/blocks/transformer/low/front_activated"
+    },
+    "ic2:lv_transformer_sides_activated": {
+      "textures": "textures/blocks/transformer/low/sides_activated"
+    },
+    "ic2:lv_transformer_sides": {
+      "textures": "textures/blocks/transformer/low/sides"
+    },
+    "ic2:lv_transformer_up_down": {
+      "textures": "textures/blocks/transformer/low/up_down"
+    },
+    "ic2:lv_transformer_up_down_activated": {
+      "textures": "textures/blocks/transformer/low/up_down_activated"
+    },
+    "ic2:mv_transformer_front": {
+      "textures": "textures/blocks/transformer/medium/front"
+    },
+    "ic2:mv_transformer_front_activated": {
+      "textures": "textures/blocks/transformer/medium/front_activated"
+    },
+    "ic2:mv_transformer_sides_activated": {
+      "textures": "textures/blocks/transformer/medium/sides_activated"
+    },
+    "ic2:mv_transformer_sides": {
+      "textures": "textures/blocks/transformer/medium/sides"
+    },
+    "ic2:mv_transformer_up_down": {
+      "textures": "textures/blocks/transformer/medium/up_down"
+    },
+    "ic2:mv_transformer_up_down_activated": {
+      "textures": "textures/blocks/transformer/medium/up_down_activated"
+    },
+    "ic2:hv_transformer_front": {
+      "textures": "textures/blocks/transformer/high/front"
+    },
+    "ic2:hv_transformer_front_activated": {
+      "textures": "textures/blocks/transformer/high/front_activated"
+    },
+    "ic2:hv_transformer_sides_activated": {
+      "textures": "textures/blocks/transformer/high/sides_activated"
+    },
+    "ic2:hv_transformer_sides": {
+      "textures": "textures/blocks/transformer/high/sides"
+    },
+    "ic2:hv_transformer_up_down": {
+      "textures": "textures/blocks/transformer/high/up_down"
+    },
+    "ic2:hv_transformer_up_down_activated": {
+      "textures": "textures/blocks/transformer/high/up_down_activated"
+    },
+    "ic2:ev_transformer_front": {
+      "textures": "textures/blocks/transformer/extreme/front"
+    },
+    "ic2:ev_transformer_front_activated": {
+      "textures": "textures/blocks/transformer/extreme/front_activated"
+    },
+    "ic2:ev_transformer_sides_activated": {
+      "textures": "textures/blocks/transformer/extreme/sides_activated"
+    },
+    "ic2:ev_transformer_sides": {
+      "textures": "textures/blocks/transformer/extreme/sides"
+    },
+    "ic2:ev_transformer_up_down": {
+      "textures": "textures/blocks/transformer/extreme/up_down"
+    },
+    "ic2:ev_transformer_up_down_activated": {
+      "textures": "textures/blocks/transformer/extreme/up_down_activated"
+    },
+    "ic2:nuclear_reactor": {
+      "textures": "textures/blocks/reactor/nuclear_reactor"
+    },
+    "ic2:nuclear_reactor_active": {
+      "textures": "textures/blocks/reactor/nuclear_reactor_active"
+    },
+    "ic2:reactor_chamber": {
+      "textures": "textures/blocks/reactor/reactor_chamber"
+    },
+    "ic2:reactor_chamber_active": {
+      "textures": "textures/blocks/reactor/reactor_chamber_active"
+    }
+
+
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:machine_basic_casing",
+      "category": "construction",
+      "menu_category": {
+        "category": "construction",
+        "group": "ic2:itemGroup.name.machine.casing"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 4
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:loot": "loot_tables/empty.json",
+      
+
+
+
+
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:general_machine_top",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "tag:metal": {}
+    }
+
+
+
+
+
+
+
+  }
+}

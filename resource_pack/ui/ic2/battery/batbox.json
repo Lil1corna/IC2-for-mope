@@ -1,0 +1,27 @@
+{
+  "namespace": "ic2:batbox",
+  "title_label": {
+    "type": "label",
+    "offset": [0, -3],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "tile.ic2:batbox.name",
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "entry_panel": {
+    "type": "panel",
+    "size": ["100%", "50% - 12px"],
+    "offset": [0, 7],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "title_label@title_label": {}
+      },
+      {
+        "main@ic2:battery.common": {}
+      }
+    ]
+  }
+}

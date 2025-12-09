@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ic2:lead_ingot_by_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ic2:lead_block"
+      }
+    ],
+    "result": {
+      "item": "ic2:lead_ingot",
+      "count": 9
+    }
+  }
+}

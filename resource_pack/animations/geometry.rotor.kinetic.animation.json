@@ -1,0 +1,121 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ic2.rotor.kinetic.stop": {
+      "loop": true,
+      "animation_length": 1,
+      "bones": {
+        "rotor": {
+          "rotation": {
+            "0.0": [0, 0, 0]
+          }
+        }
+      }
+    },
+    "animation.ic2.rotor.kinetic.rotate_1": {
+      "loop": true,
+      "animation_length": 1.6,
+      "bones": {
+        "rotor": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -360]
+          }
+        },
+        "axis": {
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -360]
+          }
+        }
+      }
+    },
+    "animation.ic2.rotor.kinetic.rotate_2": {
+      "loop": true,
+      "animation_length": 1.6,
+      "bones": {
+        "rotor": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -720]
+          }
+        },
+        "axis": {
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -720]
+          }
+        }
+      }
+    },
+    "animation.ic2.rotor.kinetic.rotate_3": {
+      "loop": true,
+      "animation_length": 1.6,
+      "bones": {
+        "rotor": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -1080]
+          }
+        },
+        "axis": {
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -1080]
+          }
+        }
+      }
+    },
+    "animation.ic2.rotor.kinetic.rotate_4": {
+      "loop": true,
+      "animation_length": 1.6,
+      "bones": {
+        "rotor": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -1440]
+          }
+        },
+        "axis": {
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -1440]
+          }
+        }
+      }
+    },
+    "animation.ic2.rotor.kinetic.rotate_overload": {
+      "loop": true,
+      "animation_length": 1.6,
+      "bones": {
+        "rotor": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -2160]
+          }
+        },
+        "axis": {
+          "rotation": {
+            "0.0": [0, 0, 0.01],
+            "1.6": [0, 0, -2160]
+          }
+        }
+      }
+    }
+  }
+}

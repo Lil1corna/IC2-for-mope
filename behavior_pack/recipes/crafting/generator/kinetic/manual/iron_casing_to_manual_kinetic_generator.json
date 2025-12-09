@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:iron_casing_to_manual_kinetic_generator"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "iii",
+      "ili",
+      "iii"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:iron_plate"
+      },
+      "l": {
+        "item": "minecraft:lever"
+      }
+    },
+    "result": {
+      "item": "ic2:manual_kinetic_generator"
+    }
+  }
+}

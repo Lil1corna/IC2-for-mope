@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:gold_cable",
+      "menu_category": {
+        "category": "items",
+        "group": "ic2:itemGroup.name.cable"
+      }
+    },
+    "components": {
+      "minecraft:allow_off_hand": true,
+      "minecraft:icon": "ic2:gold_cable",
+      "minecraft:block_placer": {
+        "block": "ic2:gold_cable",
+        "replace_block_item": true
+      }
+    }
+  }
+}

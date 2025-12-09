@@ -1,0 +1,179 @@
+## Блоки - Генераторы
+tile.ic2:generator.name=Генератор
+tile.ic2:geo_generator.name=Геотермальный генератор
+tile.ic2:solar_panel.name=Солнечная панель
+tile.ic2:wind_mill.name=Ветряк
+tile.ic2:water_mill.name=Водяная мельница
+tile.ic2:kinetic_generator.name=Кинетический генератор
+tile.ic2:steam_generator.name=Паровой генератор
+
+## Блоки - Машины
+tile.ic2:macerator.name=Дробитель
+tile.ic2:electric_furnace.name=Электропечь
+tile.ic2:compressor.name=Компрессор
+tile.ic2:extractor.name=Экстрактор
+tile.ic2:recycler.name=Утилизатор
+tile.ic2:metal_former.name=Металлоформовщик
+tile.ic2:canning_machine.name=Консервирующая машина
+tile.ic2:blast_furnace.name=Доменная печь
+
+## Блоки - Ядерный реактор
+tile.ic2:nuclear_reactor.name=Ядерный реактор
+tile.ic2:reactor_chamber.name=Реакторная камера
+
+## Блоки - Кабели
+tile.ic2:tin_cable.name=Оловянный кабель
+tile.ic2:copper_cable.name=Медный кабель
+tile.ic2:gold_cable.name=Золотой кабель
+tile.ic2:iron_cable.name=ВВ-кабель
+tile.ic2:glass_fibre_cable.name=Стекловолоконный кабель
+
+## Блоки - Энергохранилища
+tile.ic2:batbox.name=BatBox
+tile.ic2:cesu.name=CESU
+tile.ic2:mfe.name=MFE
+tile.ic2:mfsu.name=MFSU
+
+## Блоки - Руды
+tile.ic2:copper_ore.name=Медная руда
+tile.ic2:tin_ore.name=Оловянная руда
+tile.ic2:lead_ore.name=Свинцовая руда
+tile.ic2:uranium_ore.name=Урановая руда
+
+## Блоки - Блоки материалов
+tile.ic2:copper_block.name=Медный блок
+tile.ic2:tin_block.name=Оловянный блок
+tile.ic2:lead_block.name=Свинцовый блок
+tile.ic2:bronze_block.name=Бронзовый блок
+tile.ic2:steel_block.name=Стальной блок
+tile.ic2:uranium_block.name=Урановый блок
+
+## Блоки - Каучуковое дерево
+tile.ic2:rubber_wood.name=Каучуковое дерево
+tile.ic2:rubber_leaves.name=Каучуковые листья
+tile.ic2:rubber_sapling.name=Каучуковый саженец
+
+## Предметы - Пыль
+item.ic2:copper_dust.name=Медная пыль
+item.ic2:tin_dust.name=Оловянная пыль
+item.ic2:lead_dust.name=Свинцовая пыль
+item.ic2:uranium_dust.name=Урановая пыль
+item.ic2:coal_dust.name=Угольная пыль
+
+## Предметы - Слитки
+item.ic2:copper_ingot.name=Медный слиток
+item.ic2:tin_ingot.name=Оловянный слиток
+item.ic2:lead_ingot.name=Свинцовый слиток
+item.ic2:bronze_ingot.name=Бронзовый слиток
+
+## Предметы - Дроблёные руды
+item.ic2:crushed_copper_ore.name=Дроблёная медная руда
+item.ic2:crushed_tin_ore.name=Дроблёная оловянная руда
+item.ic2:crushed_lead_ore.name=Дроблёная свинцовая руда
+item.ic2:crushed_iron_ore.name=Дроблёная железная руда
+item.ic2:crushed_gold_ore.name=Дроблёная золотая руда
+
+## Предметы - Компоненты
+item.ic2:rubber.name=Резина
+item.ic2:sticky_resin.name=Липкая смола
+item.ic2:electronic_circuit.name=Электронная плата
+item.ic2:advanced_circuit.name=Продвинутая плата
+item.ic2:battery.name=Аккумулятор
+item.ic2:machine_case.name=Корпус машины
+item.ic2:iron_plate.name=Железная пластина
+item.ic2:copper_plate.name=Медная пластина
+item.ic2:tin_plate.name=Оловянная пластина
+item.ic2:scrap.name=Утиль
+
+## Предметы - Продвинутые материалы
+item.ic2:refined_iron.name=Очищенное железо
+item.ic2:steel_ingot.name=Стальной слиток
+item.ic2:uranium_ingot.name=Урановый слиток
+item.ic2:advanced_alloy.name=Продвинутый сплав
+item.ic2:carbon_plate.name=Углеродная пластина
+item.ic2:energy_crystal.name=Энергетический кристалл
+
+## Предметы - Инструменты
+item.ic2:treetap.name=Краник
+item.ic2:wrench.name=Гаечный ключ
+
+## Предметы - Электроинструменты
+item.ic2:electric_drill.name=Шахтёрская дрель
+item.ic2:diamond_drill.name=Алмазная дрель
+item.ic2:chainsaw.name=Бензопила
+item.ic2:electric_treetap.name=Электрический краник
+item.ic2:electric_wrench.name=Электрический ключ
+item.ic2:mining_laser.name=Шахтёрский лазер
+
+## Предметы - Компоненты реактора
+item.ic2:uranium_cell.name=Урановый стержень
+item.ic2:depleted_uranium_cell.name=Истощённый урановый стержень
+item.ic2:heat_vent.name=Теплоотвод
+item.ic2:reactor_heat_vent.name=Реакторный теплоотвод
+item.ic2:overclocked_heat_vent.name=Разогнанный теплоотвод
+item.ic2:component_heat_exchanger.name=Компонентный теплообменник
+item.ic2:coolant_cell.name=Охлаждающая ячейка
+
+## Предметы - НаноКостюм
+item.ic2:nanosuit_helmet.name=НаноШлем
+item.ic2:nanosuit_chestplate.name=НаноНагрудник
+item.ic2:nanosuit_leggings.name=НаноПоножи
+item.ic2:nanosuit_boots.name=НаноБотинки
+
+## Предметы - КвантовыйКостюм
+item.ic2:quantumsuit_helmet.name=КвантовыйШлем
+item.ic2:quantumsuit_chestplate.name=КвантовыйНагрудник
+item.ic2:quantumsuit_leggings.name=КвантовыеПоножи
+item.ic2:quantumsuit_boots.name=КвантовыеБотинки
+
+## Информация о паке
+pack.name=IndustrialCraft 2 Experimental
+pack.description=Полный порт IC2 для Bedrock Edition
+
+item.ic2:refined_iron.name=Очищенное железо
+item.ic2:bronze_plate.name=Бронзовая пластина
+item.ic2:steel_plate.name=Стальная пластина
+item.ic2:advanced_alloy.name=Продвинутый сплав
+item.ic2:carbon_plate.name=Углеродная пластина
+item.ic2:electronic_circuit.name=Электронная схема
+item.ic2:energy_crystal.name=Энергетический кристалл
+
+item.ic2:electric_drill.name=Электродрель
+item.ic2:diamond_drill.name=Алмазная дрель
+item.ic2:chainsaw.name=Бензопила
+item.ic2:electric_treetap.name=Электрический кран
+item.ic2:electric_wrench.name=Электрический ключ
+item.ic2:mining_laser.name=Шахтерский лазер
+
+tile.ic2:metal_former.name=Металлоформовщик
+
+## Культуры - Сельскохозяйственные продукты
+item.ic2:wheat_seeds.name=Семена пшеницы
+item.ic2:carrot_seeds.name=Семена моркови
+item.ic2:potato.name=Картофель
+item.ic2:beetroot_seeds.name=Семена свёклы
+item.ic2:melon_seeds.name=Семена арбуза
+item.ic2:pumpkin_seeds.name=Семена тыквы
+item.ic2:coffee_beans.name=Кофейные зёрна
+item.ic2:coffee_powder.name=Кофейный порошок
+item.ic2:hops.name=Хмель
+item.ic2:malachite_seeds.name=Семена малахита
+
+## Культуры - Блоки
+tile.ic2:crop_wheat.name=Пшеница
+tile.ic2:crop_carrot.name=Морковь
+tile.ic2:crop_potato.name=Картофель
+tile.ic2:crop_beetroot.name=Свёкла
+tile.ic2:crop_melon.name=Арбуз
+tile.ic2:crop_pumpkin.name=Тыква
+tile.ic2:crop_coffee.name=Кофе
+tile.ic2:crop_nether_wart.name=Адский нарост
+tile.ic2:crop_brown_mushroom.name=Коричневый гриб
+tile.ic2:crop_red_mushroom.name=Красный гриб
+tile.ic2:crop_cocoa.name=Какао
+tile.ic2:crop_reed.name=Тростник
+tile.ic2:crop_dandelion.name=Одуванчик
+tile.ic2:crop_poppy.name=Мак
+tile.ic2:crop_tulip.name=Тюльпан
+tile.ic2:crop_hops.name=Хмель
+tile.ic2:crop_malachite.name=Малахит

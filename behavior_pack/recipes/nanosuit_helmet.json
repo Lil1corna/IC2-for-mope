@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:nanosuit_helmet"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "CCC",
+            "CEC",
+            "   "
+        ],
+        "key": {
+            "C": { "item": "ic2:copper_plate" },
+            "E": { "item": "ic2:advanced_circuit" }
+        },
+        "result": {
+            "item": "ic2:nanosuit_helmet",
+            "count": 1
+        }
+    }
+}

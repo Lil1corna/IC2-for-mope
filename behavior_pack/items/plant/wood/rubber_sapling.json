@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:rubber_sapling",
+      "menu_category": {
+        "category": "nature",
+        "group": "minecraft:itemGroup.name.sapling"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ic2:rubber_sapling_carried",
+      "minecraft:block_placer": {
+        "block": "ic2:rubber_sapling",
+        "replace_block_item": true
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:saplings"
+        ]
+      }
+    }
+  }
+}

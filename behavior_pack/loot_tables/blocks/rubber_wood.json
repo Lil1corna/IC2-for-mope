@@ -1,0 +1,30 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "ic2:rubber_wood",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "ic2:sticky_resin",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

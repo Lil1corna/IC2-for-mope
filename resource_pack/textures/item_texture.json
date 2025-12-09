@@ -1,0 +1,1019 @@
+{
+  "resource_pack_name": "ic2",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    
+    "ic2:rubber_sapling_carried": {
+      "textures": "textures/items/plants/rubber_sapling"
+    },
+    
+    "ic2:seed_bag": {
+      "textures": "textures/items/crop/seed_bag"
+    },
+    "ic2:hydration_cell": {
+      "textures": "textures/items/crop/hydration_cell"
+    },
+    "ic2:fertilizer": {
+      "textures": "textures/items/crop/fertilizer"
+    },
+    "ic2:weed": {
+      "textures": "textures/items/crop/weed"
+    },
+    "ic2:weed_ex": {
+      "textures": "textures/items/crop/weed_ex"
+    },
+    "ic2:crop_stick": {
+      "textures": "textures/blocks/plants/crop/stick"
+    },
+    "ic2:grin_powder": {
+      "textures": "textures/items/crop/grin_powder"
+    },
+    "ic2:hops": {
+      "textures": "textures/items/crop/hops"
+    },
+    "ic2:terra_wart": {
+      "textures": "textures/items/crop/terra_wart"
+    },
+    "ic2:weeding_trowel": {
+      "textures": "textures/items/crop/weeding_trowel"
+    },
+    "ic2:coffee_beans": {
+      "textures": "textures/items/crop/coffee_beans"
+    },
+    "ic2:coffee_powder": {
+      "textures": "textures/items/crop/coffee_powder"
+    },
+    "ic2:cropnalyzer": {
+      "textures": "textures/items/crop/cropnalyzer"
+    },
+
+    "ic2:aurelia_seeds": {
+      "textures": "textures/items/crop/seeds/aurelia"
+    },
+    "ic2:blackthorn_seeds": {
+      "textures": "textures/items/crop/seeds/blackthorn"
+    },
+    "ic2:brown_mushroom_seeds": {
+      "textures": "textures/items/crop/seeds/brown_mushroom"
+    },
+    "ic2:coffee_seeds": {
+      "textures": "textures/items/crop/seeds/coffee"
+    },
+    "ic2:cyazint_seeds": {
+      "textures": "textures/items/crop/seeds/cyazint"
+    },
+    "ic2:cyprium_seeds": {
+      "textures": "textures/items/crop/seeds/cyprium"
+    },
+    "ic2:dandelion_seeds": {
+      "textures": "textures/items/crop/seeds/dandelion"
+    },
+    "ic2:eating_plant_seeds": {
+      "textures": "textures/items/crop/seeds/eating_plant"
+    },
+    "ic2:ferru_seeds": {
+      "textures": "textures/items/crop/seeds/ferru"
+    },
+    "ic2:flax_seeds": {
+      "textures": "textures/items/crop/seeds/flax"
+    },
+    "ic2:hops_seeds": {
+      "textures": "textures/items/crop/seeds/hops"
+    },
+    "ic2:plumbiscus_seeds": {
+      "textures": "textures/items/crop/seeds/plumbiscus"
+    },
+    "ic2:poppy_seeds": {
+      "textures": "textures/items/crop/seeds/poppy"
+    },
+    "ic2:red_mushroom_seeds": {
+      "textures": "textures/items/crop/seeds/red_mushroom"
+    },
+    "ic2:red_wheat_seeds": {
+      "textures": "textures/items/crop/seeds/red_wheat"
+    },
+    "ic2:shining_seeds": {
+      "textures": "textures/items/crop/seeds/shining"
+    },
+    "ic2:stagnium_seeds": {
+      "textures": "textures/items/crop/seeds/stagnium"
+    },
+    "ic2:sticky_reed_seeds": {
+      "textures": "textures/items/crop/seeds/sticky_reed"
+    },
+    "ic2:terra_wart_seeds": {
+      "textures": "textures/items/crop/seeds/terra_wart"
+    },
+    "ic2:tulip_seeds": {
+      "textures": "textures/items/crop/seeds/tulip"
+    },
+    "ic2:venomilia_seeds": {
+      "textures": "textures/items/crop/seeds/venomilia"
+    },
+    
+    "ic2:raw_tin": {
+      "textures": "textures/items/resource/raw/tin"
+    },
+    "ic2:raw_lead": {
+      "textures": "textures/items/resource/raw/lead"
+    },
+    "ic2:raw_uranium": {
+      "textures": "textures/items/resource/raw/uranium"
+    },
+    
+    "ic2:tin_ingot": {
+      "textures": "textures/items/resource/ingot/tin"
+    },
+    "ic2:lead_ingot": {
+      "textures": "textures/items/resource/ingot/lead"
+    },
+    "ic2:bronze_ingot": {
+      "textures": "textures/items/resource/ingot/bronze"
+    },
+    "ic2:uranium_ingot": {
+      "textures": "textures/items/resource/ingot/uranium"
+    },
+    "ic2:steel_ingot": {
+      "textures": "textures/items/resource/ingot/steel"
+    },
+    "ic2:silver_ingot": {
+      "textures": "textures/items/resource/ingot/silver"
+    },
+    "ic2:alloy_ingot": {
+      "textures": "textures/items/resource/ingot/alloy"
+    },
+    
+    "ic2:tin_dust": {
+      "textures": "textures/items/resource/dust/tin"
+    },
+    "ic2:lead_dust": {
+      "textures": "textures/items/resource/dust/lead"
+    },
+    "ic2:bronze_dust": {
+      "textures": "textures/items/resource/dust/bronze"
+    },
+    "ic2:clay_dust": {
+      "textures": "textures/items/resource/dust/clay"
+    },
+    "ic2:coal_dust": {
+      "textures": "textures/items/resource/dust/coal"
+    },
+    "ic2:copper_dust": {
+      "textures": "textures/items/resource/dust/copper"
+    },
+    "ic2:diamond_dust": {
+      "textures": "textures/items/resource/dust/diamond"
+    },
+    "ic2:energium_dust": {
+      "textures": "textures/items/resource/dust/energium"
+    },
+    "ic2:gold_dust": {
+      "textures": "textures/items/resource/dust/gold"
+    },
+    "ic2:iron_dust": {
+      "textures": "textures/items/resource/dust/iron"
+    },
+    "ic2:lapis_dust": {
+      "textures": "textures/items/resource/dust/lapis"
+    },
+    "ic2:lithium_dust": {
+      "textures": "textures/items/resource/dust/lithium"
+    },
+    "ic2:obsidian_dust": {
+      "textures": "textures/items/resource/dust/obsidian"
+    },
+    "ic2:silicon_dioxide_dust": {
+      "textures": "textures/items/resource/dust/silicon_dioxide"
+    },
+    "ic2:silver_dust": {
+      "textures": "textures/items/resource/dust/silver"
+    },
+    "ic2:stone_dust": {
+      "textures": "textures/items/resource/dust/stone"
+    },
+    "ic2:sulfur_dust": {
+      "textures": "textures/items/resource/dust/sulfur"
+    },
+    "ic2:tin_hydrated_dust": {
+      "textures": "textures/items/resource/dust/tin_hydrated"
+    },
+    
+    "ic2:small_bronze_dust": {
+      "textures": "textures/items/resource/dust/small_bronze"
+    },
+    "ic2:small_copper_dust": {
+      "textures": "textures/items/resource/dust/small_copper"
+    },
+    "ic2:small_gold_dust": {
+      "textures": "textures/items/resource/dust/small_gold"
+    },
+    "ic2:small_iron_dust": {
+      "textures": "textures/items/resource/dust/small_iron"
+    },
+    "ic2:small_lapis_dust": {
+      "textures": "textures/items/resource/dust/small_lapis"
+    },
+    "ic2:small_lead_dust": {
+      "textures": "textures/items/resource/dust/small_lead"
+    },
+    "ic2:small_lithium_dust": {
+      "textures": "textures/items/resource/dust/small_lithium"
+    },
+    "ic2:small_obsidian_dust": {
+      "textures": "textures/items/resource/dust/small_obsidian"
+    },
+    "ic2:small_silver_dust": {
+      "textures": "textures/items/resource/dust/small_silver"
+    },
+    "ic2:small_sulfur_dust": {
+      "textures": "textures/items/resource/dust/small_sulfur"
+    },
+    "ic2:small_tin_dust": {
+      "textures": "textures/items/resource/dust/small_tin"
+    },
+    
+    "ic2:bronze_plate": {
+      "textures": "textures/items/resource/plate/bronze"
+    },
+    "ic2:copper_plate": {
+      "textures": "textures/items/resource/plate/copper"
+    },
+    "ic2:tin_plate": {
+      "textures": "textures/items/resource/plate/tin"
+    },
+    "ic2:obsidian_plate": {
+      "textures": "textures/items/resource/plate/obsidian"
+    },
+    "ic2:iron_plate": {
+      "textures": "textures/items/resource/plate/iron"
+    },
+    "ic2:gold_plate": {
+      "textures": "textures/items/resource/plate/gold"
+    },
+    "ic2:steel_plate": {
+      "textures": "textures/items/resource/plate/steel"
+    },
+    "ic2:lapis_plate": {
+      "textures": "textures/items/resource/plate/lapis"
+    },
+    "ic2:lead_plate": {
+      "textures": "textures/items/resource/plate/lead"
+    },
+    
+    "ic2:crushed_iron_ore": {
+      "textures": "textures/items/resource/crushed/iron"
+    },
+    "ic2:crushed_uranium_ore": {
+      "textures": "textures/items/resource/crushed/uranium"
+    },
+    "ic2:crushed_lead_ore": {
+      "textures": "textures/items/resource/crushed/lead"
+    },
+    "ic2:crushed_gold_ore": {
+      "textures": "textures/items/resource/crushed/gold"
+    },
+    "ic2:crushed_tin_ore": {
+      "textures": "textures/items/resource/crushed/tin"
+    },
+    "ic2:crushed_copper_ore": {
+      "textures": "textures/items/resource/crushed/copper"
+    },
+    "ic2:crushed_ancient_debris": {
+      "textures": "textures/items/resource/crushed/ancient_debris"
+    },
+    
+    "ic2:tin_casing": {
+      "textures": "textures/items/resource/casing/tin"
+    },
+    "ic2:copper_casing": {
+      "textures": "textures/items/resource/casing/copper"
+    },
+    "ic2:gold_casing": {
+      "textures": "textures/items/resource/casing/gold"
+    },
+    "ic2:lead_casing": {
+      "textures": "textures/items/resource/casing/lead"
+    },
+    "ic2:iron_casing": {
+      "textures": "textures/items/resource/casing/iron"
+    },
+    "ic2:steel_casing": {
+      "textures": "textures/items/resource/casing/steel"
+    },
+    "ic2:bronze_casing": {
+      "textures": "textures/items/resource/casing/bronze"
+    },
+    
+    "ic2:empty_cell": {
+      "textures": "textures/items/cell/empty"
+    },
+    "ic2:water_cell": {
+      "textures": "textures/items/cell/water"
+    },
+    "ic2:lava_cell": {
+      "textures": "textures/items/cell/lava"
+    },
+    
+    "ic2:bronze_rotor": {
+      "textures": "textures/items/rotor/bronze"
+    },
+    "ic2:carbon_rotor": {
+      "textures": "textures/items/rotor/carbon"
+    },
+    "ic2:iron_rotor": {
+      "textures": "textures/items/rotor/iron"
+    },
+    "ic2:steel_rotor": {
+      "textures": "textures/items/rotor/steel"
+    },
+    "ic2:wooden_rotor": {
+      "textures": "textures/items/rotor/wooden"
+    },
+    "ic2:bronze_rotor_blade": {
+      "textures": "textures/items/rotor/blade/bronze"
+    },
+    "ic2:carbon_rotor_blade": {
+      "textures": "textures/items/rotor/blade/carbon"
+    },
+    "ic2:iron_rotor_blade": {
+      "textures": "textures/items/rotor/blade/iron"
+    },
+    "ic2:steel_rotor_blade": {
+      "textures": "textures/items/rotor/blade/steel"
+    },
+    "ic2:wooden_rotor_blade": {
+      "textures": "textures/items/rotor/blade/wooden"
+    },
+    
+    "ic2:resin": {
+      "textures": "textures/items/resource/resin"
+    },
+    "ic2:rubber": {
+      "textures": "textures/items/crafting/rubber"
+    },
+    
+    "ic2:treetap": {
+      "textures": "textures/items/tool/basic/treetap"
+    },
+    "ic2:forge_hammer": {
+      "textures": "textures/items/tool/basic/forge_hammer"
+    },
+    "ic2:cutter": {
+      "textures": "textures/items/tool/basic/cutter"
+    },
+    "ic2:wrench": {
+      "textures": "textures/items/tool/basic/wrench"
+    },
+    
+    "ic2:bronze_shovel": {
+      "textures": "textures/items/tool/bronze/shovel"
+    },
+    "ic2:bronze_hoe": {
+      "textures": "textures/items/tool/bronze/hoe"
+    },
+    "ic2:bronze_axe": {
+      "textures": "textures/items/tool/bronze/axe"
+    },
+    "ic2:bronze_pickaxe": {
+      "textures": "textures/items/tool/bronze/pickaxe"
+    },
+    "ic2:bronze_sword": {
+      "textures": "textures/items/tool/bronze/sword"
+    },
+    
+    "ic2:small_power_unit": {
+      "textures": "textures/items/tool/electric/module/small_power_unit"
+    },
+    "ic2:wind_meter": {
+      "textures": "textures/items/tool/electric/wind_meter"
+    },
+    "ic2:electric_wrench": {
+      "textures": "textures/items/tool/general/electric_wrench"
+    },
+    "ic2:electric_treetap": {
+      "textures": "textures/items/tool/electric/treetap"
+    },
+    
+    
+    "ic2:bronze_leggings": {
+      "textures": "textures/items/armor/bronze/leggings"
+    },
+    "ic2:bronze_helmet": {
+      "textures": "textures/items/armor/bronze/helmet"
+    },
+    "ic2:bronze_boots": {
+      "textures": "textures/items/armor/bronze/boots"
+    },
+    "ic2:bronze_chestplate": {
+      "textures": "textures/items/armor/bronze/chestplate"
+    },
+    
+    "ic2:nano_boots": {
+      "textures": "textures/items/armor/nanosuit_boots"
+    },
+    "ic2:nano_chestplate": {
+      "textures": "textures/items/armor/nanosuit_chestplate"
+    },
+    "ic2:nano_helmet": {
+      "textures": "textures/items/armor/nanosuit_helmet"
+    },
+    "ic2:nano_leggings": {
+      "textures": "textures/items/armor/nanosuit_leggings"
+    },
+    "ic2:quantum_boots": {
+      "textures": "textures/items/armor/quantumsuit_boots"
+    },
+    "ic2:quantum_chestplate": {
+      "textures": "textures/items/armor/quantumsuit_chestplate"
+    },
+    "ic2:quantum_helmet": {
+      "textures": "textures/items/armor/quantumsuit_helmet"
+    },
+    "ic2:quantum_leggings": {
+      "textures": "textures/items/armor/quantumsuit_leggings"
+    },
+    "ic2:nanosuit_boots": {
+      "textures": "textures/items/armor/nanosuit_boots"
+    },
+    "ic2:nanosuit_chestplate": {
+      "textures": "textures/items/armor/nanosuit_chestplate"
+    },
+    "ic2:nanosuit_helmet": {
+      "textures": "textures/items/armor/nanosuit_helmet"
+    },
+    "ic2:nanosuit_leggings": {
+      "textures": "textures/items/armor/nanosuit_leggings"
+    },
+    "ic2:quantumsuit_boots": {
+      "textures": "textures/items/armor/quantumsuit_boots"
+    },
+    "ic2:quantumsuit_chestplate": {
+      "textures": "textures/items/armor/quantumsuit_chestplate"
+    },
+    "ic2:quantumsuit_helmet": {
+      "textures": "textures/items/armor/quantumsuit_helmet"
+    },
+    "ic2:quantumsuit_leggings": {
+      "textures": "textures/items/armor/quantumsuit_leggings"
+    },
+    
+    "ic2:chainsaw": {
+      "textures": "textures/items/tool/general/chainsaw"
+    },
+    "ic2:diamond_drill": {
+      "textures": "textures/items/tool/general/diamond_drill"
+    },
+    "ic2:electric_drill": {
+      "textures": "textures/items/tool/general/drill"
+    },
+    "ic2:mining_laser": {
+      "textures": "textures/items/tool/electric/mining_laser"
+    },
+    "ic2:scanner": {
+      "textures": "textures/items/tool/electric/scanner"
+    },
+    "ic2:electric_hoe": {
+      "textures": "textures/items/tool/electric/hoe"
+    },
+    
+    "ic2:malachite": {
+      "textures": "textures/items/resource/crushed/copper"
+    },
+    
+    "ic2:boat_rubber": {
+      "textures": "textures/items/boat/rubber_boat"
+    },
+    
+    "ic2:re_battery": {
+      "textures": "textures/items/battery/re_battery_4"
+    },
+    
+    "ic2:circuit": {
+      "textures": "textures/items/crafting/circuit"
+    },
+    "ic2:electric_motor": {
+      "textures": "textures/items/crafting/electric_motor"
+    },
+    "ic2:iron_shaft": {
+      "textures": "textures/items/crafting/iron_shaft"
+    },
+    "ic2:bronze_shaft": {
+      "textures": "textures/items/crafting/bronze_shaft"
+    },
+    "ic2:coil": {
+      "textures": "textures/items/crafting/coil"
+    },
+    "ic2:scrap": {
+      "textures": "textures/items/crafting/scrap"
+    },
+    "ic2:scrap_box": {
+      "textures": "textures/items/crafting/scrap_box"
+    },
+
+    
+    "ic2:copper_cable": {
+      "textures": "textures/items/cable/copper"
+    },
+    "ic2:insulated_copper_cable": {
+      "textures": "textures/items/cable/copper_insulated"
+    },
+    "ic2:tin_cable": {
+      "textures": "textures/items/cable/tin"
+    },
+    "ic2:insulated_tin_cable": {
+      "textures": "textures/items/cable/tin_insulated"
+    },
+    "ic2:gold_cable": {
+      "textures": "textures/items/cable/gold"
+    },
+    "ic2:insulated_gold_cable": {
+      "textures": "textures/items/cable/gold_insulated"
+    },
+    "ic2:double_insulated_gold_cable": {
+      "textures": "textures/items/cable/gold_double_insulated"
+    },
+    "ic2:iron_cable": {
+      "textures": "textures/items/cable/iron"
+    },
+    "ic2:insulated_iron_cable": {
+      "textures": "textures/items/cable/iron_insulated"
+    },
+    "ic2:double_insulated_iron_cable": {
+      "textures": "textures/items/cable/iron_double_insulated"
+    },
+    "ic2:triple_insulated_iron_cable": {
+      "textures": "textures/items/cable/iron_triple_insulated"
+    },
+    "ic2:glass_fibre_cable": {
+      "textures": "textures/items/cable/glass"
+    },
+    "ic2:splitter_cable": {
+      "textures": "textures/items/cable/splitter"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    "ic2:ui.charge_progress.0": {
+      "textures": "textures/ui/common/progress/charge/icon_0"
+    },
+    "ic2:ui.charge_progress.1": {
+      "textures": "textures/ui/common/progress/charge/icon_1"
+    },
+    "ic2:ui.charge_progress.2": {
+      "textures": "textures/ui/common/progress/charge/icon_2"
+    },
+    "ic2:ui.charge_progress.3": {
+      "textures": "textures/ui/common/progress/charge/icon_3"
+    },
+    "ic2:ui.charge_progress.4": {
+      "textures": "textures/ui/common/progress/charge/icon_4"
+    },
+    "ic2:ui.charge_progress.5": {
+      "textures": "textures/ui/common/progress/charge/icon_5"
+    },
+    "ic2:ui.charge_progress.6": {
+      "textures": "textures/ui/common/progress/charge/icon_6"
+    },
+    "ic2:ui.charge_progress.7": {
+      "textures": "textures/ui/common/progress/charge/icon_7"
+    },
+    "ic2:ui.charge_progress.8": {
+      "textures": "textures/ui/common/progress/charge/icon_8"
+    },
+    "ic2:ui.charge_progress.9": {
+      "textures": "textures/ui/common/progress/charge/icon_9"
+    },
+    "ic2:ui.charge_progress.10": {
+      "textures": "textures/ui/common/progress/charge/icon_10"
+    },
+    "ic2:ui.charge_progress.11": {
+      "textures": "textures/ui/common/progress/charge/icon_11"
+    },
+    "ic2:ui.charge_progress.12": {
+      "textures": "textures/ui/common/progress/charge/icon_12"
+    },
+    "ic2:ui.charge_progress.13": {
+      "textures": "textures/ui/common/progress/charge/icon_13"
+    },
+
+    
+
+    "ic2:ui.generator_energy_bar.0": {
+      "textures": "textures/ui/generator/fire/energy/icon_0"
+    },
+    "ic2:ui.generator_energy_bar.1": {
+      "textures": "textures/ui/generator/fire/energy/icon_1"
+    },
+    "ic2:ui.generator_energy_bar.2": {
+      "textures": "textures/ui/generator/fire/energy/icon_2"
+    },
+    "ic2:ui.generator_energy_bar.3": {
+      "textures": "textures/ui/generator/fire/energy/icon_3"
+    },
+    "ic2:ui.generator_energy_bar.4": {
+      "textures": "textures/ui/generator/fire/energy/icon_4"
+    },
+    "ic2:ui.generator_energy_bar.5": {
+      "textures": "textures/ui/generator/fire/energy/icon_5"
+    },
+    "ic2:ui.generator_energy_bar.6": {
+      "textures": "textures/ui/generator/fire/energy/icon_6"
+    },
+    "ic2:ui.generator_energy_bar.7": {
+      "textures": "textures/ui/generator/fire/energy/icon_7"
+    },
+    "ic2:ui.generator_energy_bar.8": {
+      "textures": "textures/ui/generator/fire/energy/icon_8"
+    },
+    "ic2:ui.generator_energy_bar.9": {
+      "textures": "textures/ui/generator/fire/energy/icon_9"
+    },
+    "ic2:ui.generator_energy_bar.10": {
+      "textures": "textures/ui/generator/fire/energy/icon_10"
+    },
+    "ic2:ui.generator_energy_bar.11": {
+      "textures": "textures/ui/generator/fire/energy/icon_11"
+    },
+    "ic2:ui.generator_energy_bar.12": {
+      "textures": "textures/ui/generator/fire/energy/icon_12"
+    },
+    "ic2:ui.generator_fuel_progress.0": {
+      "textures": "textures/ui/generator/fire/fuel/icon_0"
+    },
+    "ic2:ui.generator_fuel_progress.1": {
+      "textures": "textures/ui/generator/fire/fuel/icon_1"
+    },
+    "ic2:ui.generator_fuel_progress.2": {
+      "textures": "textures/ui/generator/fire/fuel/icon_2"
+    },
+    "ic2:ui.generator_fuel_progress.3": {
+      "textures": "textures/ui/generator/fire/fuel/icon_3"
+    },
+    "ic2:ui.generator_fuel_progress.4": {
+      "textures": "textures/ui/generator/fire/fuel/icon_4"
+    },
+    "ic2:ui.generator_fuel_progress.5": {
+      "textures": "textures/ui/generator/fire/fuel/icon_5"
+    },
+    "ic2:ui.generator_fuel_progress.6": {
+      "textures": "textures/ui/generator/fire/fuel/icon_6"
+    },
+    "ic2:ui.generator_fuel_progress.7": {
+      "textures": "textures/ui/generator/fire/fuel/icon_7"
+    },
+    "ic2:ui.generator_fuel_progress.8": {
+      "textures": "textures/ui/generator/fire/fuel/icon_8"
+    },
+    "ic2:ui.generator_fuel_progress.9": {
+      "textures": "textures/ui/generator/fire/fuel/icon_9"
+    },
+    "ic2:ui.generator_fuel_progress.10": {
+      "textures": "textures/ui/generator/fire/fuel/icon_10"
+    },
+    "ic2:ui.generator_fuel_progress.11": {
+      "textures": "textures/ui/generator/fire/fuel/icon_11"
+    },
+    "ic2:ui.generator_fuel_progress.12": {
+      "textures": "textures/ui/generator/fire/fuel/icon_12"
+    },
+    "ic2:ui.generator_fuel_progress.13": {
+      "textures": "textures/ui/generator/fire/fuel/icon_13"
+    },
+    "ic2:ui.geo_generator_fuel_progress.0": {
+      "textures": "textures/ui/generator/geo/fuel/icon_0"
+    },
+    "ic2:ui.geo_generator_fuel_progress.1": {
+      "textures": "textures/ui/generator/geo/fuel/icon_1"
+    },
+    "ic2:ui.geo_generator_fuel_progress.2": {
+      "textures": "textures/ui/generator/geo/fuel/icon_2"
+    },
+    "ic2:ui.geo_generator_fuel_progress.3": {
+      "textures": "textures/ui/generator/geo/fuel/icon_3"
+    },
+    "ic2:ui.geo_generator_fuel_progress.4": {
+      "textures": "textures/ui/generator/geo/fuel/icon_4"
+    },
+    "ic2:ui.geo_generator_fuel_progress.5": {
+      "textures": "textures/ui/generator/geo/fuel/icon_5"
+    },
+    "ic2:ui.geo_generator_fuel_progress.6": {
+      "textures": "textures/ui/generator/geo/fuel/icon_6"
+    },
+    "ic2:ui.geo_generator_fuel_progress.7": {
+      "textures": "textures/ui/generator/geo/fuel/icon_7"
+    },
+    "ic2:ui.geo_generator_fuel_progress.8": {
+      "textures": "textures/ui/generator/geo/fuel/icon_8"
+    },
+    "ic2:ui.geo_generator_fuel_progress.9": {
+      "textures": "textures/ui/generator/geo/fuel/icon_9"
+    },
+    "ic2:ui.geo_generator_fuel_progress.10": {
+      "textures": "textures/ui/generator/geo/fuel/icon_10"
+    },
+    "ic2:ui.geo_generator_fuel_progress.11": {
+      "textures": "textures/ui/generator/geo/fuel/icon_11"
+    },
+    "ic2:ui.geo_generator_fuel_progress.12": {
+      "textures": "textures/ui/generator/geo/fuel/icon_12"
+    },
+    "ic2:ui.water_generator_fuel_progress.0": {
+      "textures": "textures/ui/generator/water/fuel/icon_0"
+    },
+    "ic2:ui.water_generator_fuel_progress.1": {
+      "textures": "textures/ui/generator/water/fuel/icon_1"
+    },
+    "ic2:ui.water_generator_fuel_progress.2": {
+      "textures": "textures/ui/generator/water/fuel/icon_2"
+    },
+    "ic2:ui.water_generator_fuel_progress.3": {
+      "textures": "textures/ui/generator/water/fuel/icon_3"
+    },
+    "ic2:ui.water_generator_fuel_progress.4": {
+      "textures": "textures/ui/generator/water/fuel/icon_4"
+    },
+    "ic2:ui.water_generator_fuel_progress.5": {
+      "textures": "textures/ui/generator/water/fuel/icon_5"
+    },
+    "ic2:ui.water_generator_fuel_progress.6": {
+      "textures": "textures/ui/generator/water/fuel/icon_6"
+    },
+    "ic2:ui.water_generator_fuel_progress.7": {
+      "textures": "textures/ui/generator/water/fuel/icon_7"
+    },
+    "ic2:ui.water_generator_fuel_progress.8": {
+      "textures": "textures/ui/generator/water/fuel/icon_8"
+    },
+    "ic2:ui.water_generator_fuel_progress.9": {
+      "textures": "textures/ui/generator/water/fuel/icon_9"
+    },
+    "ic2:ui.water_generator_fuel_progress.10": {
+      "textures": "textures/ui/generator/water/fuel/icon_10"
+    },
+    "ic2:ui.water_generator_fuel_progress.11": {
+      "textures": "textures/ui/generator/water/fuel/icon_11"
+    },
+    "ic2:ui.water_generator_fuel_progress.12": {
+      "textures": "textures/ui/generator/water/fuel/icon_12"
+    },
+    "ic2:ui.water_generator_fuel_progress.13": {
+      "textures": "textures/ui/generator/water/fuel/icon_13"
+    },
+    "ic2:ui.macerator_process_progress.0": {
+      "textures": "textures/ui/machine/macerator/progress/icon_0"
+    },
+    "ic2:ui.macerator_process_progress.1": {
+      "textures": "textures/ui/machine/macerator/progress/icon_1"
+    },
+    "ic2:ui.macerator_process_progress.2": {
+      "textures": "textures/ui/machine/macerator/progress/icon_2"
+    },
+    "ic2:ui.macerator_process_progress.3": {
+      "textures": "textures/ui/machine/macerator/progress/icon_3"
+    },
+    "ic2:ui.macerator_process_progress.4": {
+      "textures": "textures/ui/machine/macerator/progress/icon_4"
+    },
+    "ic2:ui.macerator_process_progress.5": {
+      "textures": "textures/ui/machine/macerator/progress/icon_5"
+    },
+    "ic2:ui.macerator_process_progress.6": {
+      "textures": "textures/ui/machine/macerator/progress/icon_6"
+    },
+    "ic2:ui.macerator_process_progress.7": {
+      "textures": "textures/ui/machine/macerator/progress/icon_7"
+    },
+    "ic2:ui.macerator_process_progress.8": {
+      "textures": "textures/ui/machine/macerator/progress/icon_8"
+    },
+    "ic2:ui.macerator_process_progress.9": {
+      "textures": "textures/ui/machine/macerator/progress/icon_9"
+    },
+    "ic2:ui.macerator_process_progress.10": {
+      "textures": "textures/ui/machine/macerator/progress/icon_10"
+    },
+    "ic2:ui.macerator_process_progress.11": {
+      "textures": "textures/ui/machine/macerator/progress/icon_11"
+    },
+    "ic2:ui.recycler_process_progress.0": {
+      "textures": "textures/ui/machine/recycler/progress/icon_0"
+    },
+    "ic2:ui.recycler_process_progress.1": {
+      "textures": "textures/ui/machine/recycler/progress/icon_1"
+    },
+    "ic2:ui.recycler_process_progress.2": {
+      "textures": "textures/ui/machine/recycler/progress/icon_2"
+    },
+    "ic2:ui.recycler_process_progress.3": {
+      "textures": "textures/ui/machine/recycler/progress/icon_3"
+    },
+    "ic2:ui.recycler_process_progress.4": {
+      "textures": "textures/ui/machine/recycler/progress/icon_4"
+    },
+    "ic2:ui.recycler_process_progress.5": {
+      "textures": "textures/ui/machine/recycler/progress/icon_5"
+    },
+    "ic2:ui.recycler_process_progress.6": {
+      "textures": "textures/ui/machine/recycler/progress/icon_6"
+    },
+    "ic2:ui.recycler_process_progress.7": {
+      "textures": "textures/ui/machine/recycler/progress/icon_7"
+    },
+    "ic2:ui.recycler_process_progress.8": {
+      "textures": "textures/ui/machine/recycler/progress/icon_8"
+    },
+    "ic2:ui.recycler_process_progress.9": {
+      "textures": "textures/ui/machine/recycler/progress/icon_9"
+    },
+    "ic2:ui.compressor_process_progress.0": {
+      "textures": "textures/ui/machine/compressor/progress/icon_0"
+    },
+    "ic2:ui.compressor_process_progress.1": {
+      "textures": "textures/ui/machine/compressor/progress/icon_1"
+    },
+    "ic2:ui.compressor_process_progress.2": {
+      "textures": "textures/ui/machine/compressor/progress/icon_2"
+    },
+    "ic2:ui.compressor_process_progress.3": {
+      "textures": "textures/ui/machine/compressor/progress/icon_3"
+    },
+    "ic2:ui.compressor_process_progress.4": {
+      "textures": "textures/ui/machine/compressor/progress/icon_4"
+    },
+    "ic2:ui.compressor_process_progress.5": {
+      "textures": "textures/ui/machine/compressor/progress/icon_5"
+    },
+    "ic2:ui.compressor_process_progress.6": {
+      "textures": "textures/ui/machine/compressor/progress/icon_6"
+    },
+    "ic2:ui.compressor_process_progress.7": {
+      "textures": "textures/ui/machine/compressor/progress/icon_7"
+    },
+    "ic2:ui.compressor_process_progress.8": {
+      "textures": "textures/ui/machine/compressor/progress/icon_8"
+    },
+    "ic2:ui.compressor_process_progress.9": {
+      "textures": "textures/ui/machine/compressor/progress/icon_9"
+    },
+    "ic2:ui.compressor_process_progress.10": {
+      "textures": "textures/ui/machine/compressor/progress/icon_10"
+    },
+    "ic2:ui.compressor_process_progress.11": {
+      "textures": "textures/ui/machine/compressor/progress/icon_11"
+    },
+    "ic2:ui.extractor_process_progress.0": {
+      "textures": "textures/ui/machine/extractor/progress/icon_0"
+    },
+    "ic2:ui.extractor_process_progress.1": {
+      "textures": "textures/ui/machine/extractor/progress/icon_1"
+    },
+    "ic2:ui.extractor_process_progress.2": {
+      "textures": "textures/ui/machine/extractor/progress/icon_2"
+    },
+    "ic2:ui.extractor_process_progress.3": {
+      "textures": "textures/ui/machine/extractor/progress/icon_3"
+    },
+    "ic2:ui.extractor_process_progress.4": {
+      "textures": "textures/ui/machine/extractor/progress/icon_4"
+    },
+    "ic2:ui.extractor_process_progress.5": {
+      "textures": "textures/ui/machine/extractor/progress/icon_5"
+    },
+    "ic2:ui.extractor_process_progress.6": {
+      "textures": "textures/ui/machine/extractor/progress/icon_6"
+    },
+    "ic2:ui.extractor_process_progress.7": {
+      "textures": "textures/ui/machine/extractor/progress/icon_7"
+    },
+    "ic2:ui.extractor_process_progress.8": {
+      "textures": "textures/ui/machine/extractor/progress/icon_8"
+    },
+    "ic2:ui.extractor_process_progress.9": {
+      "textures": "textures/ui/machine/extractor/progress/icon_9"
+    },
+    "ic2:ui.extractor_process_progress.10": {
+      "textures": "textures/ui/machine/extractor/progress/icon_10"
+    },
+    "ic2:ui.extractor_process_progress.11": {
+      "textures": "textures/ui/machine/extractor/progress/icon_11"
+    },
+    
+    "ic2_advanced_circuit": {
+      "textures": "textures/items/advanced_circuit"
+    },
+    "ic2_battery": {
+      "textures": "textures/items/battery"
+    },
+    "ic2_bronze_ingot": {
+      "textures": "textures/items/bronze_ingot"
+    },
+    "ic2_coal_dust": {
+      "textures": "textures/items/coal_dust"
+    },
+    "ic2_component_heat_exchanger": {
+      "textures": "textures/items/component_heat_exchanger"
+    },
+    "ic2_coolant_cell": {
+      "textures": "textures/items/coolant_cell"
+    },
+    "ic2_copper_dust": {
+      "textures": "textures/items/copper_dust"
+    },
+    "ic2_copper_ingot": {
+      "textures": "textures/items/copper_ingot"
+    },
+    "ic2_copper_plate": {
+      "textures": "textures/items/copper_plate"
+    },
+    "ic2_crushed_copper_ore": {
+      "textures": "textures/items/crushed_copper_ore"
+    },
+    "ic2_crushed_gold_ore": {
+      "textures": "textures/items/crushed_gold_ore"
+    },
+    "ic2_crushed_iron_ore": {
+      "textures": "textures/items/crushed_iron_ore"
+    },
+    "ic2_crushed_lead_ore": {
+      "textures": "textures/items/crushed_lead_ore"
+    },
+    "ic2_crushed_tin_ore": {
+      "textures": "textures/items/crushed_tin_ore"
+    },
+    "ic2_depleted_uranium_cell": {
+      "textures": "textures/items/depleted_uranium_cell"
+    },
+    "ic2_electronic_circuit": {
+      "textures": "textures/items/electronic_circuit"
+    },
+    "ic2_heat_vent": {
+      "textures": "textures/items/heat_vent"
+    },
+    "ic2_iron_plate": {
+      "textures": "textures/items/iron_plate"
+    },
+    "ic2_lead_dust": {
+      "textures": "textures/items/lead_dust"
+    },
+    "ic2_lead_ingot": {
+      "textures": "textures/items/lead_ingot"
+    },
+    "ic2_machine_case": {
+      "textures": "textures/items/machine_case"
+    },
+    "ic2_overclocked_heat_vent": {
+      "textures": "textures/items/overclocked_heat_vent"
+    },
+    "ic2_reactor_heat_vent": {
+      "textures": "textures/items/reactor_heat_vent"
+    },
+    "ic2_rubber": {
+      "textures": "textures/items/rubber"
+    },
+    "ic2_scrap": {
+      "textures": "textures/items/scrap"
+    },
+    "ic2_sticky_resin": {
+      "textures": "textures/items/sticky_resin"
+    },
+    "ic2_tin_dust": {
+      "textures": "textures/items/tin_dust"
+    },
+    "ic2_tin_ingot": {
+      "textures": "textures/items/tin_ingot"
+    },
+    "ic2_tin_plate": {
+      "textures": "textures/items/tin_plate"
+    },
+    "ic2_treetap": {
+      "textures": "textures/items/treetap"
+    },
+    "ic2_uranium_cell": {
+      "textures": "textures/items/uranium_cell"
+    },
+    "ic2_uranium_dust": {
+      "textures": "textures/items/uranium_dust"
+    },
+    "ic2_wrench": {
+      "textures": "textures/items/wrench"
+    }
+  }
+}

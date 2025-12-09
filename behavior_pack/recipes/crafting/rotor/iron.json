@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:iron_rotor"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " f ",
+      "fcf",
+      " f "
+    ],
+    "key": {
+      "c": {
+        "item": "ic2:iron_shaft"
+      },
+      "f": {
+        "item": "ic2:iron_rotor_blade"
+      }
+    },
+    "result": {
+      "item": "ic2:iron_rotor"
+    }
+  }
+}

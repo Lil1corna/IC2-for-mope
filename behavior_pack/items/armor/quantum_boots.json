@@ -1,0 +1,49 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:quantum_boots",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.ic2"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "ic2:quantum_boots",
+      "minecraft:durability": {
+        "max_durability": 540000
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["ic2:iridium_plate"],
+            "repair_amount": 54000
+          }
+        ]
+      },
+      "minecraft:wearable": {
+        "slot": "slot.armor.feet"
+      },
+      "minecraft:damage_absorption": {
+        "absorbable_causes": ["all"]
+      },
+      "minecraft:enchantable": {
+        "slot": "armor_feet",
+        "value": 1
+      },
+      "minecraft:armor": {
+        "protection": 6
+      },
+      "minecraft:damageable": {
+        "damage_per_use": 1
+      },
+      "tag:ic2:quantum_armor": {},
+      "tag:ic2:energy_storable": {
+        "capacity": 10000000,
+        "tier": 4
+      }
+    }
+  }
+}
+

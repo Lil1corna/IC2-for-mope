@@ -1,0 +1,181 @@
+## Blocks - Generators
+tile.ic2:generator.name=Generator
+tile.ic2:geo_generator.name=Geo-Generator
+tile.ic2:solar_panel.name=Solar Panel
+tile.ic2:wind_mill.name=Wind Turbine
+tile.ic2:water_mill.name=Water Mill
+tile.ic2:kinetic_generator.name=Kinetic Generator
+tile.ic2:steam_generator.name=Steam Generator
+
+## Blocks - Machines
+tile.ic2:macerator.name=Macerator
+tile.ic2:electric_furnace.name=Electric Furnace
+tile.ic2:compressor.name=Compressor
+tile.ic2:extractor.name=Extractor
+tile.ic2:recycler.name=Recycler
+tile.ic2:metal_former.name=Metal Former
+tile.ic2:electric_furnace.name=Electric Furnace
+tile.ic2:canning_machine.name=Canning Machine
+tile.ic2:blast_furnace.name=Blast Furnace
+
+## Blocks - Nuclear Reactor
+tile.ic2:nuclear_reactor.name=Nuclear Reactor
+tile.ic2:reactor_chamber.name=Reactor Chamber
+
+## Blocks - Cables
+tile.ic2:tin_cable.name=Tin Cable
+tile.ic2:copper_cable.name=Copper Cable
+tile.ic2:gold_cable.name=Gold Cable
+tile.ic2:iron_cable.name=HV Cable
+tile.ic2:glass_fibre_cable.name=Glass Fibre Cable
+
+## Blocks - Energy Storage
+tile.ic2:batbox.name=BatBox
+tile.ic2:cesu.name=CESU
+tile.ic2:mfe.name=MFE
+tile.ic2:mfsu.name=MFSU
+
+## Blocks - Ores
+tile.ic2:copper_ore.name=Copper Ore
+tile.ic2:tin_ore.name=Tin Ore
+tile.ic2:lead_ore.name=Lead Ore
+tile.ic2:uranium_ore.name=Uranium Ore
+
+## Blocks - Storage Blocks
+tile.ic2:copper_block.name=Copper Block
+tile.ic2:tin_block.name=Tin Block
+tile.ic2:lead_block.name=Lead Block
+tile.ic2:bronze_block.name=Bronze Block
+tile.ic2:steel_block.name=Steel Block
+tile.ic2:uranium_block.name=Uranium Block
+
+## Blocks - Rubber Tree
+tile.ic2:rubber_wood.name=Rubber Wood
+tile.ic2:rubber_leaves.name=Rubber Leaves
+tile.ic2:rubber_sapling.name=Rubber Sapling
+
+## Items - Dusts
+item.ic2:copper_dust.name=Copper Dust
+item.ic2:tin_dust.name=Tin Dust
+item.ic2:lead_dust.name=Lead Dust
+item.ic2:uranium_dust.name=Uranium Dust
+item.ic2:coal_dust.name=Coal Dust
+
+## Items - Ingots
+item.ic2:copper_ingot.name=Copper Ingot
+item.ic2:tin_ingot.name=Tin Ingot
+item.ic2:lead_ingot.name=Lead Ingot
+item.ic2:bronze_ingot.name=Bronze Ingot
+
+## Items - Crushed Ores
+item.ic2:crushed_copper_ore.name=Crushed Copper Ore
+item.ic2:crushed_tin_ore.name=Crushed Tin Ore
+item.ic2:crushed_lead_ore.name=Crushed Lead Ore
+item.ic2:crushed_iron_ore.name=Crushed Iron Ore
+item.ic2:crushed_gold_ore.name=Crushed Gold Ore
+
+## Items - Components
+item.ic2:rubber.name=Rubber
+item.ic2:sticky_resin.name=Sticky Resin
+item.ic2:electronic_circuit.name=Electronic Circuit
+item.ic2:advanced_circuit.name=Advanced Circuit
+item.ic2:battery.name=RE-Battery
+item.ic2:machine_case.name=Machine Case
+item.ic2:iron_plate.name=Iron Plate
+item.ic2:copper_plate.name=Copper Plate
+item.ic2:tin_plate.name=Tin Plate
+item.ic2:scrap.name=Scrap
+
+## Items - Advanced Materials
+item.ic2:refined_iron.name=Refined Iron
+item.ic2:steel_ingot.name=Steel Ingot
+item.ic2:uranium_ingot.name=Uranium Ingot
+item.ic2:bronze_ingot.name=Bronze Ingot
+item.ic2:advanced_alloy.name=Advanced Alloy
+item.ic2:carbon_plate.name=Carbon Plate
+item.ic2:energy_crystal.name=Energy Crystal
+
+## Items - Tools
+item.ic2:treetap.name=Treetap
+item.ic2:wrench.name=Wrench
+
+## Items - Electric Tools
+item.ic2:electric_drill.name=Mining Drill
+item.ic2:diamond_drill.name=Diamond Drill
+item.ic2:chainsaw.name=Chainsaw
+item.ic2:electric_treetap.name=Electric Treetap
+item.ic2:electric_wrench.name=Electric Wrench
+item.ic2:mining_laser.name=Mining Laser
+
+## Items - Reactor Components
+item.ic2:uranium_cell.name=Uranium Cell
+item.ic2:depleted_uranium_cell.name=Depleted Uranium Cell
+item.ic2:heat_vent.name=Heat Vent
+item.ic2:reactor_heat_vent.name=Reactor Heat Vent
+item.ic2:overclocked_heat_vent.name=Overclocked Heat Vent
+item.ic2:component_heat_exchanger.name=Component Heat Exchanger
+item.ic2:coolant_cell.name=Coolant Cell
+
+## Items - NanoSuit
+item.ic2:nanosuit_helmet.name=NanoSuit Helmet
+item.ic2:nanosuit_chestplate.name=NanoSuit Chestplate
+item.ic2:nanosuit_leggings.name=NanoSuit Leggings
+item.ic2:nanosuit_boots.name=NanoSuit Boots
+
+## Items - QuantumSuit
+item.ic2:quantumsuit_helmet.name=QuantumSuit Helmet
+item.ic2:quantumsuit_chestplate.name=QuantumSuit Chestplate
+item.ic2:quantumsuit_leggings.name=QuantumSuit Leggings
+item.ic2:quantumsuit_boots.name=QuantumSuit Boots
+
+## Pack Info
+pack.name=IndustrialCraft 2 Experimental
+pack.description=Full IC2 port for Bedrock Edition
+
+item.ic2:refined_iron.name=Refined Iron
+item.ic2:bronze_plate.name=Bronze Plate
+item.ic2:steel_plate.name=Steel Plate
+item.ic2:advanced_alloy.name=Advanced Alloy
+item.ic2:carbon_plate.name=Carbon Plate
+item.ic2:electronic_circuit.name=Electronic Circuit
+item.ic2:energy_crystal.name=Energy Crystal
+
+item.ic2:electric_drill.name=Electric Drill
+item.ic2:diamond_drill.name=Diamond Drill
+item.ic2:chainsaw.name=Chainsaw
+item.ic2:electric_treetap.name=Electric Treetap
+item.ic2:electric_wrench.name=Electric Wrench
+item.ic2:mining_laser.name=Mining Laser
+
+tile.ic2:metal_former.name=Metal Former
+
+## Crops - Agricultural Products
+item.ic2:wheat_seeds.name=Wheat Seeds
+item.ic2:carrot_seeds.name=Carrot Seeds
+item.ic2:potato.name=Potato
+item.ic2:beetroot_seeds.name=Beetroot Seeds
+item.ic2:melon_seeds.name=Melon Seeds
+item.ic2:pumpkin_seeds.name=Pumpkin Seeds
+item.ic2:coffee_beans.name=Coffee Beans
+item.ic2:coffee_powder.name=Coffee Powder
+item.ic2:hops.name=Hops
+item.ic2:malachite_seeds.name=Malachite Seeds
+
+## Crops - Blocks
+tile.ic2:crop_wheat.name=Wheat Crop
+tile.ic2:crop_carrot.name=Carrot Crop
+tile.ic2:crop_potato.name=Potato Crop
+tile.ic2:crop_beetroot.name=Beetroot Crop
+tile.ic2:crop_melon.name=Melon Crop
+tile.ic2:crop_pumpkin.name=Pumpkin Crop
+tile.ic2:crop_coffee.name=Coffee Crop
+tile.ic2:crop_nether_wart.name=Nether Wart Crop
+tile.ic2:crop_brown_mushroom.name=Brown Mushroom Crop
+tile.ic2:crop_red_mushroom.name=Red Mushroom Crop
+tile.ic2:crop_cocoa.name=Cocoa Crop
+tile.ic2:crop_reed.name=Sugar Cane Crop
+tile.ic2:crop_dandelion.name=Dandelion Crop
+tile.ic2:crop_poppy.name=Poppy Crop
+tile.ic2:crop_tulip.name=Tulip Crop
+tile.ic2:crop_hops.name=Hops Crop
+tile.ic2:crop_malachite.name=Malachite Crop

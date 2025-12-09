@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:lapotron_crystal"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "LCL",
+      "CEC",
+      "LCL"
+    ],
+    "key": {
+      "L": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "C": {
+        "item": "ic2:energy_crystal"
+      },
+      "E": {
+        "item": "ic2:electronic_circuit"
+      }
+    },
+    "result": {
+      "item": "ic2:lapotron_crystal"
+    }
+  }
+}
+EOF && echo "✅ Добавлен рецепт Lapotron Crystal"

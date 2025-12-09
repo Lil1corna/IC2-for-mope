@@ -1,0 +1,23 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.rotor": {
+      "initial_state": "stop",
+      "states": {
+        "run": {
+          "animations": ["run"],
+          "transitions": [
+            {"stop": "!q.is_baby && q.all_animations_finished"}
+          ],
+          "blend_transition": 0.2
+        },
+        "stop": {
+          "animations": ["stop"],
+          "transitions": [
+            {"run": "q.is_baby"}
+          ]
+        }
+      }
+    }
+  }
+}

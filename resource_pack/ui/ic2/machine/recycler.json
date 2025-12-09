@@ -1,0 +1,160 @@
+{
+  "namespace": "ic2:recycler",
+  "title_label": {
+    "type": "label",
+    "offset": [0, -3],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "tile.ic2:recycler.name",
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "entry_panel": {
+    "type": "panel",
+    "size": ["100%", "50% - 12px"],
+    "offset": [0, 7],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "title_label@title_label": {}
+      },
+      {
+        "main@control:machine_entry_panel": {}
+      }
+    ]
+  },
+  "control:machine_entry_panel": {
+    "type": "panel",
+    "size": ["50% + 16px", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "entry_panel@control:entry_panel": {}
+      }
+    ]
+  },
+  "control:entry_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "slot_panel@control:slot_panel": {}
+      }
+    ]
+  },
+  "control:slot_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "offset": [0, 16],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "slot_grid@control:slot_grid": {}
+      }
+    ]
+  },
+  "control:slot_grid": {
+    "type": "grid",
+    "grid_dimensions": [1, 5],
+    "size": ["100%", "100%"],
+    "collection_name": "container_items",
+    "grid_item_template": "common.container_item",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "$item_collection_name": "container_items",
+    "controls": [
+      {
+        "raw_slot@control:raw_slot": {}
+      },
+      {
+        "battery_slot@control:battery_slot": {}
+      },
+      {
+        "output_slot@control:output_slot": {}
+      },
+      {
+        "process_progress@control:process_progress": {}
+      },
+      {
+        "charge_progress@control:charge_progress": {}
+      }
+    ]
+  },
+  "control:raw_slot": {
+    "type": "panel",
+    "grid_position": [0, 0],
+    "controls": [
+      {
+        "charge_slot@common.container_item": {
+          "offset": [-32, -4]
+        }
+      }
+    ]
+  },
+  "control:battery_slot": {
+    "type": "panel",
+    "grid_position": [0, 1],
+    "controls": [
+      {
+        "fuel_slot@common.container_item": {
+          "offset": [-32, 17]
+        }
+      }
+    ]
+  },
+  "control:output_slot": {
+    "type": "panel",
+    "grid_position": [0, 2],
+    "controls": [
+      {
+        "output_slot@common.container_item": {
+          "offset": [40, -16]
+        }
+      }
+    ]
+  },
+  "control:process_progress": {
+    "type": "panel",
+    "grid_position": [0, 3],
+    "controls": [
+      {
+        "process_progress_item@control:process_progress_item": {}
+      }
+    ]
+  },
+  "control:process_progress_item@common.container_item": {
+    "ignored": false,
+    "$item_collection_name": "container_items",
+    "$cell_image_size": [18, 18],
+    "$item_renderer_size": [18, 18],
+    "$cell_overlay_ref": "ic2:common.invisible",
+    "$background_images": "ic2:common.invisible",
+    "focus_enabled": false,
+    "size": [0, 0],
+    "offset": [4, -30]
+  },
+  "control:charge_progress": {
+    "type": "panel",
+    "grid_position": [0, 4],
+    "controls": [
+      {
+        "charge_progress@common.container_item": {
+          "ignored": false,
+          "$item_collection_name": "container_items",
+          "$cell_image_size": [17, 17],
+          "$item_renderer_size": [17, 17],
+          "$cell_overlay_ref": "ic2:common.invisible",
+          "$background_images": "ic2:common.invisible",
+          "focus_enabled": false,
+          "size": [0, 0],
+          "offset": [-32, -43]
+        }
+      }
+    ]
+  }
+}

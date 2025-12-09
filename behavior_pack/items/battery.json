@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:item": {
+        "description": {
+            "identifier": "ic2:battery",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.ic2_components"
+            }
+        },
+        "components": {
+            "minecraft:icon": "ic2_battery",
+            "minecraft:max_stack_size": 1,
+            "minecraft:durability": {
+                "max_durability": 10000
+            }
+        }
+    }
+}

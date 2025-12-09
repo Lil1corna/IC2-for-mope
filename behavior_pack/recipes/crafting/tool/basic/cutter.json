@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:cutter"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "p p",
+      " p ",
+      "i i"
+    ],
+    "key": {
+      "i": {
+        "item": "minecraft:iron_ingot"
+      },
+      "p": {
+        "item": "ic2:iron_plate"
+      }
+    },
+    "result": {
+      "item": "ic2:cutter"
+    }
+  }
+}

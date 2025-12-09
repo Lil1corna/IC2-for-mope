@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:re_battery"
+    },
+    "components": {
+      "minecraft:icon": "ic2:re_battery",
+      "minecraft:tags": {
+        "tags": [
+          "script_data_driven",
+          "ic2:electric_tier",
+          "ic2:low_voltage_tier",
+          "ic2:max_storage:10000"
+        ]
+      }
+    }
+  }
+}

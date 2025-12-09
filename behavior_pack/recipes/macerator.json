@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:macerator"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "FFF",
+            "CMC",
+            " C "
+        ],
+        "key": {
+            "F": { "item": "minecraft:flint" },
+            "C": { "item": "minecraft:cobblestone" },
+            "M": { "item": "ic2:machine_case" }
+        },
+        "result": {
+            "item": "ic2:macerator",
+            "count": 1
+        }
+    }
+}

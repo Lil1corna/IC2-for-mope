@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:resin_sticky_piston"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "r",
+      "p"
+    ],
+    "key": {
+      "r": {
+        "item": "ic2:resin"
+      },
+      "p": {
+        "item": "minecraft:piston"
+      }
+    },
+    "result": {
+      "item": "minecraft:sticky_piston"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  
+  "ic2:smithing_table": {
+    "sound": "wood"
+  },
+  
+  "ic2:deepslate_lead_ore": {
+    "sound": "deepslate"
+  },
+  "ic2:deepslate_tin_ore": {
+    "sound": "deepslate"
+  },
+  "ic2:deepslate_uranium_ore": {
+    "sound": "deepslate"
+  },
+  
+  "ic2:tin_block": {
+    "sound": "metal"
+  },
+  "ic2:lead_block": {
+    "sound": "metal"
+  },
+  "ic2:bronze_block": {
+    "sound": "metal"
+  },
+  
+  "ic2:copper_cable": {
+    "sound": "metal"
+  },
+  "ic2:tin_cable": {
+    "sound": "metal"
+  },
+  "ic2:gold_cable": {
+    "sound": "metal"
+  },
+  "ic2:iron_cable": {
+    "sound": "metal"
+  },
+  "ic2:glass_fibre_cable": {
+    "sound": "glass"
+  },
+  "ic2:insulated_copper_cable": {
+    "sound": "cloth"
+  },
+  "ic2:insulated_tin_cable": {
+    "sound": "cloth"
+  },
+  "ic2:insulated_gold_cable": {
+    "sound": "cloth"
+  },
+  "ic2:double_insulated_gold_cable": {
+    "sound": "cloth"
+  },
+  "ic2:insulated_iron_cable": {
+    "sound": "cloth"
+  },
+  "ic2:double_insulated_iron_cable": {
+    "sound": "cloth"
+  },
+  "ic2:triple_insulated_iron_cable": {
+    "sound": "cloth"
+  },
+  
+  "ic2:rubber_leaves": {
+    "brightness_gamma": 0.8,
+    "sound": "grass"
+  },
+  "ic2:rubber_log": {
+    "sound": "wood"
+  },
+  "ic2:stripped_rubber_log": {
+    "sound": "wood"
+  },
+  "ic2:stripped_rubber_wood": {
+    "sound": "wood"
+  },
+  "ic2:rubber_wood": {
+    "sound": "wood"
+  },
+  "ic2:rubber_sapling": {
+    "sound": "grass"
+  },
+  
+  "ic2:generator": {
+    "sound": "metal"
+  },
+  
+  "ic2:macerator": {
+    "sound": "metal"
+  }
+}

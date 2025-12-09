@@ -1,0 +1,24 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "ic2:rubber_tree_structure_feature_844_3"
+        },
+        "structure_name": "ic2:rbt844_3",
+        "adjustment_radius": 0,
+        "facing_direction": "south",
+        "constraints": {
+            "unburied": {},
+            "grounded": {},
+            "block_intersection": {
+                "block_allowlist": [
+                    "minecraft:air",
+                    "minecraft:dirt",
+                    "minecraft:grass",
+                    "ic2:rubber_log",
+                    "ic2:rubber_leaves"
+                ]
+            }
+        }
+    }
+}

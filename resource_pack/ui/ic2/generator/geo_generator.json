@@ -1,0 +1,174 @@
+{
+  "namespace": "ic2:geo_generator",
+  "title_label": {
+    "type": "label",
+    "offset": [0, -3],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "tile.ic2:geo_generator.name",
+    "color": "$title_text_color",
+    "layer": 2
+  },
+  "main_panel": {
+    "type": "panel",
+    "size": [
+      "100%", "100%"
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "left_part@left_part": {}
+      }, {
+        "center_part@center_part": {}
+      }, {
+        "right_part@right_part": {}
+      }
+    ]
+  },
+  "left_part": {
+    "type": "panel",
+    "size": ["33.33%", "100%"],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "input_slot": {
+          "type": "collection_panel",
+          "size": [18, 18],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "collection_name": "container_items",
+          "offset": [4, 12],
+          "controls": [
+            {
+              "input_slot_item@chest.chest_grid_item": {
+                "collection_index": 0
+              }
+            }
+          ]
+        }
+      }, {
+        "output_arrow_image": {
+          "type": "image",
+          "layer": 1,
+          "texture": "textures/ui/generator/geo/input_arrow",
+          "size": [25, 13],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [14, 32]
+        }
+      }, {
+        "empty_container_slot": {
+          "type": "collection_panel",
+          "size": [18, 18],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "collection_name": "container_items",
+          "offset": [4, 46],
+          "controls": [
+            {
+              "empty_container_slot_item@chest.chest_grid_item": {
+                "collection_index": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "center_part": {
+    "type": "panel",
+    "size": ["33.33%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "fluid_progress": {
+          "type": "collection_panel",
+          "size": [55, 55],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "collection_name": "container_items",
+          "offset": [-4, 0],
+          "controls": [
+            {
+              "fluid_progress_item@chest.chest_grid_item": {
+                "collection_index": 2,
+                "ignored": false,
+                "focus_enabled": false,
+                "$cell_image_size": [55, 54],
+                "$item_renderer_size": [55, 54],
+                "$cell_overlay_ref": "ic2:common.invisible",
+                "$background_images": "ic2:common.invisible",
+                "size": [0, 0]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "right_part": {
+    "type": "panel",
+    "size": ["33.33%", "100%"],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      {
+        "energy_bar": {
+          "type": "collection_panel",
+          "size": [18, 18],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "collection_name": "container_items",
+          "offset": [0, 12],
+          "controls": [
+            {
+              "energy_bar_item@chest.chest_grid_item": {
+                "collection_index": 3,
+                "ignored": false,
+                "focus_enabled": false,
+                "$cell_image_size": [32, 32],
+                "$item_renderer_size": [32, 32],
+                "$cell_overlay_ref": "ic2:common.invisible",
+                "$background_images": "ic2:common.invisible",
+                "size": [0, 0]
+              }
+            }
+          ]
+        }
+      }, {
+        "charge_slot": {
+          "type": "collection_panel",
+          "size": [18, 18],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "collection_name": "container_items",
+          "offset": [0, 46],
+          "controls": [
+            {
+              "charge_slot_item@chest.chest_grid_item": {
+                "collection_index": 4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "entry_panel": {
+    "type": "panel",
+    "size": ["100%", "50% - 12px"],
+    "offset": [0, 7],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "title_label@title_label": {}
+      }, {
+        "main@main_panel": {}
+      }
+    ]
+  }
+}

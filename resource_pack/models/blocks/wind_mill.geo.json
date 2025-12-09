@@ -1,0 +1,135 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.ic2.wind_mill",
+                "texture_width": 16,
+                "texture_height": 16,
+                "visible_bounds_width": 3,
+                "visible_bounds_height": 3,
+                "visible_bounds_offset": [0, 0.5, 0]
+            },
+            "bones": [
+                {
+                    "name": "root",
+                    "pivot": [0, 0, 0]
+                },
+                {
+                    "name": "body",
+                    "parent": "root",
+                    "pivot": [0, 8, 0],
+                    "cubes": [
+                        {
+                            "origin": [-8, 0, -8],
+                            "size": [16, 16, 16],
+                            "uv": {
+                                "north": {"uv": [0, 0], "uv_size": [16, 16]},
+                                "east": {"uv": [0, 0], "uv_size": [16, 16]},
+                                "south": {"uv": [0, 0], "uv_size": [16, 16]},
+                                "west": {"uv": [0, 0], "uv_size": [16, 16]},
+                                "up": {"uv": [0, 0], "uv_size": [16, 16]},
+                                "down": {"uv": [0, 0], "uv_size": [16, 16]}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "rotor_hub",
+                    "parent": "root",
+                    "pivot": [0, 8, -8],
+                    "cubes": [
+                        {
+                            "origin": [-2, 6, -10],
+                            "size": [4, 4, 2],
+                            "uv": {
+                                "north": {"uv": [6, 6], "uv_size": [4, 4]},
+                                "east": {"uv": [6, 6], "uv_size": [2, 4]},
+                                "south": {"uv": [6, 6], "uv_size": [4, 4]},
+                                "west": {"uv": [6, 6], "uv_size": [2, 4]},
+                                "up": {"uv": [6, 6], "uv_size": [4, 2]},
+                                "down": {"uv": [6, 6], "uv_size": [4, 2]}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "blade_top",
+                    "parent": "rotor_hub",
+                    "pivot": [0, 8, -9],
+                    "cubes": [
+                        {
+                            "origin": [-1, 10, -10],
+                            "size": [2, 10, 1],
+                            "uv": {
+                                "north": {"uv": [7, 0], "uv_size": [2, 10]},
+                                "east": {"uv": [7, 0], "uv_size": [1, 10]},
+                                "south": {"uv": [7, 0], "uv_size": [2, 10]},
+                                "west": {"uv": [7, 0], "uv_size": [1, 10]},
+                                "up": {"uv": [7, 0], "uv_size": [2, 1]},
+                                "down": {"uv": [7, 0], "uv_size": [2, 1]}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "blade_bottom",
+                    "parent": "rotor_hub",
+                    "pivot": [0, 8, -9],
+                    "cubes": [
+                        {
+                            "origin": [-1, -4, -10],
+                            "size": [2, 10, 1],
+                            "uv": {
+                                "north": {"uv": [7, 0], "uv_size": [2, 10]},
+                                "east": {"uv": [7, 0], "uv_size": [1, 10]},
+                                "south": {"uv": [7, 0], "uv_size": [2, 10]},
+                                "west": {"uv": [7, 0], "uv_size": [1, 10]},
+                                "up": {"uv": [7, 0], "uv_size": [2, 1]},
+                                "down": {"uv": [7, 0], "uv_size": [2, 1]}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "blade_left",
+                    "parent": "rotor_hub",
+                    "pivot": [0, 8, -9],
+                    "cubes": [
+                        {
+                            "origin": [-11, 7, -10],
+                            "size": [9, 2, 1],
+                            "uv": {
+                                "north": {"uv": [0, 7], "uv_size": [9, 2]},
+                                "east": {"uv": [0, 7], "uv_size": [1, 2]},
+                                "south": {"uv": [0, 7], "uv_size": [9, 2]},
+                                "west": {"uv": [0, 7], "uv_size": [1, 2]},
+                                "up": {"uv": [0, 7], "uv_size": [9, 1]},
+                                "down": {"uv": [0, 7], "uv_size": [9, 1]}
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "blade_right",
+                    "parent": "rotor_hub",
+                    "pivot": [0, 8, -9],
+                    "cubes": [
+                        {
+                            "origin": [2, 7, -10],
+                            "size": [9, 2, 1],
+                            "uv": {
+                                "north": {"uv": [0, 7], "uv_size": [9, 2]},
+                                "east": {"uv": [0, 7], "uv_size": [1, 2]},
+                                "south": {"uv": [0, 7], "uv_size": [9, 2]},
+                                "west": {"uv": [0, 7], "uv_size": [1, 2]},
+                                "up": {"uv": [0, 7], "uv_size": [9, 1]},
+                                "down": {"uv": [0, 7], "uv_size": [9, 1]}
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

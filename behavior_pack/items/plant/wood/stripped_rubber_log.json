@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:stripped_rubber_log",
+      "menu_category": {
+        "category": "nature",
+        "group": "minecraft:itemGroup.name.log"
+      }
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "ic2:stripped_rubber_log"
+      },
+      "minecraft:fuel":{
+        "duration": 15
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:logs_that_burn",
+          "minecraft:logs"
+        ]
+      }
+    }
+  }
+}

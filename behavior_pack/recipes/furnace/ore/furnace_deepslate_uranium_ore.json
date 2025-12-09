@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ic2:furnace_deepslate_uranium_ore"
+    },
+    "tags": ["furnace", "blast_furnace"],
+    "input": "ic2:deepslate_uranium_ore",
+    "output": "ic2:uranium_ingot"
+  }
+}

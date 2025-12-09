@@ -1,0 +1,104 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ic2:rotor",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "ic2:is_running": {
+          "type": "bool",
+          "values": [true, false],
+          "default": false
+        }
+      },
+      "scripts": {
+        "animate": [
+          "unpushable_in_water"
+        ]
+      },
+      "animations": {
+        "unpushable_in_water": "controller.animation.unpushable_in_water"
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:type_family": {
+        "family": [
+          "container",
+          "inanimate"
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1,
+        "min": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {
+          "max_distance": 3.40282e+38,
+          "min_distance": 3.40282e+38
+        },
+        "despawn_from_chance": false,
+        "despawn_from_inactivity": false,
+        "despawn_from_simulation_edge": false,
+        "remove_child_entities": false
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:breathable": {
+        "total_supply": 114514,
+        "suffocate_time": 114514,
+        "breathes_air": true,
+        "breathes_water": true,
+        "breathes_solids": true,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": false
+      },
+      "minecraft:is_stackable": true,
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": 3.40282e+38
+    },
+    "component_group": {
+      "ic2:is_running_group": {
+        "minecraft:is_baby": {}
+      }
+    },
+    "events": {
+      "ic2:setup": {
+        "add": {
+          "component_groups": [
+            "ic2:is_running_group"
+          ]
+        }
+      },
+      "ic2:shutdown": {
+        "remove": {
+          "component_groups": [
+            "ic2:is_running_group"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:biome_modifier": {
+    "description": {
+      "identifier": "ic2:add_rubber_trees"
+    },
+    "components": {
+      "minecraft:add_features": {
+        "features": [
+          "ic2:rubber_trees_forest_feature_rule",
+          "ic2:rubber_trees_jungle_feature_rule",
+          "ic2:rubber_trees_swamp_feature_rule"
+        ],
+        "biomes": [
+          "minecraft:forest",
+          "minecraft:forest_hills",
+          "minecraft:jungle",
+          "minecraft:jungle_hills",
+          "minecraft:jungle_edge",
+          "minecraft:swampland"
+        ]
+      }
+    }
+  }
+}

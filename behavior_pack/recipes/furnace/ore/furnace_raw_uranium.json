@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ic2:furnace_raw_uranium"
+    },
+    "tags": [ "furnace", "blast_furnace" ],
+    "input": "ic2:raw_uranium",
+    "output": "ic2:uranium_ingot"
+  }
+}

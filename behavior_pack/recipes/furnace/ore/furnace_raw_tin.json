@@ -1,0 +1,11 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ic2:furnace_raw_tin"
+    },
+    "tags": [ "furnace", "blast_furnace" ],
+    "input": "ic2:raw_tin",
+    "output": "ic2:tin_ingot"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:electric_motor"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " t ",
+      "cic",
+      " t "
+    ],
+    "key": {
+      "t": {
+        "item": "ic2:tin_casing"
+      },
+      "c": {
+        "item": "ic2:coil"
+      },
+      "i": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "ic2:electric_motor"
+    }
+  }
+}

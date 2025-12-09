@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:tesla_coil"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "fff",
+      "fbf",
+      "iei"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:iron_casing"
+      },
+      "e": {
+        "item": "ic2:circuit"
+      },
+      "b": {
+        "item": "ic2:mv_transformer"
+      },
+      "f": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "ic2:tesla_coil"
+    }
+  }
+}

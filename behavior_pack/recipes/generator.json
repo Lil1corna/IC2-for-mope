@@ -1,0 +1,24 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:generator"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " B ",
+            "MCM",
+            " F "
+        ],
+        "key": {
+            "B": { "item": "ic2:battery" },
+            "M": { "item": "ic2:machine_case" },
+            "C": { "item": "ic2:electronic_circuit" },
+            "F": { "item": "minecraft:furnace" }
+        },
+        "result": {
+            "item": "ic2:generator",
+            "count": 1
+        }
+    }
+}

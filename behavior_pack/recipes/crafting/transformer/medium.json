@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:mv_transformer"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "t",
+      "c",
+      "t"
+    ],
+    "key": {
+      "t": {
+        "item": "ic2:insulated_copper_cable"
+      },
+      "c": {
+        "item": "ic2:machine_basic_casing"
+      }
+    },
+    "result": {
+      "item": "ic2:mv_transformer"
+    }
+  }
+}

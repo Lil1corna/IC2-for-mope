@@ -1,0 +1,166 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:rubber_log",
+      "states": {
+        "ic2:resin_state": ["none", "empty", "full"]
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": ["minecraft:block_face"]
+        },
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"],
+          "y_rotation_offset": 180
+        }
+      },
+      "menu_category": {
+        "category": "none",
+        "is_hidden_in_commands": true,
+        "group": "minecraft:itemGroup.name.log"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:flammable": {
+        "destroy_chance_modifier": 5,
+        "catch_chance_modifier": 5
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:rubber_log_sides",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "ic2:rubber_log_bottomtop",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "ic2:rubber_log_bottomtop",
+          "render_method": "opaque"
+        }
+      },
+      "ic2:enable_tick": true,
+      "ic2:enable_interact": true,
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [1, 1]
+      },
+      "tag:script_data_driven": {},
+      "tag:ic2:leaves_update": {},
+      "tag:ic2:is_strippable_log": {},
+      "tag:tendrock:logs": {},
+      "tag:minecraft:wood": {},
+      "tag:minecraft:logs_that_burn": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north' && (q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down')",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 180, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south' && (q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down')",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west' && (q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down')",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, -90, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east' && (q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down')",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 90, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [90, 0, 0]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [0, 0, 90]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:resin_state') == 'full'",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:rubber_log_sides",
+              "render_method": "opaque"
+            },
+            "south": {
+              "texture": "ic2:rubber_log_wet_front",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "ic2:rubber_log_bottomtop",
+              "render_method": "opaque"
+            },
+            "down": {
+              "texture": "ic2:rubber_log_bottomtop",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:resin_state') == 'empty'",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:rubber_log_sides",
+              "render_method": "opaque"
+            },
+            "south": {
+              "texture": "ic2:rubber_log_dry_front",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "ic2:rubber_log_bottomtop",
+              "render_method": "opaque"
+            },
+            "down": {
+              "texture": "ic2:rubber_log_bottomtop",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:resin_state') == 'none'",
+        "components": {
+        }
+      }
+    ]
+  }
+}

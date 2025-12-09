@@ -1,0 +1,55 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:reactor_chamber",
+      "menu_category": {
+        "category": "construction",
+        "group": "itemGroup.name.ic2"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 30.0
+      },
+      "minecraft:loot": "loot_tables/blocks/reactor_chamber.json",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:reactor_chamber",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 16]
+      },
+      "minecraft:ticking": {
+        "looping": true,
+        "range": [1, 1]
+      },
+      "minecraft:inventory": {
+        "inventory_size": 1,
+        "private": true
+      },
+      "tag:ic2:reactor_component": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('ic2:active') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:reactor_chamber_active"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+

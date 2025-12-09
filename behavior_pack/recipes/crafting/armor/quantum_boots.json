@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:quantum_boots"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "   ",
+      "IEI",
+      "I I"
+    ],
+    "key": {
+      "I": {
+        "item": "ic2:iridium_plate"
+      },
+      "E": {
+        "item": "ic2:lapotron_crystal"
+      }
+    },
+    "unlock": [
+      {
+        "item": "ic2:iridium_plate"
+      }
+    ],
+    "result": {
+      "item": "ic2:quantum_boots"
+    }
+  }
+}
+

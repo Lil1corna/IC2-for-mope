@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:coil"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "iii",
+      "iri",
+      "iii"
+    ],
+    "key": {
+      "i": {
+        "item": "ic2:copper_cable"
+      },
+      "r": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "ic2:coil"
+    }
+  }
+}

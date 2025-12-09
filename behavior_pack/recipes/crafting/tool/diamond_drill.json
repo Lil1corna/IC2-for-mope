@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:diamond_drill"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " D ",
+      "DED",
+      " A "
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:diamond"
+      },
+      "E": {
+        "item": "ic2:electric_drill"
+      },
+      "A": {
+        "item": "ic2:advanced_alloy"
+      }
+    },
+    "result": {
+      "item": "ic2:diamond_drill",
+      "count": 1
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:wooden_rotor_blade"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "pip",
+      "pip",
+      "pip"
+    ],
+    "key": {
+      "p": {
+        "tag": "minecraft:planks"
+      },
+      "i": {
+        "tag": "minecraft:logs"
+      }
+    },
+    "result": {
+      "item": "ic2:wooden_rotor_blade"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:nuclear_reactor",
+      "menu_category": {
+        "category": "construction",
+        "group": "itemGroup.name.ic2"
+      },
+      "states": {
+        "ic2:active": [false, true],
+        "ic2:heat": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 60.0
+      },
+      "minecraft:loot": "loot_tables/blocks/nuclear_reactor.json",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:nuclear_reactor",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 16]
+      },
+      "minecraft:ticking": {
+        "looping": true,
+        "range": [20, 20]
+      },
+      "minecraft:inventory": {
+        "inventory_size": 54,
+        "private": true
+      },
+      "minecraft:block_light_emission": 0,
+      "tag:ic2:machine": {},
+      "tag:ic2:reactor": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('ic2:active') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ic2:nuclear_reactor_active"
+            }
+          },
+          "minecraft:block_light_emission": 8
+        }
+      },
+      {
+        "condition": "q.block_state('ic2:heat') >= 8",
+        "components": {
+          "minecraft:block_light_emission": 15
+        }
+      }
+    ]
+  }
+}
+

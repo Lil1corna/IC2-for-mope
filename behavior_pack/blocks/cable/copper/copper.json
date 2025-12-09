@@ -1,0 +1,54 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ic2:copper_cable",
+      "menu_category": {
+        "category": "none",
+        "is_hidden_in_commands": true
+      },
+      "states": {
+        "ic2:is_connected_east": [false, true],
+        "ic2:is_connected_west": [false, true],
+        "ic2:is_connected_south": [false, true],
+        "ic2:is_connected_north": [false, true],
+        "ic2:is_connected_up": [false, true],
+        "ic2:is_connected_down": [false, true]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:loot": "loot_tables/cable/copper.json",
+      "minecraft:light_dampening": 0,
+      "ic2:enable_tick": true,
+      "minecraft:tick": {
+        "looping": true,
+        "interval_range": [1, 1]
+      },
+      "minecraft:geometry": {
+        "identifier": "geometry.cable_4",
+        "bone_visibility": {
+          "east": "query.block_state('ic2:is_connected_east')",
+          "west": "query.block_state('ic2:is_connected_west')",
+          "south": "query.block_state('ic2:is_connected_south')",
+          "north": "query.block_state('ic2:is_connected_north')",
+          "up": "query.block_state('ic2:is_connected_up')",
+          "down": "query.block_state('ic2:is_connected_down')"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ic2:copper_cable",
+          "render_method": "opaque"
+        }
+      },
+      "ic2:connectable_cable": {},
+      "tag:ic2:cable": {}
+    }
+  }
+}

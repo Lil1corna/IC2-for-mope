@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:smithing_table"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "ss",
+      "pp",
+      "pp"
+    ],
+    "key": {
+      "s": {
+        "item": "ic2:steel_ingot"
+      },
+      "p": {
+        "item": "minecraft:planks"
+      }
+    },
+    "result": {
+      "item": "ic2:smithing_table"
+    }
+  }
+}

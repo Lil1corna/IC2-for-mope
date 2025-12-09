@@ -1,0 +1,24 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:solar_panel"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "GGG",
+            "DCD",
+            "GMG"
+        ],
+        "key": {
+            "G": { "item": "minecraft:glass" },
+            "D": { "item": "ic2:coal_dust" },
+            "C": { "item": "ic2:electronic_circuit" },
+            "M": { "item": "ic2:generator" }
+        },
+        "result": {
+            "item": "ic2:solar_panel",
+            "count": 1
+        }
+    }
+}

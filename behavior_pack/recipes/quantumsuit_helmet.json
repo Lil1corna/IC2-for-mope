@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "ic2:quantumsuit_helmet"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "DND",
+            "DAD",
+            "   "
+        ],
+        "key": {
+            "D": { "item": "minecraft:diamond" },
+            "N": { "item": "ic2:nanosuit_helmet" },
+            "A": { "item": "ic2:advanced_circuit" }
+        },
+        "result": {
+            "item": "ic2:quantumsuit_helmet",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ic2:wind_meter"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " t ",
+      "tbt",
+      " tp"
+    ],
+    "key": {
+      "t": {
+        "item": "ic2:tin_casing"
+      },
+      "p": {
+        "item": "ic2:small_power_unit"
+      },
+      "b": {
+        "item": "ic2:bronze_casing"
+      }
+    },
+    "result": {
+      "item": "ic2:wind_meter"
+    }
+  }
+}

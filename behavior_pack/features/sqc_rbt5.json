@@ -1,0 +1,13 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:aggregate_feature": {
+    "description": {
+      "identifier": "ic2:sqc_rbt5"
+    },
+    "features": [
+      "ic2:s_rbt",
+      "ic2:sct_rbt5"
+    ],
+    "early_out": "first_failure"
+  }
+}

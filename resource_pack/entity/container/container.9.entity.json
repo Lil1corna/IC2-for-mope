@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ic2:container.9",
+      "materials": {
+        "default": "minecart"
+      },
+      "textures": {
+        "default": "textures/entity/invisible"
+      },
+      "geometry": {
+        "default": "geometry.cube"
+      },
+      "render_controllers": ["controller.render.minecart"]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "item",
+          "name": "ic2:insulated_tin_cable"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}
