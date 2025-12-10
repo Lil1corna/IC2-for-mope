@@ -177,3 +177,26 @@ tile.ic2:crop_poppy.name=Мак
 tile.ic2:crop_tulip.name=Тюльпан
 tile.ic2:crop_hops.name=Хмель
 tile.ic2:crop_malachite.name=Малахит
+
+## Предметы - Машины
+item.ic2:generator.name=Генератор
+item.ic2:geo_generator.name=Гео-генератор
+item.ic2:solar_generator.name=Солнечная панель
+item.ic2:wind_generator.name=Ветряная турбина
+item.ic2:water_generator.name=Водяная мельница
+item.ic2:kinetic_generator.name=Кинетический генератор
+item.ic2:water_kinetic_generator.name=Гидрокинетический генератор
+item.ic2:wind_kinetic_generator.name=Ветрокинетический генератор
+item.ic2:manual_kinetic_generator.name=Ручной кинетический генератор
+item.ic2:macerator.name=Дробитель
+item.ic2:electric_furnace.name=Электропечь
+item.ic2:compressor.name=Компрессор
+item.ic2:extractor.name=Экстрактор
+item.ic2:recycler.name=Переработчик
+item.ic2:tesla_coil.name=Катушка Тесла
+item.ic2:canning_machine.name=Консервирующая машина
+item.ic2:metal_former.name=Металлоформовщик
+item.ic2:batbox.name=BatBox
+item.ic2:cesu.name=CESU
+item.ic2:mfe.name=MFE
+item.ic2:mfsu.name=MFSU

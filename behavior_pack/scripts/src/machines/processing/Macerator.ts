@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
-import { BaseMachine, MACHINE_BASE_CONFIG, MachineConfig } from "./BaseMachine";
+import { BaseMachine, MachineConfig } from "./BaseMachine";
+import { VoltageTier } from "../../energy/EnergyNetwork";
 
 /**
  * Recipe definition for Macerator
@@ -89,12 +90,20 @@ export function getMaceratorOutput(input: string): { output: string; count: numb
  * Macerator machine - crushes ores into dust for ore doubling
  * Requirements 10.1-10.4
  */
+const MACERATOR_CONFIG: MachineConfig = {
+    maxInput: 32,
+    consumption: 2,
+    operationTime: 200,
+    maxEnergy: 1000,
+    maxVoltage: VoltageTier.LV
+};
+
 export class Macerator extends BaseMachine {
     private currentInput: string | null = null;
     private recipes: MaceratorRecipe[];
 
-    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG) {
-        super(position, config);
+    constructor(position: Vector3, config: MachineConfig = MACERATOR_CONFIG) {
+        super(position, config, "macerator");
         this.recipes = MACERATOR_RECIPES;
     }
 

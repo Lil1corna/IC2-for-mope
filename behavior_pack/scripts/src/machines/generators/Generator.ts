@@ -1,34 +1,16 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
+import { IMachine } from "../IMachine";
 
 /**
  * Fuel burn times in ticks (matching vanilla furnace)
  * 1 item smelts in 200 ticks in vanilla furnace
  */
 export const FUEL_BURN_TIMES: Record<string, number> = {
-    "minecraft:coal": 1600,           // 80 seconds, smelts 8 items
-    "minecraft:charcoal": 1600,       // 80 seconds, smelts 8 items
-    "minecraft:coal_block": 16000,    // 800 seconds, smelts 80 items
-    "minecraft:oak_log": 300,         // 15 seconds, smelts 1.5 items
-    "minecraft:spruce_log": 300,
-    "minecraft:birch_log": 300,
-    "minecraft:jungle_log": 300,
-    "minecraft:acacia_log": 300,
-    "minecraft:dark_oak_log": 300,
-    "minecraft:mangrove_log": 300,
-    "minecraft:cherry_log": 300,
-    "minecraft:oak_planks": 300,      // 15 seconds
-    "minecraft:spruce_planks": 300,
-    "minecraft:birch_planks": 300,
-    "minecraft:jungle_planks": 300,
-    "minecraft:acacia_planks": 300,
-    "minecraft:dark_oak_planks": 300,
-    "minecraft:mangrove_planks": 300,
-    "minecraft:cherry_planks": 300,
-    "minecraft:stick": 100,           // 5 seconds, smelts 0.5 items
-    "minecraft:wooden_slab": 150,     // 7.5 seconds
-    "minecraft:blaze_rod": 2400,      // 120 seconds, smelts 12 items
-    "minecraft:lava_bucket": 20000,   // 1000 seconds, smelts 100 items
+    "minecraft:coal": 1600,
+    "minecraft:oak_planks": 300,
+    "minecraft:stick": 100,
+    "minecraft:lava_bucket": 20000
 };
 
 /**
@@ -50,10 +32,10 @@ export interface GeneratorConfig {
  * Default generator configuration matching IC2 Experimental
  */
 export const GENERATOR_CONFIG: GeneratorConfig = {
-    outputPerTick: 10,      // 10 EU/t output
-    maxBuffer: 4000,        // 4000 EU buffer
-    packetSize: 10,         // 10 EU per packet
-    voltageTier: VoltageTier.LV  // Low Voltage (32 EU max)
+    outputPerTick: 10,
+    maxBuffer: 1000,
+    packetSize: 10,
+    voltageTier: VoltageTier.LV
 };
 
 /**
@@ -101,8 +83,9 @@ export function calculateOutputPerTick(config: GeneratorConfig = GENERATOR_CONFI
  * Generator class implementing basic coal/wood generator
  * Requirements 5.1-5.4
  */
-export class Generator {
-    private position: Vector3;
+export class Generator implements IMachine<GeneratorState> {
+    readonly position: Vector3;
+    readonly type: string = "generator";
     private config: GeneratorConfig;
     private state: GeneratorState;
 
@@ -117,10 +100,10 @@ export class Generator {
         };
 
         // Register with energy network as generator
-        energyNetwork.registerGenerator({
-            position: this.position,
+        energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
-            packetSize: this.config.packetSize
+            packetSize: this.config.packetSize,
+            machine: this
         });
     }
 
@@ -141,15 +124,12 @@ export class Generator {
     /**
      * Get generator position
      */
-    getPosition(): Vector3 {
-        return this.position;
+    get energyStored(): number {
+        return this.state.energyStored;
     }
 
-    /**
-     * Get generator configuration
-     */
-    getConfig(): GeneratorConfig {
-        return this.config;
+    get maxEnergy(): number {
+        return this.config.maxBuffer;
     }
 
     /**
@@ -184,7 +164,7 @@ export class Generator {
      * Called every game tick when generator is loaded
      * @returns EU generated this tick
      */
-    tick(): number {
+    tick(delta: number = 1): number {
         let euGenerated = 0;
 
         // If burning fuel, generate energy
@@ -193,10 +173,10 @@ export class Generator {
             const spaceInBuffer = this.config.maxBuffer - this.state.energyStored;
             
             if (spaceInBuffer > 0) {
-                // Generate energy (up to available space)
-                euGenerated = Math.min(this.config.outputPerTick, spaceInBuffer);
+                const perTick = this.config.outputPerTick * delta;
+                euGenerated = Math.min(perTick, spaceInBuffer);
                 this.state.energyStored += euGenerated;
-                this.state.burnTimeRemaining--;
+                this.state.burnTimeRemaining = Math.max(0, this.state.burnTimeRemaining - delta);
                 
                 // Check if fuel exhausted
                 if (this.state.burnTimeRemaining <= 0) {
@@ -207,7 +187,7 @@ export class Generator {
             // If buffer full, fuel still burns but no EU generated
             // (IC2 behavior: fuel continues burning even if buffer full)
             else {
-                this.state.burnTimeRemaining--;
+                this.state.burnTimeRemaining = Math.max(0, this.state.burnTimeRemaining - delta);
                 if (this.state.burnTimeRemaining <= 0) {
                     this.state.isActive = false;
                     this.state.totalBurnTime = 0;
@@ -219,6 +199,21 @@ export class Generator {
         this.trySendPackets();
 
         return euGenerated;
+    }
+
+    addEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const space = this.config.maxBuffer - this.state.energyStored;
+        const accepted = Math.min(space, amount);
+        this.state.energyStored += accepted;
+        return accepted;
+    }
+
+    removeEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const removed = Math.min(this.state.energyStored, amount);
+        this.state.energyStored -= removed;
+        return removed;
     }
 
     /**

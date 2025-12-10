@@ -115,10 +115,10 @@ export class SolarPanel {
         this.config = config;
 
         // Register with energy network as generator
-        energyNetwork.registerGenerator({
-            position: this.position,
+        energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
-            packetSize: this.config.outputPerTick
+            packetSize: this.config.outputPerTick,
+            machine: this
         });
     }
 

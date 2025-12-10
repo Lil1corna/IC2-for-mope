@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
-import { BaseMachine, MACHINE_BASE_CONFIG, MachineConfig } from "./BaseMachine";
+import { BaseMachine, MachineConfig } from "./BaseMachine";
+import { VoltageTier } from "../../energy/EnergyNetwork";
 
 /**
  * Recipe definition for Extractor
@@ -76,12 +77,20 @@ export function getExtractorOutput(input: string): { output: string; count: numb
  * Extractor machine - extracts rubber and other materials
  * Requirements 13.1-13.3
  */
+const EXTRACTOR_CONFIG: MachineConfig = {
+    maxInput: 32,
+    consumption: 2,
+    operationTime: 150,
+    maxEnergy: 1000,
+    maxVoltage: VoltageTier.LV
+};
+
 export class Extractor extends BaseMachine {
     private currentInput: string | null = null;
     private recipes: ExtractorRecipe[];
 
-    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG) {
-        super(position, config);
+    constructor(position: Vector3, config: MachineConfig = EXTRACTOR_CONFIG) {
+        super(position, config, "extractor");
         this.recipes = EXTRACTOR_RECIPES;
     }
 

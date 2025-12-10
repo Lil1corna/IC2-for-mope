@@ -179,3 +179,26 @@ tile.ic2:crop_poppy.name=Poppy Crop
 tile.ic2:crop_tulip.name=Tulip Crop
 tile.ic2:crop_hops.name=Hops Crop
 tile.ic2:crop_malachite.name=Malachite Crop
+
+## Items - Machines
+item.ic2:generator.name=Generator
+item.ic2:geo_generator.name=Geothermal Generator
+item.ic2:solar_generator.name=Solar Panel
+item.ic2:wind_generator.name=Wind Turbine
+item.ic2:water_generator.name=Water Mill
+item.ic2:kinetic_generator.name=Kinetic Generator
+item.ic2:water_kinetic_generator.name=Water Kinetic Generator
+item.ic2:wind_kinetic_generator.name=Wind Kinetic Generator
+item.ic2:manual_kinetic_generator.name=Manual Kinetic Generator
+item.ic2:macerator.name=Macerator
+item.ic2:electric_furnace.name=Electric Furnace
+item.ic2:compressor.name=Compressor
+item.ic2:extractor.name=Extractor
+item.ic2:recycler.name=Recycler
+item.ic2:tesla_coil.name=Tesla Coil
+item.ic2:canning_machine.name=Canning Machine
+item.ic2:metal_former.name=Metal Former
+item.ic2:batbox.name=BatBox
+item.ic2:cesu.name=CESU
+item.ic2:mfe.name=MFE
+item.ic2:mfsu.name=MFSU
