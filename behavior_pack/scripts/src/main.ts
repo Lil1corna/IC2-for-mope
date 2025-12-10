@@ -98,9 +98,9 @@ class MachineManager {
 
     destroyMachine(posKey: string): void {
         const machine = this.machines.get(posKey);
-        if (machine && typeof (machine as { destroy?: () => void }).destroy === "function") {
+        if (machine) {
             try {
-                (machine as { destroy: () => void }).destroy();
+                machine.destroy?.();
             } catch {
                 // Ignore cleanup errors
             }

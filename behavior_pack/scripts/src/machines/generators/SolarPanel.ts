@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
+import { IMachine } from "../IMachine";
 
 /**
  * Solar Panel configuration
@@ -106,8 +107,9 @@ export function calculateSolarOutput(
  * - 0 EU/t when nighttime, rain, or blocked sky (Req 8.2)
  * - Direct output, no buffer (Req 8.3)
  */
-export class SolarPanel {
-    private position: Vector3;
+export class SolarPanel implements IMachine<void> {
+    readonly position: Vector3;
+    readonly type: string = "solar_panel";
     private config: SolarPanelConfig;
 
     constructor(position: Vector3, config: SolarPanelConfig = SOLAR_PANEL_CONFIG) {
@@ -133,7 +135,31 @@ export class SolarPanel {
      * Get solar panel configuration
      */
     getConfig(): SolarPanelConfig {
-        return this.config;
+        return { ...this.config };
+    }
+
+    get energyStored(): number {
+        return 0;
+    }
+
+    get maxEnergy(): number {
+        return 0;
+    }
+
+    addEnergy(_amount: number): number {
+        return 0;
+    }
+
+    removeEnergy(_amount: number): number {
+        return 0;
+    }
+
+    getState(): void {
+        return undefined;
+    }
+
+    setState(_state: void): void {
+        // Solar panels are stateless for now
     }
 
     /**

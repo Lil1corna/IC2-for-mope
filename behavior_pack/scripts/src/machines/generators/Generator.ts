@@ -1,6 +1,7 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
 import { IMachine } from "../IMachine";
+import { BaseMachine, MachineConfig } from "../processing/BaseMachine";
 
 /**
  * Fuel burn times in ticks (matching vanilla furnace)
@@ -83,16 +84,23 @@ export function calculateOutputPerTick(config: GeneratorConfig = GENERATOR_CONFI
  * Generator class implementing basic coal/wood generator
  * Requirements 5.1-5.4
  */
-export class Generator implements IMachine<GeneratorState> {
-    readonly position: Vector3;
-    readonly type: string = "generator";
+export class Generator extends BaseMachine implements IMachine<GeneratorState> {
     private config: GeneratorConfig;
-    private state: GeneratorState;
+    private generatorState: GeneratorState;
 
     constructor(position: Vector3, config: GeneratorConfig = GENERATOR_CONFIG) {
-        this.position = position;
+        const baseConfig: MachineConfig = {
+            maxInput: config.packetSize,
+            consumption: 0,
+            operationTime: 0,
+            maxEnergy: config.maxBuffer,
+            maxVoltage: config.voltageTier
+        };
+
+        super(position, baseConfig, "generator", false);
+
         this.config = config;
-        this.state = {
+        this.generatorState = {
             energyStored: 0,
             burnTimeRemaining: 0,
             totalBurnTime: 0,
@@ -111,21 +119,28 @@ export class Generator implements IMachine<GeneratorState> {
      * Get current generator state
      */
     getState(): GeneratorState {
-        return { ...this.state };
+        return { ...this.generatorState };
+    }
+
+    /**
+     * Get generator configuration
+     */
+    getConfig(): GeneratorConfig {
+        return this.config;
     }
 
     /**
      * Set generator state (for persistence restore)
      */
     setState(state: GeneratorState): void {
-        this.state = { ...state };
+        this.generatorState = { ...state };
     }
 
     /**
      * Get generator position
      */
     get energyStored(): number {
-        return this.state.energyStored;
+        return this.generatorState.energyStored;
     }
 
     get maxEnergy(): number {
@@ -139,12 +154,12 @@ export class Generator implements IMachine<GeneratorState> {
      */
     tryConsumeFuel(itemId: string): boolean {
         // Can't add fuel if already burning
-        if (this.state.burnTimeRemaining > 0) {
+        if (this.generatorState.burnTimeRemaining > 0) {
             return false;
         }
 
         // Can't add fuel if buffer is full
-        if (this.state.energyStored >= this.config.maxBuffer) {
+        if (this.generatorState.energyStored >= this.config.maxBuffer) {
             return false;
         }
 
@@ -153,9 +168,9 @@ export class Generator implements IMachine<GeneratorState> {
             return false;
         }
 
-        this.state.burnTimeRemaining = burnTime;
-        this.state.totalBurnTime = burnTime;
-        this.state.isActive = true;
+        this.generatorState.burnTimeRemaining = burnTime;
+        this.generatorState.totalBurnTime = burnTime;
+        this.generatorState.isActive = true;
         return true;
     }
 
@@ -168,29 +183,29 @@ export class Generator implements IMachine<GeneratorState> {
         let euGenerated = 0;
 
         // If burning fuel, generate energy
-        if (this.state.burnTimeRemaining > 0) {
+        if (this.generatorState.burnTimeRemaining > 0) {
             // Check if buffer has space
-            const spaceInBuffer = this.config.maxBuffer - this.state.energyStored;
-            
+            const spaceInBuffer = this.config.maxBuffer - this.generatorState.energyStored;
+
             if (spaceInBuffer > 0) {
                 const perTick = this.config.outputPerTick * delta;
                 euGenerated = Math.min(perTick, spaceInBuffer);
-                this.state.energyStored += euGenerated;
-                this.state.burnTimeRemaining = Math.max(0, this.state.burnTimeRemaining - delta);
-                
+                this.generatorState.energyStored += euGenerated;
+                this.generatorState.burnTimeRemaining = Math.max(0, this.generatorState.burnTimeRemaining - delta);
+
                 // Check if fuel exhausted
-                if (this.state.burnTimeRemaining <= 0) {
-                    this.state.isActive = false;
-                    this.state.totalBurnTime = 0;
+                if (this.generatorState.burnTimeRemaining <= 0) {
+                    this.generatorState.isActive = false;
+                    this.generatorState.totalBurnTime = 0;
                 }
             }
             // If buffer full, fuel still burns but no EU generated
             // (IC2 behavior: fuel continues burning even if buffer full)
             else {
-                this.state.burnTimeRemaining = Math.max(0, this.state.burnTimeRemaining - delta);
-                if (this.state.burnTimeRemaining <= 0) {
-                    this.state.isActive = false;
-                    this.state.totalBurnTime = 0;
+                this.generatorState.burnTimeRemaining = Math.max(0, this.generatorState.burnTimeRemaining - delta);
+                if (this.generatorState.burnTimeRemaining <= 0) {
+                    this.generatorState.isActive = false;
+                    this.generatorState.totalBurnTime = 0;
                 }
             }
         }
@@ -203,16 +218,16 @@ export class Generator implements IMachine<GeneratorState> {
 
     addEnergy(amount: number): number {
         if (amount <= 0) return 0;
-        const space = this.config.maxBuffer - this.state.energyStored;
+        const space = this.config.maxBuffer - this.generatorState.energyStored;
         const accepted = Math.min(space, amount);
-        this.state.energyStored += accepted;
+        this.generatorState.energyStored += accepted;
         return accepted;
     }
 
     removeEnergy(amount: number): number {
         if (amount <= 0) return 0;
-        const removed = Math.min(this.state.energyStored, amount);
-        this.state.energyStored -= removed;
+        const removed = Math.min(this.generatorState.energyStored, amount);
+        this.generatorState.energyStored -= removed;
         return removed;
     }
 
@@ -221,7 +236,7 @@ export class Generator implements IMachine<GeneratorState> {
      */
     private trySendPackets(): void {
         // Send packets while we have enough energy
-        while (this.state.energyStored >= this.config.packetSize) {
+        while (this.generatorState.energyStored >= this.config.packetSize) {
             const results = energyNetwork.sendPacket(
                 this.position,
                 this.config.packetSize,
@@ -240,7 +255,7 @@ export class Generator implements IMachine<GeneratorState> {
             }
 
             // Deduct sent energy
-            this.state.energyStored -= this.config.packetSize;
+            this.generatorState.energyStored -= this.config.packetSize;
         }
     }
 
@@ -248,22 +263,22 @@ export class Generator implements IMachine<GeneratorState> {
      * Get current energy stored
      */
     getEnergyStored(): number {
-        return this.state.energyStored;
+        return this.generatorState.energyStored;
     }
 
     /**
      * Get burn progress (0-1)
      */
     getBurnProgress(): number {
-        if (this.state.totalBurnTime <= 0) return 0;
-        return 1 - (this.state.burnTimeRemaining / this.state.totalBurnTime);
+        if (this.generatorState.totalBurnTime <= 0) return 0;
+        return 1 - (this.generatorState.burnTimeRemaining / this.generatorState.totalBurnTime);
     }
 
     /**
      * Check if generator is currently active (burning fuel)
      */
     isActive(): boolean {
-        return this.state.isActive;
+        return this.generatorState.isActive;
     }
 
     /**

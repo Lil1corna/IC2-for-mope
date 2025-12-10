@@ -90,15 +90,21 @@ export function shouldMachineExplode(receivedVoltage: number, maxVoltage: number
  * Requirements 9.1-9.4
  */
 export class BaseMachine implements IMachine {
-    readonly position: Vector3;
-    protected config: MachineConfig;
+    public readonly position: Vector3;
+    public type: string;
+    protected machineConfig: MachineConfig;
     protected state: MachineState;
-    protected machineType: string;
+    private readonly isRegisteredAsConsumer: boolean;
 
-    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG, machineType: string = "machine") {
+    constructor(
+        position: Vector3,
+        config: MachineConfig = MACHINE_BASE_CONFIG,
+        machineType: string = "machine",
+        registerAsConsumer: boolean = true
+    ) {
         this.position = position;
-        this.config = config;
-        this.machineType = machineType;
+        this.machineConfig = config;
+        this.type = machineType;
         this.state = {
             energyStored: 0,
             progress: 0,
@@ -107,16 +113,16 @@ export class BaseMachine implements IMachine {
             hasOutputSpace: true
         };
 
-        // Register with energy network as consumer
-        energyNetwork.registerConsumer(this.position, {
-            maxVoltage: this.config.maxVoltage,
-            maxInput: this.config.maxInput,
-            machine: this
-        });
-    }
+        this.isRegisteredAsConsumer = registerAsConsumer;
 
-    get type(): string {
-        return this.machineType;
+        // Register with energy network as consumer
+        if (this.isRegisteredAsConsumer) {
+            energyNetwork.registerConsumer(this.position, {
+                maxVoltage: this.machineConfig.maxVoltage,
+                maxInput: this.machineConfig.maxInput,
+                machine: this
+            });
+        }
     }
 
     get energyStored(): number {
@@ -124,21 +130,21 @@ export class BaseMachine implements IMachine {
     }
 
     get maxEnergy(): number {
-        return this.config.maxEnergy;
+        return this.machineConfig.maxEnergy;
     }
 
     /**
      * Get current machine state
      */
-    getState(): MachineState {
+    getState(): any {
         return { ...this.state };
     }
 
     /**
      * Set machine state (for persistence restore)
      */
-    setState(state: MachineState): void {
-        this.state = { ...state };
+    setState(state: any): void {
+        this.state = { ...(state as MachineState) };
         this.updateNetworkConsumer();
     }
 
@@ -152,8 +158,8 @@ export class BaseMachine implements IMachine {
     /**
      * Get machine configuration
      */
-    getConfig(): MachineConfig {
-        return this.config;
+    getConfig(): any {
+        return this.machineConfig;
     }
 
     /**
@@ -165,7 +171,7 @@ export class BaseMachine implements IMachine {
      */
     receiveEnergy(euAmount: number, voltage: number): EnergyReceiveResult {
         // Check for overvoltage - machine explodes (Requirement 9.1)
-        if (shouldMachineExplode(voltage, this.config.maxVoltage)) {
+        if (shouldMachineExplode(voltage, this.machineConfig.maxVoltage)) {
             const force = calculateExplosionForce(voltage);
             return {
                 accepted: false,
@@ -176,8 +182,8 @@ export class BaseMachine implements IMachine {
         }
 
         // Check if we can accept energy
-        const spaceAvailable = this.config.maxEnergy - this.state.energyStored;
-        const actualReceived = Math.min(euAmount, spaceAvailable, this.config.maxInput);
+        const spaceAvailable = this.machineConfig.maxEnergy - this.state.energyStored;
+        const actualReceived = Math.min(euAmount, spaceAvailable, this.machineConfig.maxInput);
 
         if (actualReceived > 0) {
             this.state.energyStored += actualReceived;
@@ -193,8 +199,8 @@ export class BaseMachine implements IMachine {
 
     addEnergy(amount: number): number {
         if (amount <= 0) return 0;
-        const space = this.config.maxEnergy - this.state.energyStored;
-        const accepted = Math.min(space, amount, this.config.maxInput);
+        const space = this.machineConfig.maxEnergy - this.state.energyStored;
+        const accepted = Math.min(space, amount, this.machineConfig.maxInput);
         if (accepted > 0) {
             this.state.energyStored += accepted;
             this.updateNetworkConsumer();
@@ -231,7 +237,7 @@ export class BaseMachine implements IMachine {
      * Requirements 9.2-9.4
      * @returns Result of tick operation
      */
-    tick(delta: number = 1): TickResult {
+    tick(delta: number = 1): any {
         const result: TickResult = {
             euConsumed: 0,
             operationCompleted: false,
@@ -249,7 +255,7 @@ export class BaseMachine implements IMachine {
         }
 
         // Check if we have enough energy (Requirement 9.4)
-        if (this.state.energyStored < this.config.consumption) {
+        if (this.state.energyStored < this.machineConfig.consumption) {
             // Insufficient energy - pause operation
             result.isPaused = true;
             this.state.isProcessing = false;
@@ -257,14 +263,14 @@ export class BaseMachine implements IMachine {
         }
 
         // Consume energy and progress (Requirement 9.2)
-        const consumption = this.config.consumption * delta;
+        const consumption = this.machineConfig.consumption * delta;
         this.state.energyStored = Math.max(0, this.state.energyStored - consumption);
         result.euConsumed = consumption;
         this.state.progress += delta;
         this.state.isProcessing = true;
 
         // Check if operation complete (Requirement 9.3)
-        if (this.state.progress >= this.config.operationTime) {
+        if (this.state.progress >= this.machineConfig.operationTime) {
             result.operationCompleted = true;
             this.state.progress = 0;
             this.state.isProcessing = false;
@@ -285,8 +291,8 @@ export class BaseMachine implements IMachine {
      * Get operation progress (0-1)
      */
     getProgress(): number {
-        if (this.config.operationTime <= 0) return 0;
-        return this.state.progress / this.config.operationTime;
+        if (this.machineConfig.operationTime <= 0) return 0;
+        return this.state.progress / this.machineConfig.operationTime;
     }
 
     /**
@@ -300,17 +306,21 @@ export class BaseMachine implements IMachine {
      * Update energy network consumer info
      */
     protected updateNetworkConsumer(): void {
-        energyNetwork.registerConsumer(this.position, {
-            maxVoltage: this.config.maxVoltage,
-            maxInput: this.config.maxInput,
-            machine: this
-        });
+        if (this.isRegisteredAsConsumer) {
+            energyNetwork.registerConsumer(this.position, {
+                maxVoltage: this.machineConfig.maxVoltage,
+                maxInput: this.machineConfig.maxInput,
+                machine: this
+            });
+        }
     }
 
     /**
      * Cleanup when machine is destroyed
      */
     destroy(): void {
-        energyNetwork.unregisterConsumer(this.position);
+        if (this.isRegisteredAsConsumer) {
+            energyNetwork.unregisterConsumer(this.position);
+        }
     }
 }
