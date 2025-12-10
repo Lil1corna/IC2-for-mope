@@ -1,9 +1,9 @@
 ## Блоки - Генераторы
 tile.ic2:generator.name=Генератор
 tile.ic2:geo_generator.name=Геотермальный генератор
-tile.ic2:solar_panel.name=Солнечная панель
-tile.ic2:wind_mill.name=Ветряк
-tile.ic2:water_mill.name=Водяная мельница
+tile.ic2:solar_generator.name=Солнечная панель
+tile.ic2:wind_generator.name=Ветряк
+tile.ic2:water_generator.name=Водяная мельница
 tile.ic2:kinetic_generator.name=Кинетический генератор
 tile.ic2:steam_generator.name=Паровой генератор
 
