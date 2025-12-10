@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
-import { BaseMachine, MACHINE_BASE_CONFIG, MachineConfig } from "./BaseMachine";
+import { BaseMachine, MachineConfig } from "./BaseMachine";
+import { VoltageTier } from "../../energy/EnergyNetwork";
 
 /**
  * Recipe definition for Compressor
@@ -85,12 +86,20 @@ export function getCompressorOutput(input: string): { output: string; count: num
  * Compressor machine - compresses materials into advanced components
  * Requirements 12.1-12.4
  */
+const COMPRESSOR_CONFIG: MachineConfig = {
+    maxInput: 32,
+    consumption: 3,
+    operationTime: 200,
+    maxEnergy: 1000,
+    maxVoltage: VoltageTier.LV
+};
+
 export class Compressor extends BaseMachine {
     private currentInput: string | null = null;
     private recipes: CompressorRecipe[];
 
-    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG) {
-        super(position, config);
+    constructor(position: Vector3, config: MachineConfig = COMPRESSOR_CONFIG) {
+        super(position, config, "compressor");
         this.recipes = COMPRESSOR_RECIPES;
     }
 

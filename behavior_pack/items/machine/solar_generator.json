@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ic2:solar_generator",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:icon": "ic2_solar_generator",
+      "minecraft:display_name": {
+        "value": "Solar Panel"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:block_placer": {
+        "block": "ic2:solar_generator"
+      }
+    }
+  }
+}

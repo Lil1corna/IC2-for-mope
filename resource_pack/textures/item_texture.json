@@ -1012,6 +1012,69 @@
     "ic2_uranium_dust": {
       "textures": "textures/items/uranium_dust"
     },
+    "ic2_generator": {
+      "textures": "textures/blocks/generator/fire/front"
+    },
+    "ic2_geo_generator": {
+      "textures": "textures/blocks/generator/geo/front"
+    },
+    "ic2_solar_generator": {
+      "textures": "textures/blocks/generator/solar/top"
+    },
+    "ic2_wind_generator": {
+      "textures": "textures/blocks/generator/wind/front"
+    },
+    "ic2_water_generator": {
+      "textures": "textures/blocks/generator/water/front"
+    },
+    "ic2_kinetic_generator": {
+      "textures": "textures/blocks/generator/kinetic/front"
+    },
+    "ic2_water_kinetic_generator": {
+      "textures": "textures/blocks/kinetic/water/front"
+    },
+    "ic2_wind_kinetic_generator": {
+      "textures": "textures/blocks/kinetic/wind/front"
+    },
+    "ic2_manual_kinetic_generator": {
+      "textures": "textures/blocks/kinetic/manual/sides"
+    },
+    "ic2_macerator": {
+      "textures": "textures/blocks/machine/macerator/front"
+    },
+    "ic2_electric_furnace": {
+      "textures": "textures/blocks/machine/electric_furnace/front"
+    },
+    "ic2_compressor": {
+      "textures": "textures/blocks/machine/compressor/front"
+    },
+    "ic2_extractor": {
+      "textures": "textures/blocks/machine/extractor/front"
+    },
+    "ic2_recycler": {
+      "textures": "textures/blocks/machine/recycler/front"
+    },
+    "ic2_tesla_coil": {
+      "textures": "textures/blocks/machine/tesla/sides"
+    },
+    "ic2_canning_machine": {
+      "textures": "textures/blocks/general/machine/sides"
+    },
+    "ic2_metal_former": {
+      "textures": "textures/blocks/machine/metal_former/front"
+    },
+    "ic2_batbox": {
+      "textures": "textures/blocks/wiring/storage/batbox/front"
+    },
+    "ic2_cesu": {
+      "textures": "textures/blocks/wiring/storage/cesu/front"
+    },
+    "ic2_mfe": {
+      "textures": "textures/blocks/wiring/storage/mfe/front"
+    },
+    "ic2_mfsu": {
+      "textures": "textures/blocks/wiring/storage/mfsu/front"
+    },
     "ic2_wrench": {
       "textures": "textures/items/wrench"
     }

@@ -1,4 +1,6 @@
-import { Block, Dimension, Vector3, world } from "@minecraft/server";
+import { Vector3 } from "@minecraft/server";
+import { IMachine } from "../machines/IMachine";
+import { getAdjacentPositions, posToKey } from "./CableGraph";
 
 /**
  * Voltage Tiers for IC2 energy system
@@ -92,8 +94,7 @@ export interface EnergyConsumer {
     position: Vector3;
     maxVoltage: number;
     maxInput: number;
-    currentEnergy: number;
-    maxEnergy: number;
+    machine: IMachine;
 }
 
 /**
@@ -103,6 +104,7 @@ export interface EnergyGenerator {
     position: Vector3;
     outputVoltage: number;
     packetSize: number;
+    machine: IMachine;
 }
 
 /**
@@ -137,106 +139,68 @@ export class EnergyNetwork {
     private consumers: Map<string, EnergyConsumer> = new Map();
     private generators: Map<string, EnergyGenerator> = new Map();
     private cables: Map<string, CableConfig> = new Map();
-    private pathCache: Map<string, CachedPath[]> = new Map();
-    private cacheValid: boolean = false;
 
-    /**
-     * Convert Vector3 to string key for maps
-     */
-    private posToKey(pos: Vector3): string {
-        return `${Math.floor(pos.x)},${Math.floor(pos.y)},${Math.floor(pos.z)}`;
+    private key(pos: Vector3): string {
+        return posToKey(pos);
     }
 
-    /**
-     * Register a consumer (machine) in the network
-     */
-    registerConsumer(consumer: EnergyConsumer): void {
-        const key = this.posToKey(consumer.position);
-        this.consumers.set(key, consumer);
-        this.invalidateCache();
+    registerConsumer(position: Vector3, data: Omit<EnergyConsumer, "position">): void {
+        const key = this.key(position);
+        this.consumers.set(key, { position: { ...position }, ...data });
     }
 
-    /**
-     * Unregister a consumer from the network
-     */
+    updateConsumer(position: Vector3, data: Partial<Omit<EnergyConsumer, "position">>): void {
+        const key = this.key(position);
+        const existing = this.consumers.get(key);
+        if (!existing) return;
+        this.consumers.set(key, { ...existing, ...data, position: existing.position });
+    }
+
     unregisterConsumer(position: Vector3): void {
-        const key = this.posToKey(position);
-        this.consumers.delete(key);
-        this.invalidateCache();
+        this.consumers.delete(this.key(position));
     }
 
-    /**
-     * Register a generator in the network
-     */
-    registerGenerator(generator: EnergyGenerator): void {
-        const key = this.posToKey(generator.position);
-        this.generators.set(key, generator);
-        this.invalidateCache();
+    registerGenerator(position: Vector3, data: Omit<EnergyGenerator, "position">): void {
+        const key = this.key(position);
+        this.generators.set(key, { position: { ...position }, ...data });
     }
 
-    /**
-     * Unregister a generator from the network
-     */
+    updateGenerator(position: Vector3, data: Partial<Omit<EnergyGenerator, "position">>): void {
+        const key = this.key(position);
+        const existing = this.generators.get(key);
+        if (!existing) return;
+        this.generators.set(key, { ...existing, ...data, position: existing.position });
+    }
+
     unregisterGenerator(position: Vector3): void {
-        const key = this.posToKey(position);
-        this.generators.delete(key);
-        this.invalidateCache();
+        this.generators.delete(this.key(position));
     }
 
-    /**
-     * Register a cable in the network
-     */
     registerCable(position: Vector3, cableType: string): void {
-        const key = this.posToKey(position);
         const config = CABLE_CONFIG[cableType];
-        if (config) {
-            this.cables.set(key, config);
-            this.invalidateCache();
-        }
+        if (!config) return;
+        this.cables.set(this.key(position), config);
     }
 
-    /**
-     * Unregister a cable from the network
-     */
     unregisterCable(position: Vector3): void {
-        const key = this.posToKey(position);
-        this.cables.delete(key);
-        this.invalidateCache();
+        this.cables.delete(this.key(position));
     }
 
-    /**
-     * Invalidate the path cache (called when network changes)
-     */
-    invalidateCache(): void {
-        this.cacheValid = false;
-        this.pathCache.clear();
-    }
-
-    /**
-     * Check if cache is valid
-     */
-    isCacheValid(): boolean {
-        return this.cacheValid;
-    }
-
-
-    /**
-     * Send an energy packet from a source
-     * Returns results for each consumer that received energy
-     */
     sendPacket(source: Vector3, euAmount: number, voltage: number): PacketResult[] {
         const results: PacketResult[] = [];
-        const paths = this.getConsumerPaths(source);
+        if (euAmount <= 0) return results;
 
-        for (const path of paths) {
-            const consumerKey = this.posToKey(path.target);
-            const consumer = this.consumers.get(consumerKey);
-            
-            if (!consumer) continue;
+        const neighbors = getAdjacentPositions(source);
+        for (const neighbor of neighbors) {
+            const consumer = this.consumers.get(this.key(neighbor));
+            if (consumer) {
+                results.push(this.handlePacketToConsumer(consumer, euAmount, voltage, 0, 1));
+                continue;
+            }
 
-            // Check cable voltage limits along path
-            if (voltage > path.maxVoltage) {
-                // Cable burns - handled by caller
+            const cable = this.cables.get(this.key(neighbor));
+            if (!cable) continue;
+            if (voltage > cable.maxEU) {
                 results.push({
                     accepted: false,
                     euDelivered: 0,
@@ -246,18 +210,17 @@ export class EnergyNetwork {
                 continue;
             }
 
-            // Receive packet at consumer
-            const result = this.receivePacket(consumer, euAmount, voltage, path.totalLoss, path.distance);
-            results.push(result);
+            const cableNeighbors = getAdjacentPositions(neighbor);
+            for (const targetPos of cableNeighbors) {
+                const target = this.consumers.get(this.key(targetPos));
+                if (!target) continue;
+                results.push(this.handlePacketToConsumer(target, euAmount, voltage, cable.loss, 1));
+            }
         }
 
         return results;
     }
 
-    /**
-     * Receive an energy packet at a consumer
-     * Handles overvoltage explosion and energy loss
-     */
     receivePacket(
         consumer: EnergyConsumer,
         euAmount: number,
@@ -265,111 +228,119 @@ export class EnergyNetwork {
         totalLoss: number,
         distance: number
     ): PacketResult {
-        // Check for overvoltage - machine explodes
+        return this.handlePacketToConsumer(consumer, euAmount, voltage, totalLoss, distance);
+    }
+
+    distributeEnergy(): void {
+        for (const generator of this.generators.values()) {
+            let available = generator.machine.energyStored;
+            if (available <= 0) continue;
+
+            const neighbors = getAdjacentPositions(generator.position);
+            for (const neighbor of neighbors) {
+                if (available <= 0) break;
+
+                const neighborKey = this.key(neighbor);
+                const neighborConsumer = this.consumers.get(neighborKey);
+                if (neighborConsumer) {
+                    const accepted = this.sendDirect(generator, neighborConsumer);
+                    if (accepted > 0) {
+                        generator.machine.removeEnergy(accepted);
+                        available -= accepted;
+                    }
+                    continue;
+                }
+
+                const cable = this.cables.get(neighborKey);
+                if (!cable) continue;
+                if (generator.outputVoltage > cable.maxEU) {
+                    continue;
+                }
+
+                const delivered = this.sendViaCable(generator, neighbor, cable);
+                if (delivered > 0) {
+                    generator.machine.removeEnergy(delivered);
+                    available -= delivered;
+                }
+            }
+        }
+    }
+
+    private handlePacketToConsumer(
+        consumer: EnergyConsumer,
+        euAmount: number,
+        voltage: number,
+        lossPerBlock: number,
+        distance: number
+    ): PacketResult {
         if (shouldExplode(voltage, consumer.maxVoltage)) {
-            const force = calculateExplosionForce(voltage);
             return {
                 accepted: false,
                 euDelivered: 0,
                 exploded: true,
-                explosionForce: force
+                explosionForce: calculateExplosionForce(voltage)
             };
         }
 
-        // Calculate energy after cable loss
-        const deliveredEU = calculateDeliveredEnergy(euAmount, totalLoss, distance);
-
-        // Check if consumer can accept energy
-        const spaceAvailable = consumer.maxEnergy - consumer.currentEnergy;
-        const actualDelivered = Math.min(deliveredEU, spaceAvailable, consumer.maxInput);
-
-        if (actualDelivered > 0) {
-            consumer.currentEnergy += actualDelivered;
-        }
-
+        const delivered = calculateDeliveredEnergy(euAmount, lossPerBlock, distance);
+        const accepted = consumer.machine.addEnergy(Math.min(delivered, consumer.maxInput));
         return {
-            accepted: actualDelivered > 0,
-            euDelivered: actualDelivered,
+            accepted: accepted > 0,
+            euDelivered: accepted,
             exploded: false
         };
     }
 
-    /**
-     * Get cached paths to consumers from a source
-     * Recalculates if cache is invalid
-     */
-    getConsumerPaths(source: Vector3): CachedPath[] {
-        const sourceKey = this.posToKey(source);
-        
-        if (this.cacheValid && this.pathCache.has(sourceKey)) {
-            return this.pathCache.get(sourceKey)!;
+    private sendDirect(generator: EnergyGenerator, consumer: EnergyConsumer): number {
+        if (generator.outputVoltage > consumer.maxVoltage) {
+            return 0;
         }
 
-        // Recalculate paths (simplified - actual pathfinding in CableGraph)
-        const paths = this.calculatePaths(source);
-        this.pathCache.set(sourceKey, paths);
-        this.cacheValid = true;
+        const packetSize = Math.min(generator.packetSize, generator.machine.energyStored);
+        if (packetSize <= 0) return 0;
 
-        return paths;
+        const accepted = consumer.machine.addEnergy(Math.min(packetSize, consumer.maxInput));
+        return accepted;
     }
 
-    /**
-     * Calculate paths from source to all reachable consumers
-     * This is a simplified version - full pathfinding in CableGraph
-     */
-    private calculatePaths(source: Vector3): CachedPath[] {
-        const paths: CachedPath[] = [];
-        
-        // For each consumer, find path through cables
-        for (const [key, consumer] of this.consumers) {
-            // Simplified: direct distance calculation
-            // Full implementation uses BFS through cable network
-            const dx = Math.abs(consumer.position.x - source.x);
-            const dy = Math.abs(consumer.position.y - source.y);
-            const dz = Math.abs(consumer.position.z - source.z);
-            const distance = dx + dy + dz; // Manhattan distance
+    private sendViaCable(generator: EnergyGenerator, cablePos: Vector3, cable: CableConfig): number {
+        const packetSize = Math.min(generator.packetSize, generator.machine.energyStored);
+        if (packetSize <= 0) return 0;
 
-            // Find minimum voltage along path (simplified)
-            let minVoltage = VoltageTier.IV;
-            let totalLoss = 0;
+        const neighbors = getAdjacentPositions(cablePos);
+        let transferred = 0;
+        for (const neighbor of neighbors) {
+            if (transferred >= packetSize) break;
 
-            // In full implementation, trace through actual cables
-            // For now, assume average cable loss
-            const avgLoss = 0.2; // Default to copper loss
-            totalLoss = avgLoss;
+            const neighborKey = this.key(neighbor);
+            const consumer = this.consumers.get(neighborKey);
+            if (!consumer) continue;
+            if (generator.outputVoltage > consumer.maxVoltage || generator.outputVoltage > cable.maxEU) {
+                continue;
+            }
 
-            paths.push({
-                target: consumer.position,
-                distance,
-                totalLoss,
-                maxVoltage: minVoltage
-            });
+            const available = packetSize - transferred;
+            const afterLoss = calculateDeliveredEnergy(available, cable.loss, 1);
+            if (afterLoss <= 0) continue;
+
+            const accepted = consumer.machine.addEnergy(Math.min(afterLoss, consumer.maxInput));
+            transferred += accepted;
         }
 
-        return paths;
+        return transferred;
     }
 
-    /**
-     * Get all registered consumers
-     */
     getConsumers(): EnergyConsumer[] {
         return Array.from(this.consumers.values());
     }
 
-    /**
-     * Get all registered generators
-     */
     getGenerators(): EnergyGenerator[] {
         return Array.from(this.generators.values());
     }
 
-    /**
-     * Get consumer at position
-     */
     getConsumer(position: Vector3): EnergyConsumer | undefined {
-        return this.consumers.get(this.posToKey(position));
+        return this.consumers.get(this.key(position));
     }
 }
 
-// Singleton instance
 export const energyNetwork = new EnergyNetwork();

@@ -1,7 +1,7 @@
 import { world, system, Player, Block, Vector3, EntityHurtAfterEvent, Dimension, ItemStack, EquipmentSlot, PlayerPlaceBlockAfterEvent, PlayerBreakBlockAfterEvent, PlayerInteractWithBlockAfterEvent, PlayerLeaveBeforeEvent } from "@minecraft/server";
 
 // Energy system imports
-import { energyNetwork, VoltageTier } from "./energy/EnergyNetwork";
+import { energyNetwork } from "./energy/EnergyNetwork";
 import { cableGraph } from "./energy/CableGraph";
 
 // Persistence imports
@@ -20,6 +20,8 @@ import { ElectricFurnace } from "./machines/processing/ElectricFurnace";
 import { Compressor } from "./machines/processing/Compressor";
 import { Extractor } from "./machines/processing/Extractor";
 import { Recycler } from "./machines/processing/Recycler";
+import { BatBox } from "./machines/storage/BatBox";
+import { IMachine } from "./machines/IMachine";
 
 // Reactor imports
 import { NuclearReactor } from "./machines/reactor/NuclearReactor";
@@ -49,11 +51,85 @@ import { guiManager, MachineType, MachineGUIState, ReactorGUIState } from "./gui
 // Machine Registries
 // ==========================================
 
-/** Registry of all active generators by position key */
-const generators = new Map<string, Generator>();
-
 /** Electric tools system */
 const electricTools = new ElectricTools();
+
+/** Registry of player armor states */
+const playerArmorStates = new Map<string, { nanosuit?: NanoSuit; quantumsuit?: QuantumSuit }>();
+
+class MachineManager {
+    private machines = new Map<string, IMachine>();
+
+    createMachine(blockId: string, position: Vector3): IMachine | null {
+        const posKey = vectorToKey(position);
+        let machine: IMachine | null = null;
+
+        switch (blockId) {
+            case "ic2:generator":
+                machine = new Generator(position);
+                break;
+            case "ic2:macerator":
+                machine = new Macerator(position);
+                break;
+            case "ic2:electric_furnace":
+                machine = new ElectricFurnace(position);
+                break;
+            case "ic2:compressor":
+                machine = new Compressor(position);
+                break;
+            case "ic2:extractor":
+                machine = new Extractor(position);
+                break;
+            case "ic2:recycler":
+                machine = new Recycler(position);
+                break;
+            case "ic2:batbox":
+                machine = new BatBox(position);
+                break;
+            default:
+                break;
+        }
+
+        if (!machine) return null;
+
+        this.machines.set(posKey, machine);
+        return machine;
+    }
+
+    destroyMachine(posKey: string): void {
+        const machine = this.machines.get(posKey);
+        if (machine && typeof (machine as { destroy?: () => void }).destroy === "function") {
+            try {
+                (machine as { destroy: () => void }).destroy();
+            } catch {
+                // Ignore cleanup errors
+            }
+        }
+
+        this.machines.delete(posKey);
+        persistenceManager.clearMachineState(posKey);
+    }
+
+    tick(delta: number = 1): void {
+        for (const [, machine] of this.machines) {
+            try {
+                machine.tick(delta);
+            } catch {
+                // Error ticking machine
+            }
+        }
+    }
+
+    getMachine(posKey: string): IMachine | undefined {
+        return this.machines.get(posKey);
+    }
+
+    entries(): IterableIterator<[string, IMachine]> {
+        return this.machines.entries();
+    }
+}
+
+const machineManager = new MachineManager();
 
 /** Registry of all active geothermal generators by position key */
 const geothermalGenerators = new Map<string, GeothermalGenerator>();
@@ -64,14 +140,8 @@ const solarPanels = new Map<string, SolarPanel>();
 /** Registry of all active wind mills by position key */
 const windMills = new Map<string, WindMill>();
 
-/** Registry of all active processing machines by position key */
-const processingMachines = new Map<string, BaseMachine>();
-
 /** Registry of all active reactors by position key */
 const reactors = new Map<string, ReactorSimulator>();
-
-/** Registry of player armor states */
-const playerArmorStates = new Map<string, { nanosuit?: NanoSuit; quantumsuit?: QuantumSuit }>();
 
 // ==========================================
 // Helper Functions
@@ -184,10 +254,8 @@ function handleBlockPlacement(block: Block): void {
         return;
     }
 
-    // Handle generator placement
-    if (blockId === "ic2:generator") {
-        const generator = new Generator(position);
-        generators.set(posKey, generator);
+    const machine = machineManager.createMachine(blockId, position);
+    if (machine) {
         return;
     }
 
@@ -206,42 +274,6 @@ function handleBlockPlacement(block: Block): void {
     if (blockId === "ic2:wind_mill") {
         const windmill = new WindMill(position);
         windMills.set(posKey, windmill);
-        return;
-    }
-
-    // Handle processing machine placement
-    if (blockId === "ic2:macerator") {
-        const macerator = new Macerator(position);
-        processingMachines.set(posKey, macerator);
-        cableGraph.addConsumer(position, VoltageTier.LV);
-        return;
-    }
-
-    if (blockId === "ic2:electric_furnace") {
-        const furnace = new ElectricFurnace(position);
-        processingMachines.set(posKey, furnace);
-        cableGraph.addConsumer(position, VoltageTier.LV);
-        return;
-    }
-
-    if (blockId === "ic2:compressor") {
-        const compressor = new Compressor(position);
-        processingMachines.set(posKey, compressor);
-        cableGraph.addConsumer(position, VoltageTier.LV);
-        return;
-    }
-
-    if (blockId === "ic2:extractor") {
-        const extractor = new Extractor(position);
-        processingMachines.set(posKey, extractor);
-        cableGraph.addConsumer(position, VoltageTier.LV);
-        return;
-    }
-
-    if (blockId === "ic2:recycler") {
-        const recycler = new Recycler(position);
-        processingMachines.set(posKey, recycler);
-        cableGraph.addConsumer(position, VoltageTier.LV);
         return;
     }
 
@@ -283,14 +315,9 @@ function handleBlockDestruction(blockId: string, position: Vector3, dimension: D
         return;
     }
 
-    // Handle generator destruction
-    if (blockId === "ic2:generator") {
-        const generator = generators.get(posKey);
-        if (generator) {
-            generator.destroy();
-            generators.delete(posKey);
-            persistenceManager.clearMachineState(posKey);
-        }
+    const machine = machineManager.getMachine(posKey);
+    if (machine) {
+        machineManager.destroyMachine(posKey);
         return;
     }
 
@@ -318,18 +345,6 @@ function handleBlockDestruction(blockId: string, position: Vector3, dimension: D
         if (windmill) {
             windmill.destroy();
             windMills.delete(posKey);
-            persistenceManager.clearMachineState(posKey);
-        }
-        return;
-    }
-
-    // Handle processing machine destruction
-    if (isProcessingMachine(blockId)) {
-        const machine = processingMachines.get(posKey);
-        if (machine) {
-            machine.destroy();
-            processingMachines.delete(posKey);
-            cableGraph.removeConsumer(position);
             persistenceManager.clearMachineState(posKey);
         }
         return;
@@ -411,14 +426,14 @@ async function handleBlockInteraction(player: Player, block: Block, itemId?: str
 
     // Generator GUI
     if (blockId === "ic2:generator") {
-        const generator = generators.get(posKey);
-        if (generator) {
-            const state = generator.getState();
+        const machine = machineManager.getMachine(posKey);
+        if (machine instanceof Generator) {
+            const state = machine.getState();
             guiState = {
                 machineType: MachineType.GENERATOR,
                 energyStored: state.energyStored,
-                maxEnergy: generator.getConfig().maxBuffer,
-                progress: generator.getBurnProgress(),
+                maxEnergy: machine.getConfig().maxBuffer,
+                progress: machine.getBurnProgress(),
                 isProcessing: state.isActive,
                 additionalInfo: {
                     "Burn Time": state.burnTimeRemaining > 0 ? `${Math.ceil(state.burnTimeRemaining / 20)}s` : "None"
@@ -494,8 +509,8 @@ async function handleBlockInteraction(player: Player, block: Block, itemId?: str
 
     // Processing Machine GUIs
     if (isProcessingMachine(blockId)) {
-        const machine = processingMachines.get(posKey);
-        if (machine) {
+        const machine = machineManager.getMachine(posKey);
+        if (machine instanceof BaseMachine) {
             const state = machine.getState();
             guiState = {
                 machineType: machineType,
@@ -879,15 +894,6 @@ function processTick(): void {
         processArmorEffects();
     }
     
-    // Process generators
-    for (const [, generator] of generators) {
-        try {
-            generator.tick();
-        } catch {
-            // Error ticking generator
-        }
-    }
-    
     // Process geothermal generators
     for (const [, geothermal] of geothermalGenerators) {
         try {
@@ -922,15 +928,9 @@ function processTick(): void {
         }
     }
     
-    // Process processing machines
-    for (const [, machine] of processingMachines) {
-        try {
-            machine.tick();
-        } catch {
-            // Error ticking machine
-        }
-    }
-    
+    machineManager.tick();
+    energyNetwork.distributeEnergy();
+
     // Process nuclear reactors
     for (const [, reactor] of reactors) {
         try {
@@ -967,17 +967,40 @@ function processTick(): void {
  * Save all machine states to persistence
  */
 function saveMachineStates(): void {
-    // Save generator states
-    for (const [posKey, generator] of generators) {
-        const state = generator.getState();
-        persistenceManager.saveMachineState({
-            energyStored: state.energyStored,
-            progress: state.burnTimeRemaining,
-            machineType: "generator",
-            positionKey: posKey
-        });
+    for (const [posKey, machine] of machineManager.entries()) {
+        if (machine instanceof Generator) {
+            const state = machine.getState();
+            persistenceManager.saveMachineState({
+                energyStored: state.energyStored,
+                progress: state.burnTimeRemaining,
+                machineType: "generator",
+                positionKey: posKey
+            });
+            continue;
+        }
+
+        if (machine instanceof BaseMachine) {
+            const state = machine.getState();
+            persistenceManager.saveMachineState({
+                energyStored: state.energyStored,
+                progress: state.progress,
+                machineType: "processing_machine",
+                positionKey: posKey
+            });
+            continue;
+        }
+
+        if (machine instanceof BatBox) {
+            const state = machine.getState();
+            persistenceManager.saveMachineState({
+                energyStored: state.energyStored,
+                progress: 0,
+                machineType: "batbox",
+                positionKey: posKey
+            });
+        }
     }
-    
+
     // Save geothermal states
     for (const [posKey, geothermal] of geothermalGenerators) {
         const state = geothermal.getState();
@@ -996,17 +1019,6 @@ function saveMachineStates(): void {
             energyStored: state.windStrength,
             progress: state.ticksUntilWindChange,
             machineType: "wind_mill",
-            positionKey: posKey
-        });
-    }
-    
-    // Save processing machine states
-    for (const [posKey, machine] of processingMachines) {
-        const state = machine.getState();
-        persistenceManager.saveMachineState({
-            energyStored: state.energyStored,
-            progress: state.progress,
-            machineType: "processing_machine",
             positionKey: posKey
         });
     }
@@ -1203,11 +1215,10 @@ world.afterEvents.playerSpawn.subscribe((event) => {
 
 // Export registries and handlers for external access
 export {
-    generators,
     geothermalGenerators,
     solarPanels,
     windMills,
-    processingMachines,
+    machineManager,
     reactors,
     handleBlockPlacement,
     handleBlockDestruction,

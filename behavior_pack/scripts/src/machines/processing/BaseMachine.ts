@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier, calculateExplosionForce } from "../../energy/EnergyNetwork";
+import { IMachine } from "../IMachine";
 
 /**
  * Base machine configuration
@@ -88,14 +89,16 @@ export function shouldMachineExplode(receivedVoltage: number, maxVoltage: number
  * Implements common functionality for all processing machines
  * Requirements 9.1-9.4
  */
-export class BaseMachine {
-    protected position: Vector3;
+export class BaseMachine implements IMachine {
+    readonly position: Vector3;
     protected config: MachineConfig;
     protected state: MachineState;
+    protected machineType: string;
 
-    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG) {
+    constructor(position: Vector3, config: MachineConfig = MACHINE_BASE_CONFIG, machineType: string = "machine") {
         this.position = position;
         this.config = config;
+        this.machineType = machineType;
         this.state = {
             energyStored: 0,
             progress: 0,
@@ -105,13 +108,23 @@ export class BaseMachine {
         };
 
         // Register with energy network as consumer
-        energyNetwork.registerConsumer({
-            position: this.position,
+        energyNetwork.registerConsumer(this.position, {
             maxVoltage: this.config.maxVoltage,
             maxInput: this.config.maxInput,
-            currentEnergy: this.state.energyStored,
-            maxEnergy: this.config.maxEnergy
+            machine: this
         });
+    }
+
+    get type(): string {
+        return this.machineType;
+    }
+
+    get energyStored(): number {
+        return this.state.energyStored;
+    }
+
+    get maxEnergy(): number {
+        return this.config.maxEnergy;
     }
 
     /**
@@ -178,6 +191,27 @@ export class BaseMachine {
         };
     }
 
+    addEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const space = this.config.maxEnergy - this.state.energyStored;
+        const accepted = Math.min(space, amount, this.config.maxInput);
+        if (accepted > 0) {
+            this.state.energyStored += accepted;
+            this.updateNetworkConsumer();
+        }
+        return accepted;
+    }
+
+    removeEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const removed = Math.min(this.state.energyStored, amount);
+        if (removed > 0) {
+            this.state.energyStored -= removed;
+            this.updateNetworkConsumer();
+        }
+        return removed;
+    }
+
     /**
      * Set whether machine has valid input to process
      */
@@ -197,7 +231,7 @@ export class BaseMachine {
      * Requirements 9.2-9.4
      * @returns Result of tick operation
      */
-    tick(): TickResult {
+    tick(delta: number = 1): TickResult {
         const result: TickResult = {
             euConsumed: 0,
             operationCompleted: false,
@@ -223,9 +257,10 @@ export class BaseMachine {
         }
 
         // Consume energy and progress (Requirement 9.2)
-        this.state.energyStored -= this.config.consumption;
-        result.euConsumed = this.config.consumption;
-        this.state.progress++;
+        const consumption = this.config.consumption * delta;
+        this.state.energyStored = Math.max(0, this.state.energyStored - consumption);
+        result.euConsumed = consumption;
+        this.state.progress += delta;
         this.state.isProcessing = true;
 
         // Check if operation complete (Requirement 9.3)
@@ -265,12 +300,10 @@ export class BaseMachine {
      * Update energy network consumer info
      */
     protected updateNetworkConsumer(): void {
-        energyNetwork.registerConsumer({
-            position: this.position,
+        energyNetwork.registerConsumer(this.position, {
             maxVoltage: this.config.maxVoltage,
             maxInput: this.config.maxInput,
-            currentEnergy: this.state.energyStored,
-            maxEnergy: this.config.maxEnergy
+            machine: this
         });
     }
 
