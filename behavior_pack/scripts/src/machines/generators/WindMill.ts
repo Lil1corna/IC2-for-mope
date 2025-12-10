@@ -151,10 +151,10 @@ export class WindMill {
         };
 
         // Register with energy network as generator
-        energyNetwork.registerGenerator({
-            position: this.position,
+        energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
-            packetSize: 1 // Variable output, send 1 EU packets
+            packetSize: 1, // Variable output, send 1 EU packets
+            machine: this
         });
     }
 

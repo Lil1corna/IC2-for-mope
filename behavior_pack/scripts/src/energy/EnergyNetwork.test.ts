@@ -9,6 +9,29 @@ import {
     EnergyNetwork,
     EnergyConsumer
 } from './EnergyNetwork';
+import { IMachine } from '../machines/IMachine';
+
+function createMockMachine(maxEnergy: number, startingEnergy = 0): IMachine<{ energyStored: number }> {
+    return {
+        position: { x: 0, y: 0, z: 0 },
+        type: "mock",
+        energyStored: startingEnergy,
+        maxEnergy,
+        tick: () => { /* no-op */ },
+        addEnergy(amount: number): number {
+            const accepted = Math.min(amount, this.maxEnergy - this.energyStored);
+            this.energyStored += accepted;
+            return accepted;
+        },
+        removeEnergy(amount: number): number {
+            const removed = Math.min(amount, this.energyStored);
+            this.energyStored -= removed;
+            return removed;
+        },
+        getState() { return { energyStored: this.energyStored }; },
+        setState(state) { this.energyStored = state.energyStored; }
+    };
+}
 
 /**
  * **Feature: ic2-bedrock-port, Property 2: Overvoltage Explosion**
@@ -78,8 +101,7 @@ describe('Property 2: Overvoltage Explosion', () => {
                         position: { x: 0, y: 0, z: 0 },
                         maxVoltage: maxVoltage,
                         maxInput: 32,
-                        currentEnergy: 0,
-                        maxEnergy: 10000
+                        machine: createMockMachine(10000)
                     };
 
                     const result = network.receivePacket(consumer, euAmount, voltage, 0, 0);
@@ -108,8 +130,7 @@ describe('Property 2: Overvoltage Explosion', () => {
                         position: { x: 0, y: 0, z: 0 },
                         maxVoltage: maxVoltage,
                         maxInput: euAmount,
-                        currentEnergy: 0,
-                        maxEnergy: 10000
+                        machine: createMockMachine(10000)
                     };
 
                     const result = network.receivePacket(consumer, euAmount, voltage, 0, 0);
