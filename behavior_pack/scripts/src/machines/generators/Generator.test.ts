@@ -69,7 +69,7 @@ describe('Property 4: Generator Output Rates (Generator)', () => {
         const generator = new Generator({ x: 0, y: 0, z: 0 });
         
         // Verify config
-        expect(generator.getConfig().maxBuffer).toBe(4000);
+        expect(generator.maxEnergy).toBe(4000);
         
         // Use coal which has 1600 ticks burn time (enough to fill buffer)
         generator.tryConsumeFuel("minecraft:coal");
