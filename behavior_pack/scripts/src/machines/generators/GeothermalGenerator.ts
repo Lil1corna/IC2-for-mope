@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
+import { IMachine } from "../IMachine";
 
 /**
  * Geothermal Generator configuration
@@ -72,8 +73,9 @@ export function getLavaEnergyValue(itemId: string): number {
  * - 2400 EU internal buffer (Req 6.3)
  * - 20000 EU per lava bucket (Req 6.1)
  */
-export class GeothermalGenerator {
-    private position: Vector3;
+export class GeothermalGenerator implements IMachine<GeothermalGeneratorState> {
+    readonly position: Vector3;
+    readonly type: string = "geothermal_generator";
     private config: GeothermalGeneratorConfig;
     private state: GeothermalGeneratorState;
 
@@ -119,7 +121,15 @@ export class GeothermalGenerator {
      * Get generator configuration
      */
     getConfig(): GeothermalGeneratorConfig {
-        return this.config;
+        return { ...this.config };
+    }
+
+    get energyStored(): number {
+        return this.state.energyStored;
+    }
+
+    get maxEnergy(): number {
+        return this.config.maxBuffer;
     }
 
     /**
@@ -183,6 +193,21 @@ export class GeothermalGenerator {
         this.trySendPackets();
 
         return euGenerated;
+    }
+
+    addEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const space = this.config.maxBuffer - this.state.energyStored;
+        const accepted = Math.min(space, amount);
+        this.state.energyStored += accepted;
+        return accepted;
+    }
+
+    removeEnergy(amount: number): number {
+        if (amount <= 0) return 0;
+        const removed = Math.min(this.state.energyStored, amount);
+        this.state.energyStored -= removed;
+        return removed;
     }
 
     /**

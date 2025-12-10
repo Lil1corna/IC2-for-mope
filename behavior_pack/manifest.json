@@ -20,7 +20,7 @@
       "language": "javascript",
       "uuid": "29f274d5-088d-4765-924e-c42d0586ec1c",
       "version": [1, 0, 0],
-      "entry": "scripts/Main.js"
+      "entry": "scripts/main.js"
     }
   ],
   "dependencies": [

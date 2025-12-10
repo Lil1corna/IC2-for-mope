@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
+import { IMachine } from "../IMachine";
 
 /**
  * Wind Mill configuration
@@ -136,8 +137,9 @@ export function calculateBlockedOutput(baseOutput: number, isBlocked: boolean): 
  * - Breaks if EU > 5 (Req 7.4)
  * - Y <= 64 produces 0 EU (Req 7.5)
  */
-export class WindMill {
-    private position: Vector3;
+export class WindMill implements IMachine<WindMillState> {
+    readonly position: Vector3;
+    readonly type: string = "wind_mill";
     private config: WindMillConfig;
     private state: WindMillState;
 
@@ -183,7 +185,23 @@ export class WindMill {
      * Get wind mill configuration
      */
     getConfig(): WindMillConfig {
-        return this.config;
+        return { ...this.config };
+    }
+
+    get energyStored(): number {
+        return 0;
+    }
+
+    get maxEnergy(): number {
+        return 0;
+    }
+
+    addEnergy(_amount: number): number {
+        return 0;
+    }
+
+    removeEnergy(_amount: number): number {
+        return 0;
     }
 
     /**

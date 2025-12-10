@@ -8,9 +8,10 @@ export interface IMachine<State = any> {
     type: string;
     energyStored: number;
     maxEnergy: number;
-    tick(delta: number): unknown;
+    tick(...args: unknown[]): unknown;
     addEnergy(amount: number): number;
     removeEnergy(amount: number): number;
     getState(): State;
     setState(state: State): void;
+    destroy?(): void;
 }

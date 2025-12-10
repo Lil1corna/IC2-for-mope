@@ -138,6 +138,6 @@ export class Recycler extends BaseMachine {
      * Get operation time in ticks
      */
     getOperationTime(): number {
-        return this.config.operationTime;
+        return this.machineConfig.operationTime;
     }
 }
