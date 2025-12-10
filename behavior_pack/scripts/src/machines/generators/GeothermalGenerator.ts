@@ -87,10 +87,10 @@ export class GeothermalGenerator {
         };
 
         // Register with energy network as generator
-        energyNetwork.registerGenerator({
-            position: this.position,
+        energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
-            packetSize: this.config.packetSize
+            packetSize: this.config.packetSize,
+            machine: this
         });
     }
 

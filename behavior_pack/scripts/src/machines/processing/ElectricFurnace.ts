@@ -1,5 +1,6 @@
 import { Vector3 } from "@minecraft/server";
-import { BaseMachine, MACHINE_BASE_CONFIG, MachineConfig } from "./BaseMachine";
+import { BaseMachine, MachineConfig } from "./BaseMachine";
+import { VoltageTier } from "../../energy/EnergyNetwork";
 
 /**
  * Recipe definition for Electric Furnace (vanilla smelting recipes)
@@ -20,15 +21,18 @@ export interface FurnaceRecipe {
  * Electric Furnace: 350 ticks (17.5 seconds) - 12.5% faster than base
  * Requirements 11.2
  */
-export const ELECTRIC_FURNACE_OPERATION_TIME = 350;
+export const ELECTRIC_FURNACE_OPERATION_TIME = 150;
 
 /**
  * Electric Furnace configuration
  * Requirements 11.1-11.2
  */
 export const ELECTRIC_FURNACE_CONFIG: MachineConfig = {
-    ...MACHINE_BASE_CONFIG,
-    operationTime: ELECTRIC_FURNACE_OPERATION_TIME
+    maxInput: 32,
+    consumption: 3,
+    operationTime: ELECTRIC_FURNACE_OPERATION_TIME,
+    maxEnergy: 1200,
+    maxVoltage: VoltageTier.LV
 };
 
 /**
@@ -152,7 +156,7 @@ export class ElectricFurnace extends BaseMachine {
     private recipes: FurnaceRecipe[];
 
     constructor(position: Vector3, config: MachineConfig = ELECTRIC_FURNACE_CONFIG) {
-        super(position, config);
+        super(position, config, "electric_furnace");
         this.recipes = FURNACE_RECIPES;
     }
 

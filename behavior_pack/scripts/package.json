@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc",
         "watch": "tsc --watch",
+        "mcaddon": "node ../../build_mcaddon.mjs",
         "test": "vitest run",
         "test:watch": "vitest"
     },
