@@ -1,6 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
-import { IMachine } from "../IMachine";
+import type { IMachine } from "../IMachine";
 
 /**
  * Wind Mill configuration
@@ -156,7 +156,7 @@ export class WindMill implements IMachine<WindMillState> {
         energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
             packetSize: 1, // Variable output, send 1 EU packets
-            machine: this
+            machine: this as unknown as IMachine
         });
     }
 

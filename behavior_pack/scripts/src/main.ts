@@ -100,7 +100,9 @@ class MachineManager {
         const machine = this.machines.get(posKey);
         if (machine) {
             try {
-                machine.destroy?.();
+                if (machine && "destroy" in machine && typeof (machine as any).destroy === "function") {
+                    (machine as any).destroy();
+                }
             } catch {
                 // Ignore cleanup errors
             }
@@ -425,19 +427,19 @@ async function handleBlockInteraction(player: Player, block: Block, itemId?: str
     let guiState: MachineGUIState | null = null;
 
     // Generator GUI
-    if (blockId === "ic2:generator") {
-        const machine = machineManager.getMachine(posKey);
-        if (machine instanceof Generator) {
-            const state = machine.getState();
-            guiState = {
-                machineType: MachineType.GENERATOR,
-                energyStored: state.energyStored,
-                maxEnergy: machine.getConfig().maxBuffer,
-                progress: machine.getBurnProgress(),
-                isProcessing: state.isActive,
-                additionalInfo: {
-                    "Burn Time": state.burnTimeRemaining > 0 ? `${Math.ceil(state.burnTimeRemaining / 20)}s` : "None"
-                }
+            if (blockId === "ic2:generator") {
+                const machine = machineManager.getMachine(posKey);
+                if (machine instanceof Generator) {
+                    const state = machine.getState();
+                    guiState = {
+                        machineType: MachineType.GENERATOR,
+                        energyStored: state.energyStored,
+                        maxEnergy: machine.maxEnergy,
+                        progress: machine.getBurnProgress(),
+                        isProcessing: state.isActive,
+                        additionalInfo: {
+                            "Burn Time": state.burnTimeRemaining > 0 ? `${Math.ceil(state.burnTimeRemaining / 20)}s` : "None"
+                        }
             };
         }
     }

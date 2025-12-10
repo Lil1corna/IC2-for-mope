@@ -1,6 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
-import { IMachine } from "../IMachine";
+import type { IMachine } from "../IMachine";
 
 /**
  * Solar Panel configuration
@@ -120,7 +120,7 @@ export class SolarPanel implements IMachine<void> {
         energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
             packetSize: this.config.outputPerTick,
-            machine: this
+            machine: this as unknown as IMachine
         });
     }
 

@@ -1,6 +1,6 @@
 import { Vector3 } from "@minecraft/server";
 import { energyNetwork, VoltageTier } from "../../energy/EnergyNetwork";
-import { IMachine } from "../IMachine";
+import type { IMachine } from "../IMachine";
 
 /**
  * Geothermal Generator configuration
@@ -92,7 +92,7 @@ export class GeothermalGenerator implements IMachine<GeothermalGeneratorState> {
         energyNetwork.registerGenerator(this.position, {
             outputVoltage: this.config.voltageTier,
             packetSize: this.config.packetSize,
-            machine: this
+            machine: this as unknown as IMachine
         });
     }
 
